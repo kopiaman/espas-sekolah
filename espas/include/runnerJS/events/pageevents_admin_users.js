@@ -1,0 +1,4 @@
+
+var pType=Runner.pages.constants.PAGE_LIST;Runner.pages.PageSettings.addPageEvent("admin_users",pType,"afterPageReady",function(pageObj,proxy,pageid){pageObj.buttonNames[pageObj.buttonNames.length]='Reset_Password';if(!pageObj.buttonEventBefore['Reset_Password']){pageObj.buttonEventBefore['Reset_Password']=function(params,ctrl,pageObj,proxy,pageid,rowData){params["txt"]="Hello";ctrl.setMessage("Loading...");}}
+if(!pageObj.buttonEventAfter['Reset_Password']){pageObj.buttonEventAfter['Reset_Password']=function(result,ctrl,pageObj,proxy,pageid,rowData){var message="Password berjaya direset kepada '1234' ";ctrl.setMessage(message);}}
+$('a[id=Reset_Password]').each(function(){if(!$(this).closest('tr.gridRowAdd').length){var newId="Reset_Password"+"_"+Runner.genId();this.id=newId;var button_Reset_Password=new Runner.form.Button({id:newId,btnName:"Reset_Password"});button_Reset_Password.init({args:[pageObj,proxy,pageid]});}});});

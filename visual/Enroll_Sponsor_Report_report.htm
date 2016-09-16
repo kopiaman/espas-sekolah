@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<HTML {$html_attrs}><HEAD><TITLE>{$pagetitle}</TITLE>
+<META http-equiv="X-UA-Compatible" content="IE=Edge">
+<META content="text/html; charset=Windows-1252" http-equiv=Content-Type><LINK rel=stylesheet type=text/css href="styles/default.css">{BEGIN styleCSSFiles}<LINK rel=stylesheet type=text/css href="{$stylepath}">{END styleCSSFiles}{BEGIN pageCSSFiles}<LINK rel=stylesheet type=text/css href="{$pagestylepath}">{END pageCSSFiles}<!--[if IE]><LINK rel=stylesheet type=text/css href="styles/defaultIE.css">{BEGIN IEcssFiles}<LINK rel=stylesheet type=text/css href="{$stylepathIE}">{END IEcssFiles}<![endif]-->
+<META name=GENERATOR content="MSHTML 8.00.7600.16385"></HEAD>
+<BODY class="{$stylename}" {$bodyattrs}>{BEGIN body}{$header} 
+<TABLE class=runner-toptable cellPadding=0><TR class=runner-header><TD class=runner-top colSpan=3>{BEGIN container_toplinks}<TABLE class="runner-c runner-c-toplinks" cellPadding=0><TR class="{$cheaderclass_toplinks}"><TD class=runner-cl><IMG src="images/spacer.gif"></TD>
+          <TD class=runner-cc></TD>
+          <TD class=runner-cr><IMG src="images/spacer.gif"></TD></TR>
+        <TR class="runner-row style1"><TD class=runner-cl></TD>
+          <TD class=runner-cc><TABLE class=runner-hc border=0 cellPadding=0><TR><td class="runner-cc filler"></td>
+
+{BEGIN security_block}<td  class="runner-cc runner-br runner-b-loggedas" {$brickclass_loggedas}><span><span>Logged on as&nbsp;<b>{$username}</b>&nbsp;</span>
+<span class="runner-btnframe"><span class="runner-btnleft"></span>
+<span class="runner-btnright"></span>
+<a href="#" class="runner-button" {$logoutlink_attrs}>Log out</a>
+</span>
+
+{BEGIN changepwd_link}<span class="runner-btnframe"><span class="runner-btnleft"></span>
+	<span class="runner-btnright"></span>
+	<a href="#" class="runner-button" {$changepwdlink_attrs}>Change password</a>
+	</span>
+{END changepwd_link}
+</span></td>
+{END security_block}
+
+
+{BEGIN prints_block}<TD class="runner-cc runner-bl runner-b-toplinks_print" {$brickclass_toplinks_print}><SPAN>{BEGIN print_link}<SPAN class=runner-btnframe><SPAN class=runner-btnleft></SPAN><SPAN class=runner-btnright></SPAN><A class=runner-button href="#" {$printlink_attrs}>Printer-friendly version</A> </SPAN>{END print_link}{BEGIN printall_link}<SPAN class=runner-btnframe><SPAN class=runner-btnleft></SPAN><SPAN class=runner-btnright></SPAN><A class=runner-button href="#" {$printalllink_attrs}>Print 
+                  whole report</A> </SPAN>{END printall_link}</SPAN></TD>
+                {END prints_block}{BEGIN asearch_link}<TD class="runner-cc runner-bl runner-b-toplinks_advsearch" {$brickclass_toplinks_advsearch}><SPAN><SPAN class=runner-btnframe><SPAN class=runner-btnleft></SPAN><SPAN class=runner-btnright></SPAN><A class=runner-button href="#" {$advsearchlink_attrs}>Advanced 
+                  search</A> </SPAN></SPAN></TD>
+                {END asearch_link}{BEGIN export_link}<TD class="runner-cc runner-bl runner-b-toplinks_export_links" {$brickclass_toplinks_export_links}><SPAN><SPAN id=export_links{$id}><A href="#" 
+                  {$excellink_attrs}><IMG border=0 alt="Expot to Excel" src="images/excel.gif"></A> <A href="#" {$wordlink_attrs}><IMG border=0 alt="Export to Word" src="images/word.gif"></A> </SPAN></SPAN></TD>
+                {END export_link}<TD class="runner-cc filler"></TD></TR></TABLE></TD>
+          <TD class=runner-cr></TD></TR>
+        <TR class="{$cfooterclass_toplinks}"><TD class=runner-cl><IMG src="images/spacer.gif"></TD>
+          <TD class=runner-cc></TD>
+          <TD class=runner-cr><IMG src="images/spacer.gif"></TD></TR></TABLE>{END container_toplinks}
+      {BEGIN container_hmenu}<TABLE class="runner-c runner-c-hmenu" cellPadding=0><TR class="{$cheaderclass_hmenu}"><TD class=runner-cl><IMG src="images/spacer.gif"></TD>
+          <TD class=runner-cc></TD>
+          <TD class=runner-cr><IMG src="images/spacer.gif"></TD></TR>
+        <TR class="runner-row style1"><TD class=runner-cl></TD>
+          <TD class=runner-cc><TABLE class=runner-hc border=0 cellPadding=0><TR>{BEGIN menu_block}<TD class="runner-cc runner-bl runner-b-hmenu" {$brickclass_hmenu}><SPAN>{$mainmenu horizontal}</SPAN></TD>
+                {END menu_block}<TD class="runner-cc filler"></TD></TR></TABLE></TD>
+          <TD class=runner-cr></TD></TR>
+        <TR class="{$cfooterclass_hmenu}"><TD class=runner-cl><IMG src="images/spacer.gif"></TD>
+          <TD class=runner-cc></TD>
+          <TD class=runner-cr><IMG src="images/spacer.gif"></TD></TR></TABLE>{END container_hmenu}
+      {BEGIN container_search}<table class="runner-c runner-c-search" cellpadding="0" ><tr class="{$cheaderclass_search}"><td class="runner-cl"><img src="images/spacer.gif"></td>
+<td class="runner-cc"></td><td class="runner-cr"><img src="images/spacer.gif"></td>
+</tr>
+<tr class="runner-row style1"><td class="runner-cl"></td>
+<td class="runner-cc"><table border="0" cellpadding="0" class="runner-hc"><tr>{BEGIN searchform_block}<td  class="runner-cc runner-bl runner-b-search" {$brickclass_search}><span><span>{BEGIN searchform_text}<INPUT size=25 {$searchfor_attrs}>{END searchform_text}
+		&nbsp;
+		{BEGIN searchform_search}<SPAN class=runner-btnframe><SPAN class=runner-btnleft></SPAN><SPAN class=runner-btnright></SPAN><A class=runner-button-img href="#" {$searchbutton_attrs}><IMG src="images/search/search.gif"></A> </SPAN>{END searchform_search}
+		&nbsp;
+		{BEGIN searchform_showall}<span id="showAll{$id}" {$showAllCont_attrs}><span class="runner-btnframe"><SPAN class=runner-btnleft></SPAN><SPAN class=runner-btnright></SPAN><A class=runner-button href="#" {$showallbutton_attrs}>Show 
+                  all</A></span> </span>{END searchform_showall}
+                </span>
+</span></td>
+{END searchform_block}
+
+
+{BEGIN searchformbuttons_block}<td  class="runner-cc runner-bl runner-b-search_buttons" {$brickclass_search_buttons}><span>{BEGIN searchPanelTopButtons}<span>
+		&nbsp;
+		<span class="runner-btnframe"><span class="runner-btnleft"></span>
+		<span class="runner-btnright"></span>
+		<a href="#" class="runner-button-img" id="showSrchWin{$id}" {$showHideSearchWin_attrs}><img src="images/search/showWindowPin.gif"></a>
+		</span>
+		&nbsp;		
+		<span class="runner-btnframe"><span class="runner-btnleft"></span>
+		<span class="runner-btnright"></span>
+		<a href="#" class="runner-button-img" id="showOptPanel{$id}" {$showHideSearchPanel_attrs}><img src="images/search/showOptions.gif"></a>
+		</span>
+	</span>
+	{END searchPanelTopButtons}
+</span></td>
+{END searchformbuttons_block}
+
+<td class="runner-cc filler"></td>
+{BEGIN details_block}<td  class="runner-cc runner-br runner-b-details_found" {$brickclass_details_found}><span><SPAN 
+                  {$details_attrs}>Details found: <b><SPAN 
+                  class=runner-details_found_count>{$records_found}</SPAN></b>
+	</SPAN>
+                </span></td>
+{END details_block}
+
+
+{BEGIN pages_block}<td  class="runner-cc runner-br runner-b-page_of" {$brickclass_page_of}><span><SPAN 
+                  {$pages_attrs}>Page <b>{$page}</b> of 
+                  <b>{$maxpages}</b>
+	</SPAN></span></td>
+                {END pages_block}
+
+
+{BEGIN recordspp_block}<td  class="runner-cc runner-br runner-b-recsperpage" {$brickclass_recsperpage}><span><SPAN id=recordspp_block{$id} name="recordspp_block{$id}">Groups per page:&nbsp;{$grpsPerPage} 
+                  </SPAN></span></td>{END recordspp_block}
+
+
+</tr>
+</table></td>
+<td class="runner-cr"></td>
+</tr>
+
+<tr class="{$cfooterclass_search}"><td class="runner-cl"><img src="images/spacer.gif"></td>
+<td class="runner-cc"></td><td class="runner-cr"><img src="images/spacer.gif"></td>
+</tr>
+</table>
+{END container_search}
+
+
+				</TD></TR>
+  <TR class=runner-body><TD class="runner-left {$blockclass_left}">{BEGIN container_left}<TABLE class="runner-c runner-c-left" cellPadding=0><TR class="{$cheaderclass_left}"><TD class=runner-cl><IMG src="images/spacer.gif"></TD>
+          <TD class=runner-cc></TD>
+          <TD class=runner-cr><IMG src="images/spacer.gif"></TD></TR>
+        {BEGIN searchPanel}<TR class="runner-row style1 runner-b-searchpanel {$brickclass_searchpanel}"><TD class=runner-cl></TD>
+          <TD class="runner-cc runner-brickcontents"><DIV class=searchPanelContainer>{$adv_search_panel} 
+            </DIV></TD>
+          <TD class=runner-cr></TD></TR>
+        {END searchPanel}<TR class="{$cfooterclass_left}"><TD class=runner-cl><IMG src="images/spacer.gif"></TD>
+          <TD class=runner-cc></TD>
+          <TD class=runner-cr><IMG src="images/spacer.gif"></TD></TR></TABLE>{END container_left}</TD>
+    <TD style="WIDTH: auto" class="runner-center {$blockclass_center}">{BEGIN container_message}<TABLE class="runner-c runner-c-message" cellPadding=0><TR class="{$cheaderclass_message}"><TD class=runner-cl><IMG src="images/spacer.gif"></TD>
+          <TD class=runner-cc></TD>
+          <TD class=runner-cr><IMG src="images/spacer.gif"></TD></TR>
+        <TR class="runner-row style1"><TD class=runner-cl></TD>
+          <TD class=runner-cc><TABLE class=runner-hc border=0 cellPadding=0><TR>{BEGIN message_block}<td  class="runner-cc runner-bl runner-b-message" {$brickclass_message}><SPAN><div class="runner-message">{$message}</div></SPAN></td>
+                {END message_block}<td class="runner-cc filler"></td>
+</TR></TABLE></TD>
+          <TD class=runner-cr></TD></TR>
+        <TR class="{$cfooterclass_message}"><TD class=runner-cl><IMG src="images/spacer.gif"></TD>
+          <TD class=runner-cc></TD>
+          <TD class=runner-cr><IMG src="images/spacer.gif"></TD></TR></TABLE>{END container_message}
+      {BEGIN container_grid}<STYLE>
+table.report {border-collapse: collapse} 
+table.report td {padding: 2px;border-width: 1px; border-style: solid; border-color: #cccccc;}
+div.page_block{clear:left;}
+td.noborder{padding-right:8px}
+td.data{padding-right:8px}
+td.group_1{background-color: #90EE90;padding-right:8px}
+td.group_2{background-color: #AFEEEE;padding-right:8px}
+td.group_3{background-color: #AFEEEE;padding-right:8px}
+td.group_4{background-color: #AFEEEE;padding-right:8px}
+td.group_5{background-color: #AFEEEE;padding-right:8px}
+td.group_6{background-color: #AFEEEE;padding-right:8px}
+td.nbgroup_1{background-color: #90EE90;border-style:none;padding-right:8px}
+td.nbgroup_2{background-color: #AFEEEE;border-style:none;padding-right:8px}
+td.nbgroup_3{background-color: #AFEEEE;border-style:none;padding-right:8px}
+td.nbgroup_4{background-color: #AFEEEE;border-style:none;padding-right:8px}
+td.nbgroup_5{background-color: #AFEEEE;border-style:none;padding-right:8px}
+td.nbgroup_6{background-color: #AFEEEE;border-style:none;padding-right:8px}
+td.header_1{background-color: #7ACA7A;padding-right:8px}
+td.header_2{background-color: #94CACA;padding-right:8px}
+td.header_3{background-color: #94CACA;padding-right:8px}
+td.header_4{background-color: #94CACA;padding-right:8px}
+td.header_5{background-color: #94CACA;padding-right:8px}
+td.header_6{background-color: #94CACA;padding-right:8px}
+td.pagesummary{background-color:#ffffbb;padding-right:8px}
+td.globalsummary{background-color:#ffe0b0;padding-right:8px}
+</STYLE>
+
+      <TABLE class=runner-b-report border=0 cellSpacing=0 cellPadding=5><TR class="runner-toprow style1"><TD class=runner-cl><IMG src="images/spacer.gif"></TD>
+          <TD class=runner-cc></TD>
+          <TD class=runner-cr><IMG src="images/spacer.gif"></TD></TR>
+        <TR class="runner-row style1"><TD class=runner-cl></TD>
+          <TD class=runner-cc><TABLE 
+            style="PADDING-BOTTOM: 2px; PADDING-LEFT: 2px; PADDING-RIGHT: 2px; PADDING-TOP: 2px" 
+            border=0 cellSpacing=0 cellPadding=0><!-------------------------------------  group headers ----------------------------------------->
+              {BEGIN grid_row}{BEGIN sponsor_firstnewgroup}<TR><TD 
+                style="BACKGROUND-IMAGE: none; BACKGROUND-COLOR: #6db8c5; WIDTH: 96px; WHITE-SPACE: normal" 
+                class=blackshade>Sponsor</TD>
+                <TD 
+                style="BACKGROUND-IMAGE: none; BACKGROUND-COLOR: #6db8c5; WIDTH: 98px; WHITE-SPACE: normal" 
+                class=blackshade>Ic</TD>
+                <TD 
+                style="BACKGROUND-IMAGE: none; BACKGROUND-COLOR: #6db8c5; WIDTH: 168px; WHITE-SPACE: normal" 
+                class=blackshade>Name</TD>
+                <TD 
+                style="BACKGROUND-COLOR: #6db8c5; WIDTH: 94px; WHITE-SPACE: normal" 
+                class=blackshade>Tel</TD>
+                <TD 
+                style="BACKGROUND-COLOR: #6db8c5; WIDTH: 134px; WHITE-SPACE: normal" 
+                class=blackshade>Email</TD>
+                <TD 
+                style="BACKGROUND-COLOR: #6db8c5; WIDTH: 375px; WHITE-SPACE: normal" 
+                class=blackshade>Program</TD></TR>
+              <TR><TD 
+                style="BACKGROUND-COLOR: #afeeee; WIDTH: 88px; WHITE-SPACE: normal" 
+                class=header_1>{$sponsor_grval} </TD>
+                <TD 
+                style="BACKGROUND-COLOR: #f2f2fd; WIDTH: 90px; WHITE-SPACE: normal" 
+                class=header_2>{$ic_grval}</TD>
+                <TD 
+                style="BACKGROUND-COLOR: #f2f2fd; WIDTH: 160px; WHITE-SPACE: normal" 
+                class=header_3>{$name_grval} </TD>
+                <TD 
+                style="BACKGROUND-COLOR: #f2f2fd; WIDTH: 86px; WHITE-SPACE: normal" 
+                class=header_4>{$tel_grval} </TD>
+                <TD 
+                style="BACKGROUND-COLOR: #f2f2fd; WIDTH: 126px; WHITE-SPACE: normal" 
+                class=header_5>{$email_grval}</TD>
+                <TD 
+                style="BACKGROUND-COLOR: #f2f2fd; WIDTH: 367px; WHITE-SPACE: normal" 
+                class=header_6>{$Program_grval}</TD><!-------------------------------------  data -----------------------------------------></TR>
+              {END sponsor_firstnewgroup}{BEGIN ic_firstnewgroup}<TR><TD 
+                style="BACKGROUND-COLOR: #afeeee; WIDTH: 88px; WHITE-SPACE: normal" 
+                class=group_1>&nbsp; </TD>
+                <TD 
+                style="BACKGROUND-COLOR: #f2f2fd; WIDTH: 90px; WHITE-SPACE: normal" 
+                class=header_2>{$ic_grval} </TD>
+                <TD 
+                style="BACKGROUND-COLOR: #f2f2fd; WIDTH: 160px; WHITE-SPACE: normal" 
+                class=header_3>{$name_grval} </TD>
+                <TD 
+                style="BACKGROUND-COLOR: #f2f2fd; WIDTH: 86px; WHITE-SPACE: normal" 
+                class=header_4>{$tel_grval}</TD>
+                <TD 
+                style="BACKGROUND-COLOR: #f2f2fd; WIDTH: 126px; WHITE-SPACE: normal" 
+                class=header_5>{$email_grval} </TD>
+                <TD 
+                style="BACKGROUND-COLOR: #f2f2fd; WIDTH: 367px; WHITE-SPACE: normal" 
+                class=header_6>{$Program_grval}</TD><!-------------------------------------  data -----------------------------------------></TR>
+              {END ic_firstnewgroup}{BEGIN name_firstnewgroup}<TR><TD 
+                style="BACKGROUND-COLOR: #afeeee; WIDTH: 88px; WHITE-SPACE: normal" 
+                class=group_1>&nbsp; </TD>
+                <TD 
+                style="BACKGROUND-COLOR: #f2f2fd; WIDTH: 90px; WHITE-SPACE: normal" 
+                class=group_2>&nbsp; </TD>
+                <TD 
+                style="BACKGROUND-COLOR: #f2f2fd; WIDTH: 160px; WHITE-SPACE: normal" 
+                class=header_3>{$name_grval}</TD>
+                <TD 
+                style="BACKGROUND-COLOR: #f2f2fd; WIDTH: 86px; WHITE-SPACE: normal" 
+                class=header_4>{$tel_grval}</TD>
+                <TD 
+                style="BACKGROUND-COLOR: #f2f2fd; WIDTH: 126px; WHITE-SPACE: normal" 
+                class=header_5>{$email_grval} </TD>
+                <TD 
+                style="BACKGROUND-COLOR: #f2f2fd; WIDTH: 367px; WHITE-SPACE: normal" 
+                class=header_6>{$Program_grval}</TD><!-------------------------------------  data -----------------------------------------></TR>
+              {END name_firstnewgroup}{BEGIN tel_firstnewgroup}<TR><TD 
+                style="BACKGROUND-IMAGE: none; BACKGROUND-COLOR: #afeeee; WIDTH: 88px; WHITE-SPACE: normal" 
+                class=group_1>&nbsp; </TD>
+                <TD 
+                style="BACKGROUND-COLOR: #f2f2fd; WIDTH: 90px; WHITE-SPACE: normal" 
+                class=group_2>&nbsp; </TD>
+                <TD 
+                style="BACKGROUND-COLOR: #f2f2fd; WIDTH: 160px; WHITE-SPACE: normal" 
+                class=group_3>&nbsp; </TD>
+                <TD 
+                style="BACKGROUND-COLOR: #f2f2fd; WIDTH: 86px; WHITE-SPACE: normal" 
+                class=header_4>{$tel_grval} </TD>
+                <TD 
+                style="BACKGROUND-COLOR: #f2f2fd; WIDTH: 126px; WHITE-SPACE: normal" 
+                class=header_5>{$email_grval} </TD>
+                <TD 
+                style="BACKGROUND-COLOR: #f2f2fd; WIDTH: 367px; WHITE-SPACE: normal" 
+                class=header_6>{$Program_grval} </TD><!-------------------------------------  data -----------------------------------------></TR>
+              {END tel_firstnewgroup}{BEGIN email_firstnewgroup}<TR><TD 
+                style="BACKGROUND-IMAGE: none; BACKGROUND-COLOR: #afeeee; WIDTH: 88px; WHITE-SPACE: normal" 
+                class=group_1>&nbsp; </TD>
+                <TD 
+                style="BACKGROUND-IMAGE: none; BACKGROUND-COLOR: #f2f2fd; WIDTH: 90px; WHITE-SPACE: normal" 
+                class=group_2>&nbsp; </TD>
+                <TD 
+                style="BACKGROUND-IMAGE: none; BACKGROUND-COLOR: #f2f2fd; WIDTH: 160px; WHITE-SPACE: normal" 
+                class=group_3>&nbsp; </TD>
+                <TD 
+                style="BACKGROUND-IMAGE: none; BACKGROUND-COLOR: #f2f2fd; WIDTH: 86px; WHITE-SPACE: normal" 
+                class=group_4>&nbsp; </TD>
+                <TD 
+                style="BACKGROUND-IMAGE: none; BACKGROUND-COLOR: #f2f2fd; WIDTH: 126px; WHITE-SPACE: normal" 
+                class=header_5>{$email_grval}</TD>
+                <TD 
+                style="BACKGROUND-IMAGE: none; BACKGROUND-COLOR: #f2f2fd; WIDTH: 367px; WHITE-SPACE: normal" 
+                class=header_6>{$Program_grval} </TD><!-------------------------------------  data -----------------------------------------></TR>
+              {END email_firstnewgroup}{BEGIN Program_firstnewgroup}<TR><TD 
+                style="BACKGROUND-COLOR: #afeeee; WIDTH: 88px; WHITE-SPACE: normal" 
+                class=group_1>&nbsp; </TD>
+                <TD 
+                style="BACKGROUND-COLOR: #f2f2fd; WIDTH: 90px; WHITE-SPACE: normal" 
+                class=group_2>&nbsp; </TD>
+                <TD 
+                style="BACKGROUND-COLOR: #f2f2fd; WIDTH: 160px; WHITE-SPACE: normal" 
+                class=group_3>&nbsp; </TD>
+                <TD 
+                style="BACKGROUND-COLOR: #f2f2fd; WIDTH: 86px; WHITE-SPACE: normal" 
+                class=group_4>&nbsp; </TD>
+                <TD 
+                style="BACKGROUND-COLOR: #f2f2fd; WIDTH: 126px; WHITE-SPACE: normal" 
+                class=group_5>&nbsp; </TD>
+                <TD 
+                style="BACKGROUND-COLOR: #f2f2fd; WIDTH: 367px; WHITE-SPACE: normal" 
+                class=header_6>{$Program_grval}</TD><!-------------------------------------  data -----------------------------------------></TR><!-------------------------------------  group summary ----------------------------------------->{END Program_firstnewgroup}{END grid_row}</TABLE></TD>
+          <TD class=runner-cr></TD></TR>
+        <TR class="runner-row style1"><TD class=runner-cl></TD>
+          <TD class=runner-cc><TABLE border=0 cellSpacing=0 cellPadding=0></TABLE></TD>
+          <TD class=runner-cr></TD></TR>
+        <TR class="runner-bottomrow style1"><TD class=runner-cl><IMG src="images/spacer.gif"></TD>
+          <TD class=runner-cc></TD>
+          <TD class=runner-cr><IMG src="images/spacer.gif"></TD></TR></TABLE>{END container_grid}
+      {BEGIN container_pagination}<TABLE class="runner-c runner-c-pagination" cellPadding=0><TR class="{$cheaderclass_pagination}"><TD class=runner-cl><IMG src="images/spacer.gif"></TD>
+          <TD class=runner-cc></TD>
+          <TD class=runner-cr><IMG src="images/spacer.gif"></TD></TR>
+        <TR class="runner-row style1"><TD class=runner-cl></TD>
+          <TD class=runner-cc><TABLE class=runner-hc border=0 cellPadding=0><TR>{BEGIN pagination_block}<TD class="runner-cc runner-bc runner-b-pagination" {$brickclass_pagination}><SPAN>{$pagination}</SPAN></TD>{END pagination_block}</TR></TABLE></TD>
+          <TD class=runner-cr></TD></TR>
+        <TR class="{$cfooterclass_pagination}"><TD class=runner-cl><IMG src="images/spacer.gif"></TD>
+          <TD class=runner-cc></TD>
+          <TD class=runner-cr><IMG src="images/spacer.gif"></TD></TR></TABLE>{END container_pagination}
+      {BEGIN container_form}<TABLE class="runner-c runner-c-form" cellPadding=0><TR class="{$cheaderclass_form}"><TD class=runner-cl><IMG src="images/spacer.gif"></TD>
+          <TD class=runner-cc></TD>
+          <TD class=runner-cr><IMG src="images/spacer.gif"></TD></TR>
+        <TR class="runner-row style1"><TD class=runner-cl></TD>
+          <TD class=runner-cc><TABLE class=runner-hc border=0 cellPadding=0><TR><TD class="runner-cc runner-bl runner-b-reportvariable" 
+                {$brickclass_reportvariable}><SPAN>{$report_filename}</SPAN></TD>
+                <TD class="runner-cc filler"></TD></TR></TABLE></TD>
+          <TD class=runner-cr></TD></TR>
+        <TR class="{$cfooterclass_form}"><TD class=runner-cl><IMG src="images/spacer.gif"></TD>
+          <TD class=runner-cc></TD>
+          <TD class=runner-cr><IMG src="images/spacer.gif"></TD></TR></TABLE>{END container_form}</TD>
+    <TD class="runner-right {$blockclass_right}"></TD></TR>
+  <TR class=runner-footer><TD class=runner-bottom 
+colSpan=3><!--%%bottom%%--></TD></TR></TABLE>{$footer}{END body} </BODY></HTML>

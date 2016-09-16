@@ -1,0 +1,4 @@
+
+var pType=Runner.pages.constants.PAGE_LIST;Runner.pages.PageSettings.addPageEvent("student_billing",pType,"afterPageReady",function(pageObj,proxy,pageid){pageObj.buttonNames[pageObj.buttonNames.length]='Cetak_Notis_Yuran';if(!pageObj.buttonEventBefore['Cetak_Notis_Yuran']){pageObj.buttonEventBefore['Cetak_Notis_Yuran']=function(params,ctrl,pageObj,proxy,pageid,rowData){}}
+if(!pageObj.buttonEventAfter['Cetak_Notis_Yuran']){pageObj.buttonEventAfter['Cetak_Notis_Yuran']=function(result,ctrl,pageObj,proxy,pageid,rowData){var sid=result["sid"];var viewNotis="x_bil_notis.php?sid="+sid;window.open(viewNotis,"_blank");}}
+$('a[id=Cetak_Notis_Yuran]').each(function(){if(!$(this).closest('tr.gridRowAdd').length){var newId="Cetak_Notis_Yuran"+"_"+Runner.genId();this.id=newId;var button_Cetak_Notis_Yuran=new Runner.form.Button({id:newId,btnName:"Cetak_Notis_Yuran"});button_Cetak_Notis_Yuran.init({args:[pageObj,proxy,pageid]});}});});

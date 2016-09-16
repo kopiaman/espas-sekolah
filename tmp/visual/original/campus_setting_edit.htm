@@ -1,0 +1,399 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+		<title>{$pagetitle}</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=7">
+		<meta http-equiv="Content-Type" content="text/html; charset=Windows-1252">
+		<link REL="stylesheet" href="styles/default.css" type="text/css">
+		{BEGIN rtlCSS}
+		<link REL="stylesheet" href="styles/defaultRTL.css" type="text/css">
+		{END rtlCSS}
+		{BEGIN styleCSSFiles}
+		<link REL="stylesheet" href="{$stylepath}" type="text/css">
+		{END styleCSSFiles}
+		{BEGIN pageCSSFiles}
+		<link REL="stylesheet" href="{$pagestylepath}" type="text/css">
+		{END pageCSSFiles}
+		<!--[if IE]>
+			<link REL="stylesheet" href="styles/defaultIE.css" type="text/css">
+			{BEGIN IEcssFiles}
+			<link REL="stylesheet" href="{$stylepathIE}" type="text/css">
+			{END IEcssFiles}
+		<![endif]-->
+	</head>
+	
+	<body class="{$stylename}" {$bodyattrs}>
+	{BEGIN body}
+		{$header}
+		<table   cellpadding="0" class="runner-toptable">
+			<tr class="runner-header">
+				<td class="runner-top" colspan=3>
+					
+
+{BEGIN container_edit}
+<table class="runner-c runner-c-edit" cellpadding="0" align=center>
+
+
+<tr class="runner-toprow style2 header"><td class="runner-cl"><img src="images/spacer.gif"></td><td class="runner-cc" ><div  class="runner-b-editheader {$brickclass_editheader}">Set Organisasi, Sunting rekod [
+Id: {$show_key1}
+]</div></td><td class="runner-cr"><img src="images/spacer.gif"></td></tr>
+
+
+{BEGIN message_block}
+<tr  class="runner-row style1 runner-b-message {$brickclass_message}"><td class="runner-cl"></td><td class="runner-cc runner-brickcontents" ><div class="runner-message">{$message}</div></td><td class="runner-cr"></td></tr>{END message_block}
+
+
+
+<tr  class="runner-row style1 runner-b-wrapper {$wrapperclass_fields}"><td class="runner-cl"></td><td class="runner-cc runner-brickcontents runner-wrapper" >
+
+{BEGIN container_fields}
+<table class="runner-c runner-c-fields" cellpadding="0" >
+
+
+	{BEGIN logo_fieldblock}
+	<tr class="runner-toprow header style1 runner-b-editfields"><td class="runner-cl"><img src="images/spacer.gif"></td>
+		<td class="runner-cc runner-cc1">
+			<div class="fieldlabel_logo {$fielddispclass_logo}">
+				{BEGIN logo_label}Logo{END logo_label}
+			</div>
+		</td>
+		<td class="runner-cc alt runner-fixedcell">
+			<div class="fieldcontrol_logo {$fielddispclass_logo}">
+				{$logo_editcontrol}&nbsp;
+			</div>
+		</td>
+	<td class="runner-cr alt"><img src="images/spacer.gif"></td></tr>
+{END logo_fieldblock}
+	{BEGIN acronyim_fieldblock}
+	<tr class="runner-row style1 runner-b-editfields"><td class="runner-cl"></td>
+		<td class="runner-cc runner-cc1">
+			<div class="fieldlabel_acronyim {$fielddispclass_acronyim}">
+				{BEGIN acronyim_label}Akronim{END acronyim_label}
+			</div>
+		</td>
+		<td class="runner-cc alt runner-fixedcell">
+			<div class="fieldcontrol_acronyim {$fielddispclass_acronyim}">
+				{$acronyim_editcontrol}&nbsp;
+			</div>
+		</td>
+	<td class="runner-cr alt"></td></tr>
+{END acronyim_fieldblock}
+	{BEGIN campus_name_fieldblock}
+	<tr class="runner-row style1 runner-b-editfields"><td class="runner-cl"></td>
+		<td class="runner-cc runner-cc1">
+			<div class="fieldlabel_campus_name {$fielddispclass_campus_name}">
+				{BEGIN campus_name_label}Nama Sekolah{END campus_name_label}
+			</div>
+		</td>
+		<td class="runner-cc alt runner-fixedcell">
+			<div class="fieldcontrol_campus_name {$fielddispclass_campus_name}">
+				{$campus_name_editcontrol}&nbsp;
+			</div>
+		</td>
+	<td class="runner-cr alt"></td></tr>
+{END campus_name_fieldblock}
+	{BEGIN sek_kod_fieldblock}
+	<tr class="runner-row style1 runner-b-editfields"><td class="runner-cl"></td>
+		<td class="runner-cc runner-cc1">
+			<div class="fieldlabel_sek_kod {$fielddispclass_sek_kod}">
+				{BEGIN sek_kod_label}Kod Sekolah{END sek_kod_label}
+			</div>
+		</td>
+		<td class="runner-cc alt runner-fixedcell">
+			<div class="fieldcontrol_sek_kod {$fielddispclass_sek_kod}">
+				{$sek_kod_editcontrol}&nbsp;
+			</div>
+		</td>
+	<td class="runner-cr alt"></td></tr>
+{END sek_kod_fieldblock}
+	{BEGIN address_fieldblock}
+	<tr class="runner-row style1 runner-b-editfields"><td class="runner-cl"></td>
+		<td class="runner-cc runner-cc1">
+			<div class="fieldlabel_address {$fielddispclass_address}">
+				{BEGIN address_label}Alamat{END address_label}
+			</div>
+		</td>
+		<td class="runner-cc alt runner-fixedcell">
+			<div class="fieldcontrol_address {$fielddispclass_address}">
+				{$address_editcontrol}&nbsp;
+			</div>
+		</td>
+	<td class="runner-cr alt"></td></tr>
+{END address_fieldblock}
+	{BEGIN postcode_fieldblock}
+	<tr class="runner-row style1 runner-b-editfields"><td class="runner-cl"></td>
+		<td class="runner-cc runner-cc1">
+			<div class="fieldlabel_postcode {$fielddispclass_postcode}">
+				{BEGIN postcode_label}Poskod{END postcode_label}
+			</div>
+		</td>
+		<td class="runner-cc alt runner-fixedcell">
+			<div class="fieldcontrol_postcode {$fielddispclass_postcode}">
+				{$postcode_editcontrol}&nbsp;
+			</div>
+		</td>
+	<td class="runner-cr alt"></td></tr>
+{END postcode_fieldblock}
+	{BEGIN city_fieldblock}
+	<tr class="runner-row style1 runner-b-editfields"><td class="runner-cl"></td>
+		<td class="runner-cc runner-cc1">
+			<div class="fieldlabel_city {$fielddispclass_city}">
+				{BEGIN city_label}Bandar{END city_label}
+			</div>
+		</td>
+		<td class="runner-cc alt runner-fixedcell">
+			<div class="fieldcontrol_city {$fielddispclass_city}">
+				{$city_editcontrol}&nbsp;
+			</div>
+		</td>
+	<td class="runner-cr alt"></td></tr>
+{END city_fieldblock}
+	{BEGIN state_fieldblock}
+	<tr class="runner-row style1 runner-b-editfields"><td class="runner-cl"></td>
+		<td class="runner-cc runner-cc1">
+			<div class="fieldlabel_state {$fielddispclass_state}">
+				{BEGIN state_label}Negeri{END state_label}
+			</div>
+		</td>
+		<td class="runner-cc alt runner-fixedcell">
+			<div class="fieldcontrol_state {$fielddispclass_state}">
+				{$state_editcontrol}&nbsp;
+			</div>
+		</td>
+	<td class="runner-cr alt"></td></tr>
+{END state_fieldblock}
+	{BEGIN email_fieldblock}
+	<tr class="runner-row style1 runner-b-editfields"><td class="runner-cl"></td>
+		<td class="runner-cc runner-cc1">
+			<div class="fieldlabel_email {$fielddispclass_email}">
+				{BEGIN email_label}Email{END email_label}
+			</div>
+		</td>
+		<td class="runner-cc alt runner-fixedcell">
+			<div class="fieldcontrol_email {$fielddispclass_email}">
+				{$email_editcontrol}&nbsp;
+			</div>
+		</td>
+	<td class="runner-cr alt"></td></tr>
+{END email_fieldblock}
+	{BEGIN faxNo_fieldblock}
+	<tr class="runner-row style1 runner-b-editfields"><td class="runner-cl"></td>
+		<td class="runner-cc runner-cc1">
+			<div class="fieldlabel_faxNo {$fielddispclass_faxNo}">
+				{BEGIN faxNo_label}No Fax{END faxNo_label}
+			</div>
+		</td>
+		<td class="runner-cc alt runner-fixedcell">
+			<div class="fieldcontrol_faxNo {$fielddispclass_faxNo}">
+				{$faxNo_editcontrol}&nbsp;
+			</div>
+		</td>
+	<td class="runner-cr alt"></td></tr>
+{END faxNo_fieldblock}
+	{BEGIN telephone_fieldblock}
+	<tr class="runner-row style1 runner-b-editfields"><td class="runner-cl"></td>
+		<td class="runner-cc runner-cc1">
+			<div class="fieldlabel_telephone {$fielddispclass_telephone}">
+				{BEGIN telephone_label}No Tel{END telephone_label}
+			</div>
+		</td>
+		<td class="runner-cc alt runner-fixedcell">
+			<div class="fieldcontrol_telephone {$fielddispclass_telephone}">
+				{$telephone_editcontrol}&nbsp;
+			</div>
+		</td>
+	<td class="runner-cr alt"></td></tr>
+{END telephone_fieldblock}
+	{BEGIN daerah_fieldblock}
+	<tr class="runner-row style1 runner-b-editfields"><td class="runner-cl"></td>
+		<td class="runner-cc runner-cc1">
+			<div class="fieldlabel_daerah {$fielddispclass_daerah}">
+				{BEGIN daerah_label}Daerah{END daerah_label}
+			</div>
+		</td>
+		<td class="runner-cc alt runner-fixedcell">
+			<div class="fieldcontrol_daerah {$fielddispclass_daerah}">
+				{$daerah_editcontrol}&nbsp;
+			</div>
+		</td>
+	<td class="runner-cr alt"></td></tr>
+{END daerah_fieldblock}
+	{BEGIN gb_tel_fieldblock}
+	<tr class="runner-row style1 runner-b-editfields"><td class="runner-cl"></td>
+		<td class="runner-cc runner-cc1">
+			<div class="fieldlabel_gb_tel {$fielddispclass_gb_tel}">
+				{BEGIN gb_tel_label}No Tel Guru Besar{END gb_tel_label}
+			</div>
+		</td>
+		<td class="runner-cc alt runner-fixedcell">
+			<div class="fieldcontrol_gb_tel {$fielddispclass_gb_tel}">
+				{$gb_tel_editcontrol}&nbsp;
+			</div>
+		</td>
+	<td class="runner-cr alt"></td></tr>
+{END gb_tel_fieldblock}
+	{BEGIN gb_name_fieldblock}
+	<tr class="runner-row style1 runner-b-editfields"><td class="runner-cl"></td>
+		<td class="runner-cc runner-cc1">
+			<div class="fieldlabel_gb_name {$fielddispclass_gb_name}">
+				{BEGIN gb_name_label}Nama Guru Besar{END gb_name_label}
+			</div>
+		</td>
+		<td class="runner-cc alt runner-fixedcell">
+			<div class="fieldcontrol_gb_name {$fielddispclass_gb_name}">
+				{$gb_name_editcontrol}&nbsp;
+			</div>
+		</td>
+	<td class="runner-cr alt"></td></tr>
+{END gb_name_fieldblock}
+	{BEGIN sek_mix_fieldblock}
+	<tr class="runner-row style1 runner-b-editfields"><td class="runner-cl"></td>
+		<td class="runner-cc runner-cc1">
+			<div class="fieldlabel_sek_mix {$fielddispclass_sek_mix}">
+				{BEGIN sek_mix_label}Sek. Lelaki/ Perempuan/ Bercampur{END sek_mix_label}
+			</div>
+		</td>
+		<td class="runner-cc alt runner-fixedcell">
+			<div class="fieldcontrol_sek_mix {$fielddispclass_sek_mix}">
+				{$sek_mix_editcontrol}&nbsp;
+			</div>
+		</td>
+	<td class="runner-cr alt"></td></tr>
+{END sek_mix_fieldblock}
+	{BEGIN sek_jenis_fieldblock}
+	<tr class="runner-row style1 runner-b-editfields"><td class="runner-cl"></td>
+		<td class="runner-cc runner-cc1">
+			<div class="fieldlabel_sek_jenis {$fielddispclass_sek_jenis}">
+				{BEGIN sek_jenis_label}Jenis Sekolah{END sek_jenis_label}
+			</div>
+		</td>
+		<td class="runner-cc alt runner-fixedcell">
+			<div class="fieldcontrol_sek_jenis {$fielddispclass_sek_jenis}">
+				{$sek_jenis_editcontrol}&nbsp;
+			</div>
+		</td>
+	<td class="runner-cr alt"></td></tr>
+{END sek_jenis_fieldblock}
+	{BEGIN sek_building_fieldblock}
+	<tr class="runner-row style1 runner-b-editfields"><td class="runner-cl"></td>
+		<td class="runner-cc runner-cc1">
+			<div class="fieldlabel_sek_building {$fielddispclass_sek_building}">
+				{BEGIN sek_building_label}Jenis Bangunan{END sek_building_label}
+			</div>
+		</td>
+		<td class="runner-cc alt runner-fixedcell">
+			<div class="fieldcontrol_sek_building {$fielddispclass_sek_building}">
+				{$sek_building_editcontrol}&nbsp;
+			</div>
+		</td>
+	<td class="runner-cr alt"></td></tr>
+{END sek_building_fieldblock}
+	{BEGIN sek_owner_fieldblock}
+	<tr class="runner-row style1 runner-b-editfields"><td class="runner-cl"></td>
+		<td class="runner-cc runner-cc1">
+			<div class="fieldlabel_sek_owner {$fielddispclass_sek_owner}">
+				{BEGIN sek_owner_label}Pemilik Bangunan{END sek_owner_label}
+			</div>
+		</td>
+		<td class="runner-cc alt runner-fixedcell">
+			<div class="fieldcontrol_sek_owner {$fielddispclass_sek_owner}">
+				{$sek_owner_editcontrol}&nbsp;
+			</div>
+		</td>
+	<td class="runner-cr alt"></td></tr>
+{END sek_owner_fieldblock}
+
+
+
+{BEGIN legend}
+<tr  class="runner-row style3 runner-b-legend {$brickclass_legend}"><td class="runner-cl"></td><td class="runner-cc runner-brickcontents" colspan=2><span id="required_block{$id}">
+<img src="images/icon_required.gif" alt="bullet"> - Medan Perlu
+</span>
+</td><td class="runner-cr"></td></tr>{END legend}
+
+
+
+<tr  class="runner-row style2 runner-b-editbuttons {$brickclass_editbuttons}"><td class="runner-cl"></td><td class="runner-cc runner-brickcontents" colspan=2>{BEGIN save_button}
+<span class="runner-btnframe">
+<span class="runner-btnleft"></span>
+<span class="runner-btnright"></span>
+<a href="#" class="runner-button" {$savebutton_attrs}>Simpan</a>
+</span>
+{END save_button}
+{BEGIN reset_button}
+<span class="runner-btnframe">
+<span class="runner-btnleft"></span>
+<span class="runner-btnright"></span>
+<a href="#" class="runner-button" {$resetbutton_attrs}>Set semula</a>
+</span>
+{END reset_button}
+{BEGIN prev_button}
+<span class="runner-btnframe">
+<span class="runner-btnleft"></span>
+<span class="runner-btnright"></span>
+<a href="#" class="runner-button" {$prevbutton_attrs}>&nbsp;<<<&nbsp;</a>
+</span>
+{END prev_button}
+{BEGIN back_button}
+<span class="runner-btnframe">
+<span class="runner-btnleft"></span>
+<span class="runner-btnright"></span>
+<a href="#" class="runner-button" {$backbutton_attrs}>Kembali ke senarai</a>
+</span>
+{END back_button}
+{BEGIN next_button}
+<span class="runner-btnframe">
+<span class="runner-btnleft"></span>
+<span class="runner-btnright"></span>
+<a href="#" class="runner-button" {$nextbutton_attrs}>&nbsp;>>>&nbsp;</a>
+</span>
+{END next_button}
+</td><td class="runner-cr"></td></tr>
+
+
+<tr class="{$cfooterclass_fields}">
+<td class="runner-cl"><img src="images/spacer.gif"></td>
+<td class="runner-cc"></td><td class="runner-cc"></td><td class="runner-cr"><img src="images/spacer.gif"></td>
+</tr>
+</table>
+{END container_fields}
+
+</td><td class="runner-cr"></td></tr>
+
+
+<tr class="{$cfooterclass_edit}">
+<td class="runner-cl"><img src="images/spacer.gif"></td>
+<td class="runner-cc"></td><td class="runner-cr"><img src="images/spacer.gif"></td>
+</tr>
+</table>
+{END container_edit}
+
+
+
+
+				</td>
+			</tr>
+			<tr class="runner-body">
+				
+				<td class="runner-left {$blockclass_left}" >
+					
+				</td>	
+				
+				<td class="runner-center {$blockclass_center}">
+					
+				</td>	
+
+				<td class="runner-right {$blockclass_right}">
+					
+				</td>	
+			</tr>
+			<tr class="runner-footer">
+				<td class="runner-bottom" colspan=3>
+					<!--%%bottom%%-->
+				</td>
+			</tr>
+		</table>
+		{$footer}
+	{END body}
+	</body>
+</html>

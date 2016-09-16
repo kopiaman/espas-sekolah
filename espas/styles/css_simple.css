@@ -1,0 +1,96 @@
+@charset "utf-8";
+body {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	line-height: 24px;
+}
+
+.rapat{
+	line-height:15px;
+	text-align:left;
+}
+
+.total_amount{
+	text-align:right;
+	font-style:14px bold;
+}
+
+
+td, th {
+	font-size: 12px;
+	line-height: 24px;
+	color: #333333;
+	text-align:center;
+	
+}
+
+.left {
+	text-align:left;
+}
+
+.left2 {
+	text-align:left;
+	font-size:10px;
+}
+
+.left2 ul li{
+	padding-top:3px;
+	line-height:10px;
+	
+}
+.right{
+	text-align:right;
+}
+
+a {
+	font-size: 12px;
+	color: #336600;
+}
+
+  .underline{
+	 text-decoration:underline;
+	 font-weight:bold;
+ }
+
+.footer {
+	text-align:center;
+	font-size:10px;
+}
+
+/* */
+.table2{ border-collapse:collapse;}
+.table2 th{ border-color:#666; border-collapse:collapse}
+.table2 tr{ border-color:#666; border-collapse:collapse; }
+.table2 td{font-size:12px}
+
+@media print{
+.table2 td{font-size:10px}	
+}
+
+
+.table3{ border-collapse:collapse; text-align:left}
+.table3 th{ border-color:#666; border-collapse:collapse}
+.table3 tr{ border-color:#666; border-collapse:collapse; text-align:left}
+.table3 p{ text-align:left}
+	
+h5{
+	font-size:14px;
+}
+	
+.key{
+	font-size:14px;
+}
+.bold {
+	font-weight: bold;
+}
+
+.small{
+	font-size:10px;
+		line-height:12px;
+}
+
+.small ul li{
+	padding-top:5px;
+
+	
+}

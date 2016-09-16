@@ -1,0 +1,76 @@
+<div class="searchOptions bottomPanelBorder" {$srchOpt_attrs}>
+	
+	<!-- Search panel content -->
+	<div class="srchCritTop" style="display: none;">
+		Criteria:&nbsp;
+		<input type="radio" name="srchType" class="runner-radio-button" {$all_checkbox}> {BEGIN all_checkbox_label}all{END all_checkbox_label}
+		&nbsp;&nbsp;&nbsp;
+		<input type="radio" name="srchType" class="runner-radio-button" {$any_checkbox}> {BEGIN any_checkbox_label}any{END any_checkbox_label}
+	</div>
+	
+	<div class="addOption">
+		<span class="runner-btnframe">
+		<span class="runner-btnleft"></span>
+		<span class="runner-btnright"></span>
+		<a href="#" id="showHideControlChooseMenu{$id}" class="runner-button" {$showHideCtrls_attrs}>Add field</a>
+		</span>
+		&nbsp;&nbsp;&nbsp;
+		<span class="runner-btnframe">
+		<span class="runner-btnleft"></span>
+		<span class="runner-btnright"></span>
+		<a href="#" id="showHideSearchType{$id}" class="runner-button" {$showHideCtrlsOpt_attrs}>{$showHideOpt_mess}</a>
+		</span>
+	</div>
+	
+	<!-- choose controls div -->
+	<div class="runner-panel controlChooseMenu" {$controlChooseMenuDiv_attrs}>
+		{BEGIN addSearch_Name}
+			<a href="#" id="addSearchControl_Name" class="addSearchControl" {$addSearchControl_Name_attrs}>Nama</a><br>
+		{END addSearch_Name}
+		{BEGIN addSearch_ICNO}
+			<a href="#" id="addSearchControl_ICNO" class="addSearchControl" {$addSearchControl_ICNO_attrs}>IC/Mykad</a><br>
+		{END addSearch_ICNO}
+		{BEGIN addSearch_Date_Apply}
+			<a href="#" id="addSearchControl_Date_Apply" class="addSearchControl" {$addSearchControl_Date_Apply_attrs}>Tarikh Mohon</a><br>
+		{END addSearch_Date_Apply}
+		{BEGIN addSearch_Gender}
+			<a href="#" id="addSearchControl_Gender" class="addSearchControl" {$addSearchControl_Gender_attrs}>Jantina</a><br>
+		{END addSearch_Gender}
+		{BEGIN addSearch_Address1}
+			<a href="#" id="addSearchControl_Address1" class="addSearchControl" {$addSearchControl_Address1_attrs}>Alamat</a><br>
+		{END addSearch_Address1}
+		{BEGIN addSearch_HomeTelephone}
+			<a href="#" id="addSearchControl_HomeTelephone" class="addSearchControl" {$addSearchControl_HomeTelephone_attrs}>Tel Rumah</a><br>
+		{END addSearch_HomeTelephone}
+		{BEGIN addSearch_MobileTelephone}
+			<a href="#" id="addSearchControl_MobileTelephone" class="addSearchControl" {$addSearchControl_MobileTelephone_attrs}>Tel HP</a><br>
+		{END addSearch_MobileTelephone}
+		{BEGIN addSearch_Status}
+			<a href="#" id="addSearchControl_Status" class="addSearchControl" {$addSearchControl_Status_attrs}>Status</a><br>
+		{END addSearch_Status}
+		{BEGIN addSearch_Disability}
+			<a href="#" id="addSearchControl_Disability" class="addSearchControl" {$addSearchControl_Disability_attrs}>Kecacatan</a><br>
+		{END addSearch_Disability}
+	</div>
+	
+	<table class="controlsBlock">
+	{BEGIN searchCtrlBlock}
+		<tr class="srchPanelRow" {$filterRow_attrs}>
+			<td class="srchPanelCell">{$delCtrlButt}</td>
+			<td class="srchPanelCell">{$fLabel}:&nbsp;</td>
+			<td class="srchPanelCell srchPanelCell2">
+				<div class="runner-searchtype">{$searchtype}</div>
+				<div class="runner-searchcontrol">{$searchcontrol}</div>
+				<div class="runner-searchcontrol">{$searchcontrol1}</div>
+		</tr>
+	{END searchCtrlBlock}
+	</table>
+	
+	<div class="bottomSearchButt" align="left" {$bottomSearchButt_attrs}>
+		<span class="runner-btnframe">
+		<span class="runner-btnleft"></span>
+		<span class="runner-btnright"></span>
+		<a href="#" class="runner-button" {$searchbutton_attrs}>Cari</a>
+		</span>
+	</div>
+</div>

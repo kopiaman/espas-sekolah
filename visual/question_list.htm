@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<HTML {$html_attrs}><HEAD><TITLE>{$pagetitle}</TITLE>
+<META content=IE=7 http-equiv=X-UA-Compatible>
+<META content="text/html; charset=Windows-1252" http-equiv=Content-Type><LINK rel=stylesheet type=text/css href="styles/default.css">{BEGIN rtlCSS}<link REL="stylesheet" href="styles/defaultRTL.css" type="text/css">
+		{END rtlCSS}
+		{BEGIN styleCSSFiles}<LINK rel=stylesheet type=text/css href="{$stylepath}">{END styleCSSFiles}{BEGIN pageCSSFiles}<LINK rel=stylesheet type=text/css href="{$pagestylepath}">{END pageCSSFiles}<!--[if IE]><LINK rel=stylesheet type=text/css href="styles/defaultIE.css">{BEGIN IEcssFiles}<LINK rel=stylesheet type=text/css href="{$stylepathIE}">{END IEcssFiles}<![endif]-->
+<META name=GENERATOR content="MSHTML 8.00.7600.16385"></HEAD>
+<BODY class="{$stylename}" {$bodyattrs}>{BEGIN body}{$header} 
+<TABLE style="WIDTH: auto" class=runner-toptable cellPadding=0><TR class=runner-header><TD class=runner-top colSpan=3>{BEGIN container_toplinks}<table class="runner-c runner-c-toplinks" cellpadding="0" ><tr class="{$cheaderclass_toplinks}"><td class="runner-cl"><img src="images/spacer.gif"></td>
+<td class="runner-cc"></td><td class="runner-cr"><img src="images/spacer.gif"></td>
+</tr>
+<tr class="runner-row style1"><td class="runner-cl"></td>
+<td class="runner-cc"><table border="0" cellpadding="0" class="runner-hc"><tr>{BEGIN asearch_link}<td  class="runner-cc runner-bl runner-b-toplinks_advsearch" {$brickclass_toplinks_advsearch}><span><span class="runner-btnframe"><span class="runner-btnleft"></span>
+	<span class="runner-btnright"></span>
+	<a href="#" class="runner-button" {$advsearchlink_attrs}>Advanced search</a>
+	</span>
+</span></td>
+{END asearch_link}
+
+
+
+
+
+<td class="runner-cc filler"></td>
+</tr>
+</table></td>
+<td class="runner-cr"></td>
+</tr>
+
+<tr class="{$cfooterclass_toplinks}"><td class="runner-cl"><img src="images/spacer.gif"></td>
+<td class="runner-cc"></td><td class="runner-cr"><img src="images/spacer.gif"></td>
+</tr>
+</table>
+{END container_toplinks}
+
+
+
+{BEGIN container_hmenu}<TABLE class="runner-c runner-c-hmenu" cellPadding=0><TR class="{$cheaderclass_hmenu}"><TD class=runner-cl><IMG src="images/spacer.gif"></TD>
+          <TD class=runner-cc></TD>
+          <TD class=runner-cr><IMG src="images/spacer.gif"></TD></TR>
+        <TR class="runner-row style1"><TD class=runner-cl></TD>
+          <TD class=runner-cc><TABLE class=runner-hc border=0 cellPadding=0><TR>{BEGIN menu_block}<TD class="runner-cc runner-bl runner-b-hmenu" {$brickclass_hmenu}><SPAN>{$mainmenu horizontal}</SPAN></TD>
+                {END menu_block}<TD class="runner-cc filler"></TD></TR></TABLE></TD>
+          <TD class=runner-cr></TD></TR>
+        <TR class="{$cfooterclass_hmenu}"><TD class=runner-cl><IMG src="images/spacer.gif"></TD>
+          <TD class=runner-cc></TD>
+          <TD class=runner-cr><IMG src="images/spacer.gif"></TD></TR></TABLE>{END container_hmenu}
+      {BEGIN container_search}<table class="runner-c runner-c-search" cellpadding="0" ><tr class="{$cheaderclass_search}"><td class="runner-cl"><img src="images/spacer.gif"></td>
+<td class="runner-cc"></td><td class="runner-cr"><img src="images/spacer.gif"></td>
+</tr>
+<tr class="runner-row style1"><td class="runner-cl"></td>
+<td class="runner-cc"><table border="0" cellpadding="0" class="runner-hc"><tr>{BEGIN searchform_block}<td  class="runner-cc runner-bl runner-b-search" {$brickclass_search}><span><span>{BEGIN searchform_text}<INPUT size=25 {$searchfor_attrs}>{END searchform_text}
+		&nbsp;
+		{BEGIN searchform_search}<SPAN class=runner-btnframe><SPAN class=runner-btnleft></SPAN><SPAN class=runner-btnright></SPAN><A class=runner-button-img href="#" {$searchbutton_attrs}><IMG src="images/search/search.gif"></A> </SPAN>{END searchform_search}
+		&nbsp;
+		{BEGIN searchform_showall}<span class="runner-btnframe" {$showAllCont_attrs}><SPAN class=runner-btnleft></SPAN><SPAN class=runner-btnright></SPAN><A class=runner-button href="#" {$showallbutton_attrs}>Show 
+                  all</A> </span>{END searchform_showall}
+                </span>
+</span></td>
+{END searchform_block}
+
+
+{BEGIN searchformbuttons_block}<td  class="runner-cc runner-bl runner-b-search_buttons" {$brickclass_search_buttons}><span>{BEGIN searchPanelTopButtons}<SPAN>
+		&nbsp;
+		<SPAN class=runner-btnframe><SPAN class=runner-btnleft></SPAN><SPAN class=runner-btnright></SPAN><A id=showSrchWin{$id} class=runner-button-img href="#" {$showHideSearchWin_attrs}><IMG src="images/search/showWindowPin.gif"></A> </SPAN>&nbsp; <SPAN class=runner-btnframe><SPAN class=runner-btnleft></SPAN><SPAN class=runner-btnright></SPAN><A id=showOptPanel{$id} class=runner-button-img href="#" {$showHideSearchPanel_attrs}><IMG src="images/search/showOptions.gif"></A> </SPAN></SPAN>{END searchPanelTopButtons}
+</span></td>
+{END searchformbuttons_block}
+
+<td class="runner-cc filler"></td>
+{BEGIN details_block}<td  class="runner-cc runner-br runner-b-details_found" {$brickclass_details_found}><span><SPAN 
+                  {$details_attrs}>Details found: <b><SPAN 
+                  class=runner-details_found_count>{$records_found}</SPAN></b>
+	</SPAN>
+                </span></td>
+{END details_block}
+
+
+{BEGIN pages_block}<td  class="runner-cc runner-br runner-b-page_of" {$brickclass_page_of}><span><SPAN 
+                  {$pages_attrs}>Page <b>{$page}</b> of 
+                  <b>{$maxpages}</b>
+	</SPAN></span></td>
+                {END pages_block}
+
+
+{BEGIN recordspp_block}<td  class="runner-cc runner-br runner-b-recsperpage" {$brickclass_recsperpage}><span><SPAN id=recordspp_block{$id} name="recordspp_block{$id}">Records Per Page:&nbsp;{$recsPerPage} 
+                  </SPAN></span></td>{END recordspp_block}
+
+
+</tr>
+</table></td>
+<td class="runner-cr"></td>
+</tr>
+
+<tr class="{$cfooterclass_search}"><td class="runner-cl"><img src="images/spacer.gif"></td>
+<td class="runner-cc"></td><td class="runner-cr"><img src="images/spacer.gif"></td>
+</tr>
+</table>
+{END container_search}
+
+
+
+{BEGIN container_recordcontrols}<TABLE class="runner-c runner-c-recordcontrols" cellPadding=0><TR class="{$cheaderclass_recordcontrols}"><TD class=runner-cl><IMG src="images/spacer.gif"></TD>
+          <TD class=runner-cc></TD>
+          <TD class=runner-cr><IMG src="images/spacer.gif"></TD></TR>
+        <TR class="runner-row style1"><TD class=runner-cl></TD>
+          <TD class=runner-cc><TABLE class=runner-hc border=0 cellPadding=0><TR>{BEGIN newrecord_controls_block}<td  class="runner-cc runner-bl runner-b-recordcontrols_new" {$brickclass_recordcontrols_new}><SPAN>{BEGIN inlineadd_link}<span class="runner-btnframe"><span class="runner-btnleft"></span>
+		<span class="runner-btnright"></span>
+		<a href="#" class="runner-button" {$inlineaddlink_attrs}>Inline Add</a>
+		</span>
+	{END inlineadd_link}</SPAN></td>
+                {END newrecord_controls_block}{BEGIN record_controls_block}<td  class="runner-cc runner-bl runner-b-recordcontrol" {$brickclass_recordcontrol}><SPAN>{BEGIN editselected_link}<span class="runner-btnframe" {$editselectedlink_span}><span class="runner-btnleft"></span>
+		<span class="runner-btnright"></span>
+		<a href="#" class="runner-button" {$editselectedlink_attrs}>Edit selected</a>
+		</span>
+	{END editselected_link}
+	{BEGIN saveall_link}<span class="runner-btnframe" {$savealllink_span}><span class="runner-btnleft"></span>
+		<span class="runner-btnright"></span>
+		<a href="#" class="runner-button" {$savealllink_attrs}>Save all</a>
+		</span>
+	{END saveall_link}
+	{BEGIN cancelall_link}<span class="runner-btnframe" {$cancelalllink_span}><span class="runner-btnleft"></span>
+		<span class="runner-btnright"></span>
+		<a href="#" class="runner-button" {$cancelalllink_attrs}>Cancel</a>
+		</span>
+	{END cancelall_link}
+
+		{BEGIN deleteselected_link}<SPAN class=runner-btnframe {$deleteselectedlink_span}><SPAN class=runner-btnleft></SPAN><SPAN class=runner-btnright></SPAN><A class=runner-button href="#" {$deleteselectedlink_attrs}>Delete selected</A> </SPAN>{END deleteselected_link}</SPAN></td>
+                {END record_controls_block}
+
+<td class="runner-cc filler"></td></TR></TABLE></TD>
+          <TD class=runner-cr></TD></TR>
+        <TR class="{$cfooterclass_recordcontrols}"><TD class=runner-cl><IMG src="images/spacer.gif"></TD>
+          <TD class=runner-cc></TD>
+          <TD class=runner-cr><IMG src="images/spacer.gif"></TD></TR></TABLE>{END container_recordcontrols}</TD></TR>
+  <TR class=runner-body><TD class="runner-left {$blockclass_left}">{BEGIN container_left}<TABLE class="runner-c runner-c-left" cellPadding=0><TR class="{$cheaderclass_left}"><TD class=runner-cl><IMG src="images/spacer.gif"></TD>
+          <TD class=runner-cc></TD>
+          <TD class=runner-cr><IMG src="images/spacer.gif"></TD></TR>
+        {BEGIN searchPanel}<TR class="runner-row style1 runner-b-searchpanel {$brickclass_searchpanel}"><TD class=runner-cl></TD>
+          <TD class="runner-cc runner-brickcontents"><DIV class=searchPanelContainer>{$adv_search_panel} 
+            </DIV></TD>
+          <TD class=runner-cr></TD></TR>
+        {END searchPanel}<TR class="{$cfooterclass_left}"><TD class=runner-cl><IMG src="images/spacer.gif"></TD>
+          <TD class=runner-cc></TD>
+          <TD class=runner-cr><IMG src="images/spacer.gif"></TD></TR></TABLE>{END container_left}</TD>
+    <TD style="WIDTH: auto" class="runner-center {$blockclass_center}">{BEGIN container_message}<TABLE class="runner-c runner-c-message" cellPadding=0><TR class="{$cheaderclass_message}"><TD class=runner-cl><IMG src="images/spacer.gif"></TD>
+          <TD class=runner-cc></TD>
+          <TD class=runner-cr><IMG src="images/spacer.gif"></TD></TR>
+        <TR class="runner-row style1"><TD class=runner-cl></TD>
+          <TD class=runner-cc><TABLE class=runner-hc border=0 cellPadding=0><TR>{BEGIN message_block}<TD class="runner-cc runner-bc runner-b-message" {$brickclass_message}><SPAN><div class="runner-message">{$message}</div></SPAN></TD>{END message_block}</TR></TABLE></TD>
+          <TD class=runner-cr></TD></TR>
+        <TR class="{$cfooterclass_message}"><TD class=runner-cl><IMG src="images/spacer.gif"></TD>
+          <TD class=runner-cc></TD>
+          <TD class=runner-cr><IMG src="images/spacer.gif"></TD></TR></TABLE>{END container_message}
+
+
+
+{BEGIN container_grid}{BEGIN grid_block}<TABLE style="WIDTH: auto" class="runner-c runner-c-grid runner-b-grid" cellPadding=0><THEAD>{BEGIN grid_header}<TR class="runner-toprow style1 {$gridHeader_class}">{BEGIN record_header}<TH style="WIDTH: 1px" class=runner-cl><IMG src="images/spacer.gif"></TH>
+          {BEGIN listIcons_column}<TH style="WIDTH: 46px" class=runner-cc iEditCont="all"></TH>
+          {END listIcons_column}{BEGIN checkbox_column}<TH style="WIDTH: 21px" class="runner-cc runner-bc"><INPUT type=checkbox 
+            {$checkboxheader_attrs}></TH>
+          {END checkbox_column}{BEGIN courseID_fieldheadercolumn}<th class="runner-cc ">{BEGIN courseID_fieldheader}<a {$courseID_orderlinkattrs}>
+											Module
+										</a>
+									{END courseID_fieldheader}
+									</th>
+									{END courseID_fieldheadercolumn}
+
+																	{BEGIN question_fieldheadercolumn}<th class="runner-cc "><P align=left>{BEGIN question_fieldheader}<A {$question_orderlinkattrs}>Question&nbsp;</A>{END question_fieldheader}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+            </th></TH>
+          {END question_fieldheadercolumn}
+
+																	{BEGIN answer_fieldheadercolumn}<th class="runner-cc runner-clast">{BEGIN answer_fieldheader}<a {$answer_orderlinkattrs}>
+											Answer
+										</a>
+									{END answer_fieldheader}
+									</th>
+									{END answer_fieldheadercolumn}<TH style="WIDTH: 2px" class=runner-cr><IMG src="images/spacer.gif"></TH>
+          {BEGIN endrecordheader_block}<TH style="WIDTH: 10px" class=runner-cs></TH>{END endrecordheader_block}{END record_header}</TR>{END grid_header}</THEAD>
+        {BEGIN grid_row}<TR class="runner-row style1 {$rowclass}" {$rowstyle} {$rowattrs}>{BEGIN grid_record}<TD style="WIDTH: 1px" class=runner-cl {$rowstyle}></TD>
+          {BEGIN listIcons_column}<TD style="WIDTH: 46px" class="runner-cc runner-bc runner-icons" iEditCont="all" {$rowstyle}>{BEGIN inlineedit_column}{BEGIN inlineedit_link}<a class="runner-button-img" {$inlineeditlink_attrs} title="Inline Edit"><img class="runner-cicon" src="images/icon_inline_edit_new.gif" alt="Inline Edit"></a>
+									{END inlineedit_link}
+									{END inlineedit_column}</TD>
+          {END listIcons_column}{BEGIN checkbox_column}<TD style="WIDTH: 21px" class="runner-cc runner-bc" iEditCont="checkBox" {$rowstyle}>{BEGIN checkbox}<INPUT type=checkbox {$checkbox_attrs}>{END checkbox}</TD>
+          {END checkbox_column}{BEGIN courseID_fieldcolumn}<td class="runner-cc  {$courseID_class}" {$courseID_style}>{$courseID_value}
+	</td>
+{END courseID_fieldcolumn}
+
+	{BEGIN question_fieldcolumn}<td class="runner-cc  {$question_class}" {$question_style}><P align=left>{$question_value}</P></td>
+          {END question_fieldcolumn}
+
+	{BEGIN answer_fieldcolumn}<td class="runner-cc runner-clast {$answer_class}" {$answer_style}>{$answer_value}
+	</td>
+{END answer_fieldcolumn}<TD style="WIDTH: 2px" class=runner-cr {$rowstyle}></TD>
+          {BEGIN endrecord_block}<TD style="WIDTH: 10px" class=runner-cs {$endrecordblock_attrs}></TD>{END endrecord_block}{END grid_record}</TR>
+        {END grid_row}{BEGIN grid_footer}<TR class="runner-bottomrow style1{$gridFooter_class}">{BEGIN record_footer}<TD style="WIDTH: 1px" class=runner-cl><IMG src="images/spacer.gif"></TD>
+          {BEGIN listIcons_column}<TD style="WIDTH: 54px" class=runner-cc></TD>
+          {END listIcons_column}{BEGIN checkbox_column}<TD style="WIDTH: 29px" class=runner-cc></TD>
+          {END checkbox_column}{BEGIN courseID_fieldheadercolumn}<td class="runner-cc "></td>
+{END courseID_fieldheadercolumn}
+{BEGIN question_fieldheadercolumn}<td class="runner-cc "></td>
+          {END question_fieldheadercolumn}
+{BEGIN answer_fieldheadercolumn}<td class="runner-cc runner-clast"></td>
+{END answer_fieldheadercolumn}<TD style="WIDTH: 2px" class=runner-cr><IMG src="images/spacer.gif"></TD>
+          {BEGIN endrecordfooter_block}<TD style="WIDTH: 10px" class=runner-cs></TD>{END endrecordfooter_block}{END record_footer}</TR>{END grid_footer}</TABLE>{END grid_block}{END container_grid}
+      {BEGIN container_pagination}<TABLE class="runner-c runner-c-pagination" cellPadding=0><TR class="{$cheaderclass_pagination}"><TD class=runner-cl><IMG src="images/spacer.gif"></TD>
+          <TD class=runner-cc></TD>
+          <TD class=runner-cr><IMG src="images/spacer.gif"></TD></TR>
+        <TR class="runner-row style1"><TD class=runner-cl></TD>
+          <TD class=runner-cc><TABLE class=runner-hc border=0 cellPadding=0><TR>{BEGIN pagination_block}<TD class="runner-cc runner-bc runner-b-pagination" {$brickclass_pagination}><SPAN>{$pagination}</SPAN></TD>{END pagination_block}</TR></TABLE></TD>
+          <TD class=runner-cr></TD></TR>
+        <TR class="{$cfooterclass_pagination}"><TD class=runner-cl><IMG src="images/spacer.gif"></TD>
+          <TD class=runner-cc></TD>
+          <TD class=runner-cr><IMG src="images/spacer.gif"></TD></TR></TABLE>{END container_pagination}</TD>
+    <TD class="runner-right {$blockclass_right}"></TD></TR>
+  <TR class=runner-footer><TD class=runner-bottom 
+colSpan=3><!--%%bottom%%--></TD></TR></TABLE>{$footer}{END body} </BODY></HTML>

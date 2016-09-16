@@ -1,0 +1,245 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+		<title>{$pagetitle}</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=7">
+		<meta http-equiv="Content-Type" content="text/html; charset=Windows-1252">
+		<link REL="stylesheet" href="styles/default.css" type="text/css">
+		{BEGIN rtlCSS}
+		<link REL="stylesheet" href="styles/defaultRTL.css" type="text/css">
+		{END rtlCSS}
+		{BEGIN styleCSSFiles}
+		<link REL="stylesheet" href="{$stylepath}" type="text/css">
+		{END styleCSSFiles}
+		{BEGIN pageCSSFiles}
+		<link REL="stylesheet" href="{$pagestylepath}" type="text/css">
+		{END pageCSSFiles}
+		<!--[if IE]>
+			<link REL="stylesheet" href="styles/defaultIE.css" type="text/css">
+			{BEGIN IEcssFiles}
+			<link REL="stylesheet" href="{$stylepathIE}" type="text/css">
+			{END IEcssFiles}
+		<![endif]-->
+	</head>
+	
+	<body class="{$stylename}" {$bodyattrs}>
+	{BEGIN body}
+		{$header}
+		<table   cellpadding="0" class="runner-toptable">
+			<tr class="runner-header">
+				<td class="runner-top" colspan=3>
+					
+
+{BEGIN container_edit}
+<table class="runner-c runner-c-edit" cellpadding="0" align=center>
+
+
+<tr class="runner-toprow style2 header"><td class="runner-cl"><img src="images/spacer.gif"></td><td class="runner-cc" ><div  class="runner-b-editheader {$brickclass_editheader}">Berita, Sunting rekod [
+Nid: {$show_key1}
+]</div></td><td class="runner-cr"><img src="images/spacer.gif"></td></tr>
+
+
+{BEGIN message_block}
+<tr  class="runner-row style1 runner-b-message {$brickclass_message}"><td class="runner-cl"></td><td class="runner-cc runner-brickcontents" ><div class="runner-message">{$message}</div></td><td class="runner-cr"></td></tr>{END message_block}
+
+
+
+<tr  class="runner-row style1 runner-b-wrapper {$wrapperclass_fields}"><td class="runner-cl"></td><td class="runner-cc runner-brickcontents runner-wrapper" >
+
+{BEGIN container_fields}
+<table class="runner-c runner-c-fields" cellpadding="0" >
+
+
+	{BEGIN title_fieldblock}
+	<tr class="runner-toprow header style1 runner-b-editfields"><td class="runner-cl"><img src="images/spacer.gif"></td>
+		<td class="runner-cc runner-cc1">
+			<div class="fieldlabel_title {$fielddispclass_title}">
+				{BEGIN title_label}Tajuk{END title_label}
+			</div>
+		</td>
+		<td class="runner-cc alt runner-fixedcell">
+			<div class="fieldcontrol_title {$fielddispclass_title}">
+				{$title_editcontrol}&nbsp;
+			</div>
+		</td>
+	<td class="runner-cr alt"><img src="images/spacer.gif"></td></tr>
+{END title_fieldblock}
+	{BEGIN ndate_fieldblock}
+	<tr class="runner-row style1 runner-b-editfields"><td class="runner-cl"></td>
+		<td class="runner-cc runner-cc1">
+			<div class="fieldlabel_ndate {$fielddispclass_ndate}">
+				{BEGIN ndate_label}Tarikh{END ndate_label}
+			</div>
+		</td>
+		<td class="runner-cc alt runner-fixedcell">
+			<div class="fieldcontrol_ndate {$fielddispclass_ndate}">
+				{$ndate_editcontrol}&nbsp;
+			</div>
+		</td>
+	<td class="runner-cr alt"></td></tr>
+{END ndate_fieldblock}
+	{BEGIN category_fieldblock}
+	<tr class="runner-row style1 runner-b-editfields"><td class="runner-cl"></td>
+		<td class="runner-cc runner-cc1">
+			<div class="fieldlabel_category {$fielddispclass_category}">
+				{BEGIN category_label}Kategori{END category_label}
+			</div>
+		</td>
+		<td class="runner-cc alt runner-fixedcell">
+			<div class="fieldcontrol_category {$fielddispclass_category}">
+				{$category_editcontrol}&nbsp;
+			</div>
+		</td>
+	<td class="runner-cr alt"></td></tr>
+{END category_fieldblock}
+	{BEGIN nstatus_fieldblock}
+	<tr class="runner-row style1 runner-b-editfields"><td class="runner-cl"></td>
+		<td class="runner-cc runner-cc1">
+			<div class="fieldlabel_nstatus {$fielddispclass_nstatus}">
+				{BEGIN nstatus_label}Status{END nstatus_label}
+			</div>
+		</td>
+		<td class="runner-cc alt runner-fixedcell">
+			<div class="fieldcontrol_nstatus {$fielddispclass_nstatus}">
+				{$nstatus_editcontrol}&nbsp;
+			</div>
+		</td>
+	<td class="runner-cr alt"></td></tr>
+{END nstatus_fieldblock}
+	{BEGIN pic_fieldblock}
+	<tr class="runner-row style1 runner-b-editfields"><td class="runner-cl"></td>
+		<td class="runner-cc runner-cc1">
+			<div class="fieldlabel_pic {$fielddispclass_pic}">
+				{BEGIN pic_label}Gambar{END pic_label}
+			</div>
+		</td>
+		<td class="runner-cc alt runner-fixedcell">
+			<div class="fieldcontrol_pic {$fielddispclass_pic}">
+				{$pic_editcontrol}&nbsp;
+			</div>
+		</td>
+	<td class="runner-cr alt"></td></tr>
+{END pic_fieldblock}
+	{BEGIN attach_fieldblock}
+	<tr class="runner-row style1 runner-b-editfields"><td class="runner-cl"></td>
+		<td class="runner-cc runner-cc1">
+			<div class="fieldlabel_attach {$fielddispclass_attach}">
+				{BEGIN attach_label}Attachment{END attach_label}
+			</div>
+		</td>
+		<td class="runner-cc alt runner-fixedcell">
+			<div class="fieldcontrol_attach {$fielddispclass_attach}">
+				{$attach_editcontrol}&nbsp;
+			</div>
+		</td>
+	<td class="runner-cr alt"></td></tr>
+{END attach_fieldblock}
+	{BEGIN content_fieldblock}
+	<tr class="runner-row style1 runner-b-editfields"><td class="runner-cl"></td>
+		<td class="runner-cc runner-cc1">
+			<div class="fieldlabel_content {$fielddispclass_content}">
+				{BEGIN content_label}Kandungan{END content_label}
+			</div>
+		</td>
+		<td class="runner-cc alt runner-fixedcell">
+			<div class="fieldcontrol_content {$fielddispclass_content}">
+				{$content_editcontrol}&nbsp;
+			</div>
+		</td>
+	<td class="runner-cr alt"></td></tr>
+{END content_fieldblock}
+
+
+
+{BEGIN legend}
+<tr  class="runner-row style3 runner-b-legend {$brickclass_legend}"><td class="runner-cl"></td><td class="runner-cc runner-brickcontents" colspan=2><span id="required_block{$id}">
+<img src="images/icon_required.gif" alt="bullet"> - Medan Perlu
+</span>
+</td><td class="runner-cr"></td></tr>{END legend}
+
+
+
+<tr  class="runner-row style2 runner-b-editbuttons {$brickclass_editbuttons}"><td class="runner-cl"></td><td class="runner-cc runner-brickcontents" colspan=2>{BEGIN save_button}
+<span class="runner-btnframe">
+<span class="runner-btnleft"></span>
+<span class="runner-btnright"></span>
+<a href="#" class="runner-button" {$savebutton_attrs}>Simpan</a>
+</span>
+{END save_button}
+{BEGIN reset_button}
+<span class="runner-btnframe">
+<span class="runner-btnleft"></span>
+<span class="runner-btnright"></span>
+<a href="#" class="runner-button" {$resetbutton_attrs}>Set semula</a>
+</span>
+{END reset_button}
+{BEGIN prev_button}
+<span class="runner-btnframe">
+<span class="runner-btnleft"></span>
+<span class="runner-btnright"></span>
+<a href="#" class="runner-button" {$prevbutton_attrs}>&nbsp;<<<&nbsp;</a>
+</span>
+{END prev_button}
+{BEGIN back_button}
+<span class="runner-btnframe">
+<span class="runner-btnleft"></span>
+<span class="runner-btnright"></span>
+<a href="#" class="runner-button" {$backbutton_attrs}>Kembali ke senarai</a>
+</span>
+{END back_button}
+{BEGIN next_button}
+<span class="runner-btnframe">
+<span class="runner-btnleft"></span>
+<span class="runner-btnright"></span>
+<a href="#" class="runner-button" {$nextbutton_attrs}>&nbsp;>>>&nbsp;</a>
+</span>
+{END next_button}
+</td><td class="runner-cr"></td></tr>
+
+
+<tr class="{$cfooterclass_fields}">
+<td class="runner-cl"><img src="images/spacer.gif"></td>
+<td class="runner-cc"></td><td class="runner-cc"></td><td class="runner-cr"><img src="images/spacer.gif"></td>
+</tr>
+</table>
+{END container_fields}
+
+</td><td class="runner-cr"></td></tr>
+
+
+<tr class="{$cfooterclass_edit}">
+<td class="runner-cl"><img src="images/spacer.gif"></td>
+<td class="runner-cc"></td><td class="runner-cr"><img src="images/spacer.gif"></td>
+</tr>
+</table>
+{END container_edit}
+
+
+
+
+				</td>
+			</tr>
+			<tr class="runner-body">
+				
+				<td class="runner-left {$blockclass_left}" >
+					
+				</td>	
+				
+				<td class="runner-center {$blockclass_center}">
+					
+				</td>	
+
+				<td class="runner-right {$blockclass_right}">
+					
+				</td>	
+			</tr>
+			<tr class="runner-footer">
+				<td class="runner-bottom" colspan=3>
+					<!--%%bottom%%-->
+				</td>
+			</tr>
+		</table>
+		{$footer}
+	{END body}
+	</body>
+</html>

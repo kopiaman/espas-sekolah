@@ -1,0 +1,522 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+		<title>{$pagetitle}</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=7">
+		<meta http-equiv="Content-Type" content="text/html; charset=Windows-1252">
+		<link REL="stylesheet" href="styles/default.css" type="text/css">
+		{BEGIN rtlCSS}
+		<link REL="stylesheet" href="styles/defaultRTL.css" type="text/css">
+		{END rtlCSS}
+		{BEGIN styleCSSFiles}
+		<link REL="stylesheet" href="{$stylepath}" type="text/css">
+		{END styleCSSFiles}
+		{BEGIN pageCSSFiles}
+		<link REL="stylesheet" href="{$pagestylepath}" type="text/css">
+		{END pageCSSFiles}
+		<!--[if IE]>
+			<link REL="stylesheet" href="styles/defaultIE.css" type="text/css">
+			{BEGIN IEcssFiles}
+			<link REL="stylesheet" href="{$stylepathIE}" type="text/css">
+			{END IEcssFiles}
+		<![endif]-->
+	</head>
+	
+	<body class="{$stylename}" {$bodyattrs}>
+	{BEGIN body}
+		{$header}
+		<table   cellpadding="0" class="runner-toptable">
+			<tr class="runner-header">
+				<td class="runner-top" colspan=3>
+					
+
+{BEGIN container_search}
+<table class="runner-c runner-c-search" cellpadding="0" align=center>
+
+
+<tr class="runner-toprow style2 header"><td class="runner-cl"><img src="images/spacer.gif"></td><td class="runner-cc" ><div  class="runner-b-srchheader {$brickclass_srchheader}">Kursus Murid - Carian maju
+{$CrossElem}</div></td><td class="runner-cr"><img src="images/spacer.gif"></td></tr>
+
+
+{BEGIN conditions_block}
+<tr  class="runner-row style1 runner-b-srchconditions {$brickclass_srchconditions}"><td class="runner-cl"></td><td class="runner-cc runner-brickcontents" >	<center>
+	<span class=fieldname>Criteria:&nbsp;</span>	
+	<input type="radio" class="runner-radio-button" name="srchType" {$all_checkbox}><label for="all_checkbox"> Semua syarat-syarat</label>
+	&nbsp;&nbsp;&nbsp;
+	<input type="radio" class="runner-radio-button" name="srchType" {$any_checkbox}><label for="any_checkbox"> Mana-mana syarat</label>
+	</center></td><td class="runner-cr"></td></tr>{END conditions_block}
+
+
+
+<tr  class="runner-row style1 runner-b-wrapper {$wrapperclass_fields}"><td class="runner-cl"></td><td class="runner-cc runner-brickcontents runner-wrapper" >
+
+{BEGIN container_fields}
+<table class="runner-c runner-c-fields" cellpadding="0" >
+
+
+<tr class="runner-toprow header style2 runner-b-srchfields"><td class="runner-cl"><img src="images/spacer.gif"></td>
+	<td class="runner-cc">&nbsp;</td>
+	<td class="runner-cc">NOT</td>
+	<td class="runner-cc" colspan=3>&nbsp; </td>
+<td class="runner-cr"></td></tr>
+	{BEGIN StudentID_fieldblock}		
+	<tr class="runner-row style1 runner-b-srchfields"><td class="runner-cl"></td>
+		<td class="runner-cc runner-cc1">
+			<div class="fieldlabel_StudentID {$fielddispclass_StudentID}">
+				Pelajar
+			</div>
+		</td>
+	</td>
+	<td class="runner-cc alt">
+		<div class="fieldoption_StudentID {$fielddispclass_StudentID}">
+			<input type="checkbox" {$StudentID_notbox}>
+		</div>
+	</td>
+	<td class="runner-cc alt">
+		<div class="fieldoption_StudentID {$fielddispclass_StudentID}">
+			{$searchtype_StudentID}
+		</div>
+	</td>
+	<td class="runner-cc alt">
+		<div class="fieldcontrol_StudentID {$fielddispclass_StudentID}">
+			{$StudentID_editcontrol}&nbsp;
+		</div>
+	</td>
+	<td class="runner-cc alt">
+		<div class="fieldcontrol_StudentID {$fielddispclass_StudentID}">
+			{$StudentID_editcontrol1}&nbsp;
+		</div>
+	</td>
+	<td class="runner-cr alt"></td></tr>
+{END StudentID_fieldblock}
+	{BEGIN tahun_fieldblock}		
+	<tr class="runner-row style1 runner-b-srchfields"><td class="runner-cl"></td>
+		<td class="runner-cc runner-cc1">
+			<div class="fieldlabel_tahun {$fielddispclass_tahun}">
+				Tahun
+			</div>
+		</td>
+	</td>
+	<td class="runner-cc alt">
+		<div class="fieldoption_tahun {$fielddispclass_tahun}">
+			<input type="checkbox" {$tahun_notbox}>
+		</div>
+	</td>
+	<td class="runner-cc alt">
+		<div class="fieldoption_tahun {$fielddispclass_tahun}">
+			{$searchtype_tahun}
+		</div>
+	</td>
+	<td class="runner-cc alt">
+		<div class="fieldcontrol_tahun {$fielddispclass_tahun}">
+			{$tahun_editcontrol}&nbsp;
+		</div>
+	</td>
+	<td class="runner-cc alt">
+		<div class="fieldcontrol_tahun {$fielddispclass_tahun}">
+			{$tahun_editcontrol1}&nbsp;
+		</div>
+	</td>
+	<td class="runner-cr alt"></td></tr>
+{END tahun_fieldblock}
+	{BEGIN Class_fieldblock}		
+	<tr class="runner-row style1 runner-b-srchfields"><td class="runner-cl"></td>
+		<td class="runner-cc runner-cc1">
+			<div class="fieldlabel_Class {$fielddispclass_Class}">
+				Kelas
+			</div>
+		</td>
+	</td>
+	<td class="runner-cc alt">
+		<div class="fieldoption_Class {$fielddispclass_Class}">
+			<input type="checkbox" {$Class_notbox}>
+		</div>
+	</td>
+	<td class="runner-cc alt">
+		<div class="fieldoption_Class {$fielddispclass_Class}">
+			{$searchtype_Class}
+		</div>
+	</td>
+	<td class="runner-cc alt">
+		<div class="fieldcontrol_Class {$fielddispclass_Class}">
+			{$Class_editcontrol}&nbsp;
+		</div>
+	</td>
+	<td class="runner-cc alt">
+		<div class="fieldcontrol_Class {$fielddispclass_Class}">
+			{$Class_editcontrol1}&nbsp;
+		</div>
+	</td>
+	<td class="runner-cr alt"></td></tr>
+{END Class_fieldblock}
+	{BEGIN etype_fieldblock}		
+	<tr class="runner-row style1 runner-b-srchfields"><td class="runner-cl"></td>
+		<td class="runner-cc runner-cc1">
+			<div class="fieldlabel_etype {$fielddispclass_etype}">
+				Peperiksaan/Ujian
+			</div>
+		</td>
+	</td>
+	<td class="runner-cc alt">
+		<div class="fieldoption_etype {$fielddispclass_etype}">
+			<input type="checkbox" {$etype_notbox}>
+		</div>
+	</td>
+	<td class="runner-cc alt">
+		<div class="fieldoption_etype {$fielddispclass_etype}">
+			{$searchtype_etype}
+		</div>
+	</td>
+	<td class="runner-cc alt">
+		<div class="fieldcontrol_etype {$fielddispclass_etype}">
+			{$etype_editcontrol}&nbsp;
+		</div>
+	</td>
+	<td class="runner-cc alt">
+		<div class="fieldcontrol_etype {$fielddispclass_etype}">
+			{$etype_editcontrol1}&nbsp;
+		</div>
+	</td>
+	<td class="runner-cr alt"></td></tr>
+{END etype_fieldblock}
+	{BEGIN s1_fieldblock}		
+	<tr class="runner-row style1 runner-b-srchfields"><td class="runner-cl"></td>
+		<td class="runner-cc runner-cc1">
+			<div class="fieldlabel_s1 {$fielddispclass_s1}">
+				Al-QURAN
+			</div>
+		</td>
+	</td>
+	<td class="runner-cc alt">
+		<div class="fieldoption_s1 {$fielddispclass_s1}">
+			<input type="checkbox" {$s1_notbox}>
+		</div>
+	</td>
+	<td class="runner-cc alt">
+		<div class="fieldoption_s1 {$fielddispclass_s1}">
+			{$searchtype_s1}
+		</div>
+	</td>
+	<td class="runner-cc alt">
+		<div class="fieldcontrol_s1 {$fielddispclass_s1}">
+			{$s1_editcontrol}&nbsp;
+		</div>
+	</td>
+	<td class="runner-cc alt">
+		<div class="fieldcontrol_s1 {$fielddispclass_s1}">
+			{$s1_editcontrol1}&nbsp;
+		</div>
+	</td>
+	<td class="runner-cr alt"></td></tr>
+{END s1_fieldblock}
+	{BEGIN s2_fieldblock}		
+	<tr class="runner-row style1 runner-b-srchfields"><td class="runner-cl"></td>
+		<td class="runner-cc runner-cc1">
+			<div class="fieldlabel_s2 {$fielddispclass_s2}">
+				AKHLAK
+			</div>
+		</td>
+	</td>
+	<td class="runner-cc alt">
+		<div class="fieldoption_s2 {$fielddispclass_s2}">
+			<input type="checkbox" {$s2_notbox}>
+		</div>
+	</td>
+	<td class="runner-cc alt">
+		<div class="fieldoption_s2 {$fielddispclass_s2}">
+			{$searchtype_s2}
+		</div>
+	</td>
+	<td class="runner-cc alt">
+		<div class="fieldcontrol_s2 {$fielddispclass_s2}">
+			{$s2_editcontrol}&nbsp;
+		</div>
+	</td>
+	<td class="runner-cc alt">
+		<div class="fieldcontrol_s2 {$fielddispclass_s2}">
+			{$s2_editcontrol1}&nbsp;
+		</div>
+	</td>
+	<td class="runner-cr alt"></td></tr>
+{END s2_fieldblock}
+	{BEGIN s3_fieldblock}		
+	<tr class="runner-row style1 runner-b-srchfields"><td class="runner-cl"></td>
+		<td class="runner-cc runner-cc1">
+			<div class="fieldlabel_s3 {$fielddispclass_s3}">
+				FEKAH
+			</div>
+		</td>
+	</td>
+	<td class="runner-cc alt">
+		<div class="fieldoption_s3 {$fielddispclass_s3}">
+			<input type="checkbox" {$s3_notbox}>
+		</div>
+	</td>
+	<td class="runner-cc alt">
+		<div class="fieldoption_s3 {$fielddispclass_s3}">
+			{$searchtype_s3}
+		</div>
+	</td>
+	<td class="runner-cc alt">
+		<div class="fieldcontrol_s3 {$fielddispclass_s3}">
+			{$s3_editcontrol}&nbsp;
+		</div>
+	</td>
+	<td class="runner-cc alt">
+		<div class="fieldcontrol_s3 {$fielddispclass_s3}">
+			{$s3_editcontrol1}&nbsp;
+		</div>
+	</td>
+	<td class="runner-cr alt"></td></tr>
+{END s3_fieldblock}
+	{BEGIN s4_fieldblock}		
+	<tr class="runner-row style1 runner-b-srchfields"><td class="runner-cl"></td>
+		<td class="runner-cc runner-cc1">
+			<div class="fieldlabel_s4 {$fielddispclass_s4}">
+				TAUHID
+			</div>
+		</td>
+	</td>
+	<td class="runner-cc alt">
+		<div class="fieldoption_s4 {$fielddispclass_s4}">
+			<input type="checkbox" {$s4_notbox}>
+		</div>
+	</td>
+	<td class="runner-cc alt">
+		<div class="fieldoption_s4 {$fielddispclass_s4}">
+			{$searchtype_s4}
+		</div>
+	</td>
+	<td class="runner-cc alt">
+		<div class="fieldcontrol_s4 {$fielddispclass_s4}">
+			{$s4_editcontrol}&nbsp;
+		</div>
+	</td>
+	<td class="runner-cc alt">
+		<div class="fieldcontrol_s4 {$fielddispclass_s4}">
+			{$s4_editcontrol1}&nbsp;
+		</div>
+	</td>
+	<td class="runner-cr alt"></td></tr>
+{END s4_fieldblock}
+	{BEGIN s5_fieldblock}		
+	<tr class="runner-row style1 runner-b-srchfields"><td class="runner-cl"></td>
+		<td class="runner-cc runner-cc1">
+			<div class="fieldlabel_s5 {$fielddispclass_s5}">
+				SIRAH
+			</div>
+		</td>
+	</td>
+	<td class="runner-cc alt">
+		<div class="fieldoption_s5 {$fielddispclass_s5}">
+			<input type="checkbox" {$s5_notbox}>
+		</div>
+	</td>
+	<td class="runner-cc alt">
+		<div class="fieldoption_s5 {$fielddispclass_s5}">
+			{$searchtype_s5}
+		</div>
+	</td>
+	<td class="runner-cc alt">
+		<div class="fieldcontrol_s5 {$fielddispclass_s5}">
+			{$s5_editcontrol}&nbsp;
+		</div>
+	</td>
+	<td class="runner-cc alt">
+		<div class="fieldcontrol_s5 {$fielddispclass_s5}">
+			{$s5_editcontrol1}&nbsp;
+		</div>
+	</td>
+	<td class="runner-cr alt"></td></tr>
+{END s5_fieldblock}
+	{BEGIN s6_fieldblock}		
+	<tr class="runner-row style1 runner-b-srchfields"><td class="runner-cl"></td>
+		<td class="runner-cc runner-cc1">
+			<div class="fieldlabel_s6 {$fielddispclass_s6}">
+				BH ARAB
+			</div>
+		</td>
+	</td>
+	<td class="runner-cc alt">
+		<div class="fieldoption_s6 {$fielddispclass_s6}">
+			<input type="checkbox" {$s6_notbox}>
+		</div>
+	</td>
+	<td class="runner-cc alt">
+		<div class="fieldoption_s6 {$fielddispclass_s6}">
+			{$searchtype_s6}
+		</div>
+	</td>
+	<td class="runner-cc alt">
+		<div class="fieldcontrol_s6 {$fielddispclass_s6}">
+			{$s6_editcontrol}&nbsp;
+		</div>
+	</td>
+	<td class="runner-cc alt">
+		<div class="fieldcontrol_s6 {$fielddispclass_s6}">
+			{$s6_editcontrol1}&nbsp;
+		</div>
+	</td>
+	<td class="runner-cr alt"></td></tr>
+{END s6_fieldblock}
+	{BEGIN s7_fieldblock}		
+	<tr class="runner-row style1 runner-b-srchfields"><td class="runner-cl"></td>
+		<td class="runner-cc runner-cc1">
+			<div class="fieldlabel_s7 {$fielddispclass_s7}">
+				TAJWID
+			</div>
+		</td>
+	</td>
+	<td class="runner-cc alt">
+		<div class="fieldoption_s7 {$fielddispclass_s7}">
+			<input type="checkbox" {$s7_notbox}>
+		</div>
+	</td>
+	<td class="runner-cc alt">
+		<div class="fieldoption_s7 {$fielddispclass_s7}">
+			{$searchtype_s7}
+		</div>
+	</td>
+	<td class="runner-cc alt">
+		<div class="fieldcontrol_s7 {$fielddispclass_s7}">
+			{$s7_editcontrol}&nbsp;
+		</div>
+	</td>
+	<td class="runner-cc alt">
+		<div class="fieldcontrol_s7 {$fielddispclass_s7}">
+			{$s7_editcontrol1}&nbsp;
+		</div>
+	</td>
+	<td class="runner-cr alt"></td></tr>
+{END s7_fieldblock}
+	{BEGIN s8_fieldblock}		
+	<tr class="runner-row style1 runner-b-srchfields"><td class="runner-cl"></td>
+		<td class="runner-cc runner-cc1">
+			<div class="fieldlabel_s8 {$fielddispclass_s8}">
+				JAWI*
+			</div>
+		</td>
+	</td>
+	<td class="runner-cc alt">
+		<div class="fieldoption_s8 {$fielddispclass_s8}">
+			<input type="checkbox" {$s8_notbox}>
+		</div>
+	</td>
+	<td class="runner-cc alt">
+		<div class="fieldoption_s8 {$fielddispclass_s8}">
+			{$searchtype_s8}
+		</div>
+	</td>
+	<td class="runner-cc alt">
+		<div class="fieldcontrol_s8 {$fielddispclass_s8}">
+			{$s8_editcontrol}&nbsp;
+		</div>
+	</td>
+	<td class="runner-cc alt">
+		<div class="fieldcontrol_s8 {$fielddispclass_s8}">
+			{$s8_editcontrol1}&nbsp;
+		</div>
+	</td>
+	<td class="runner-cr alt"></td></tr>
+{END s8_fieldblock}
+	{BEGIN s9_fieldblock}		
+	<tr class="runner-row style1 runner-b-srchfields"><td class="runner-cl"></td>
+		<td class="runner-cc runner-cc1">
+			<div class="fieldlabel_s9 {$fielddispclass_s9}">
+				KHAT*
+			</div>
+		</td>
+	</td>
+	<td class="runner-cc alt">
+		<div class="fieldoption_s9 {$fielddispclass_s9}">
+			<input type="checkbox" {$s9_notbox}>
+		</div>
+	</td>
+	<td class="runner-cc alt">
+		<div class="fieldoption_s9 {$fielddispclass_s9}">
+			{$searchtype_s9}
+		</div>
+	</td>
+	<td class="runner-cc alt">
+		<div class="fieldcontrol_s9 {$fielddispclass_s9}">
+			{$s9_editcontrol}&nbsp;
+		</div>
+	</td>
+	<td class="runner-cc alt">
+		<div class="fieldcontrol_s9 {$fielddispclass_s9}">
+			{$s9_editcontrol1}&nbsp;
+		</div>
+	</td>
+	<td class="runner-cr alt"></td></tr>
+{END s9_fieldblock}
+
+
+
+<tr class="{$cfooterclass_fields}">
+<td class="runner-cl"><img src="images/spacer.gif"></td>
+<td class="runner-cc"></td><td class="runner-cc alt"></td><td class="runner-cc alt"></td><td class="runner-cc alt"></td><td class="runner-cc alt"></td><td class="runner-cr alt"><img src="images/spacer.gif"></td>
+</tr>
+</table>
+{END container_fields}
+
+</td><td class="runner-cr"></td></tr>
+
+
+
+<tr  class="runner-row style2 runner-b-srchbuttons {$brickclass_srchbuttons}"><td class="runner-cl"></td><td class="runner-cc runner-brickcontents" >{BEGIN search_button}
+<span class="runner-btnframe">
+<span class="runner-btnleft"></span>
+<span class="runner-btnright"></span>
+<a href="#" class="runner-button" {$searchbutton_attrs}>Cari</a>
+</span>
+{END search_button} 
+{BEGIN reset_button}
+<span class="runner-btnframe">
+<span class="runner-btnleft"></span>
+<span class="runner-btnright"></span>
+<a href="#" class="runner-button" {$resetbutton_attrs}>Set semula</a>
+</span>
+{END reset_button}
+{BEGIN back_button}
+<span class="runner-btnframe">
+<span class="runner-btnleft"></span>
+<span class="runner-btnright"></span>
+<a href="#" class="runner-button" {$backbutton_attrs}>Kembali ke senarai</a>
+</span>
+{END back_button}</td><td class="runner-cr"></td></tr>
+
+
+<tr class="{$cfooterclass_search}">
+<td class="runner-cl"><img src="images/spacer.gif"></td>
+<td class="runner-cc"></td><td class="runner-cr"><img src="images/spacer.gif"></td>
+</tr>
+</table>
+{END container_search}
+
+
+				</td>
+			</tr>
+			<tr class="runner-body">
+				
+				<td class="runner-left {$blockclass_left}" >
+					
+				</td>	
+				
+				<td class="runner-center {$blockclass_center}">
+					
+				</td>	
+
+				<td class="runner-right {$blockclass_right}">
+					
+				</td>	
+			</tr>
+			<tr class="runner-footer">
+				<td class="runner-bottom" colspan=3>
+					<!--%%bottom%%-->
+				</td>
+			</tr>
+		</table>
+		{$footer}
+	{END body}
+	</body>
+</html>

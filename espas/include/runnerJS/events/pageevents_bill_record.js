@@ -1,0 +1,4 @@
+
+var pType=Runner.pages.constants.PAGE_LIST;Runner.pages.PageSettings.addPageEvent("bill_record",pType,"afterPageReady",function(pageObj,proxy,pageid){pageObj.buttonNames[pageObj.buttonNames.length]='Caj';if(!pageObj.buttonEventBefore['Caj']){pageObj.buttonEventBefore['Caj']=function(params,ctrl,pageObj,proxy,pageid,rowData){ctrl.setMessage("Memproses...");}}
+if(!pageObj.buttonEventAfter['Caj']){pageObj.buttonEventAfter['Caj']=function(result,ctrl,pageObj,proxy,pageid,rowData){var message=result["txt"]+" !!!";ctrl.setMessage(message);}}
+$('a[id=Caj]').each(function(){if(!$(this).closest('tr.gridRowAdd').length){var newId="Caj"+"_"+Runner.genId();this.id=newId;var button_Caj=new Runner.form.Button({id:newId,btnName:"Caj"});button_Caj.init({args:[pageObj,proxy,pageid]});}});});

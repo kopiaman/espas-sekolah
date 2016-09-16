@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<HTML {$html_attrs}><HEAD><TITLE>{$pagetitle}</TITLE>
+<META http-equiv="X-UA-Compatible" content="IE=Edge">
+<META content="text/html; charset=Windows-1252" http-equiv=Content-Type><LINK rel=stylesheet type=text/css href="styles/default.css">{BEGIN rtlCSS}<link REL="stylesheet" href="styles/defaultRTL.css" type="text/css">
+		{END rtlCSS}
+		{BEGIN styleCSSFiles}<LINK rel=stylesheet type=text/css href="{$stylepath}">{END styleCSSFiles}{BEGIN pageCSSFiles}<LINK rel=stylesheet type=text/css href="{$pagestylepath}">{END pageCSSFiles}<!--[if IE]><LINK rel=stylesheet type=text/css href="styles/defaultIE.css">{BEGIN IEcssFiles}<LINK rel=stylesheet type=text/css href="{$stylepathIE}">{END IEcssFiles}<![endif]-->
+<META name=GENERATOR content="MSHTML 8.00.7600.16385"></HEAD>
+<BODY class="{$stylename}" {$bodyattrs}>{BEGIN body}{$header} 
+<TABLE class=runner-toptable cellPadding=0><TR class=runner-header><TD class=runner-top colSpan=3>{BEGIN container_edit}<TABLE class="runner-c runner-c-edit" cellPadding=0 align=center><TR class="runner-toprow style2 header"><TD class=runner-cl><IMG src="images/spacer.gif"></TD>
+          <TD class=runner-cc><DIV class="runner-b-editheader {$brickclass_editheader}">Hostel, 
+            Edit record 
+            </DIV></TD>
+          <TD class=runner-cr><IMG src="images/spacer.gif"></TD></TR>
+        {BEGIN message_block}<TR class="runner-row style1 runner-b-message {$brickclass_message}"><TD class=runner-cl></TD>
+          <TD class="runner-cc runner-brickcontents"><div class="runner-message">{$message}</div></TD>
+          <TD class=runner-cr></TD></TR>
+        {END message_block}<TR class="runner-row style1 runner-b-wrapper {$wrapperclass_fields}"><TD class=runner-cl></TD>
+          <TD class="runner-cc runner-brickcontents runner-wrapper">{BEGIN container_fields}<TABLE class="runner-c runner-c-fields" cellPadding=0>{BEGIN BranchID_fieldblock}<TR class="runner-toprow header style1 runner-b-editfields"><TD class=runner-cl><IMG src="images/spacer.gif"></TD>
+                <TD class="runner-cc runner-cc1"><div class="fieldlabel_BranchID {$fielddispclass_BranchID}">{BEGIN BranchID_label}Location{END BranchID_label}
+			</div></TD>
+                <td class="runner-cc alt runner-fixedcell"><div class="fieldcontrol_BranchID {$fielddispclass_BranchID}">{$BranchID_editcontrol}&nbsp; </div>
+		</td>
+                <TD class="runner-cr alt"><IMG src="images/spacer.gif"></TD></TR>
+              {END BranchID_fieldblock}{BEGIN HostelID_fieldblock}<TR class="runner-row style1 runner-b-editfields"><TD class=runner-cl></TD>
+                <TD class="runner-cc runner-cc1"><div class="fieldlabel_HostelID {$fielddispclass_HostelID}">{BEGIN HostelID_label}
+                  Hostel{END HostelID_label}
+			</div></TD>
+                <td class="runner-cc alt runner-fixedcell"><div class="fieldcontrol_HostelID {$fielddispclass_HostelID}">{$HostelID_editcontrol}&nbsp; </div>
+		</td>
+                <TD class="runner-cr alt"></TD></TR>
+              {END HostelID_fieldblock}{BEGIN BlockID_fieldblock}<TR class="runner-row style1 runner-b-editfields"><TD class=runner-cl></TD>
+                <TD class="runner-cc runner-cc1"><div class="fieldlabel_BlockID {$fielddispclass_BlockID}">{BEGIN BlockID_label}
+                  Block{END BlockID_label}
+			</div></TD>
+                <td class="runner-cc alt runner-fixedcell"><div class="fieldcontrol_BlockID {$fielddispclass_BlockID}">{$BlockID_editcontrol}&nbsp; </div>
+		</td>
+                <TD class="runner-cr alt"></TD></TR>
+              {END BlockID_fieldblock}{BEGIN LevelID_fieldblock}<TR class="runner-row style1 runner-b-editfields"><TD class=runner-cl></TD>
+                <TD class="runner-cc runner-cc1"><div class="fieldlabel_LevelID {$fielddispclass_LevelID}">{BEGIN LevelID_label}
+                  Level{END LevelID_label}
+			</div></TD>
+                <td class="runner-cc alt runner-fixedcell"><div class="fieldcontrol_LevelID {$fielddispclass_LevelID}">{$LevelID_editcontrol}&nbsp; </div>
+		</td>
+                <TD class="runner-cr alt"></TD></TR>
+              {END LevelID_fieldblock}{BEGIN Room_fieldblock}<TR class="runner-row style1 runner-b-editfields"><TD class=runner-cl></TD>
+                <TD class="runner-cc runner-cc1"><div class="fieldlabel_Room {$fielddispclass_Room}">{BEGIN Room_label}
+                  Room{END Room_label}
+			</div></TD>
+                <td class="runner-cc alt runner-fixedcell"><div class="fieldcontrol_Room {$fielddispclass_Room}">{$Room_editcontrol}&nbsp; </div>
+		</td>
+                <TD class="runner-cr alt"></TD></TR>
+              {END Room_fieldblock}{BEGIN Room_detail_fieldblock}<tr class="runner-row style1 runner-b-editfields"><td class="runner-cl"></td>
+		<td class="runner-cc runner-cc1"><div class="fieldlabel_Room_detail {$fielddispclass_Room_detail}">{BEGIN Room_detail_label}Room Key{END Room_detail_label}
+			</div>
+		</td>
+		<td class="runner-cc alt runner-fixedcell"><div class="fieldcontrol_Room_detail {$fielddispclass_Room_detail}">{$Room_detail_editcontrol}&nbsp;
+		</div>
+		</td>
+	<td class="runner-cr alt"></td></tr>
+{END Room_detail_fieldblock}
+	{BEGIN CheckInDate_fieldblock}<TR class="runner-row style1 runner-b-editfields"><TD class=runner-cl></TD>
+                <TD class="runner-cc runner-cc1"><div class="fieldlabel_CheckInDate {$fielddispclass_CheckInDate}">{BEGIN CheckInDate_label}
+                  Check In 
+Date{END CheckInDate_label}
+			</div></TD>
+                <td class="runner-cc alt runner-fixedcell"><div class="fieldcontrol_CheckInDate {$fielddispclass_CheckInDate}">{$CheckInDate_editcontrol}&nbsp; 
+                </div>
+		</td>
+                <TD class="runner-cr alt"></TD></TR>
+              {END CheckInDate_fieldblock}{BEGIN CheckOutDate_fieldblock}<TR class="runner-row style1 runner-b-editfields"><TD class=runner-cl></TD>
+                <TD class="runner-cc runner-cc1"><div class="fieldlabel_CheckOutDate {$fielddispclass_CheckOutDate}">{BEGIN CheckOutDate_label}
+                  Check Out 
+                Date{END CheckOutDate_label}
+			</div></TD>
+                <td class="runner-cc alt runner-fixedcell"><div class="fieldcontrol_CheckOutDate {$fielddispclass_CheckOutDate}">{$CheckOutDate_editcontrol}&nbsp; 
+                  </div>
+		</td>
+                <TD class="runner-cr alt"></TD></TR>
+              {END CheckOutDate_fieldblock}{BEGIN Items_fieldblock}<TR class="runner-row style1 runner-b-editfields"><TD class=runner-cl></TD>
+                <TD class="runner-cc runner-cc1"><div class="fieldlabel_Items {$fielddispclass_Items}">{BEGIN Items_label}
+                  Items{END Items_label}
+			</div></TD>
+                <td class="runner-cc alt runner-fixedcell"><div class="fieldcontrol_Items {$fielddispclass_Items}">{$Items_editcontrol}&nbsp; </div>
+		</td>
+                <TD class="runner-cr alt"></TD></TR>
+              {END Items_fieldblock}{BEGIN legend}<TR class="runner-row style3 runner-b-legend {$brickclass_legend}"><TD class=runner-cl></TD>
+                <TD class="runner-cc runner-brickcontents" colSpan=2><SPAN id=required_block{$id}><IMG alt=bullet src="images/icon_required.gif"> - Required field </SPAN></TD>
+                <TD class=runner-cr></TD></TR>
+              {END legend}<TR 
+              class="runner-row style2 runner-b-editbuttons {$brickclass_editbuttons}"><TD class=runner-cl></TD>
+                <TD class="runner-cc runner-brickcontents" colSpan=2>{BEGIN save_button}<SPAN class=runner-btnframe><SPAN class=runner-btnleft></SPAN><SPAN class=runner-btnright></SPAN><A class=runner-button href="#" {$savebutton_attrs}>Save</A> 
+                  </SPAN>{END save_button}{BEGIN reset_button}<SPAN class=runner-btnframe><SPAN class=runner-btnleft></SPAN><SPAN class=runner-btnright></SPAN><A class=runner-button href="#" {$resetbutton_attrs}>Reset</A> 
+                  </SPAN>{END reset_button}{BEGIN prev_button}<SPAN class=runner-btnframe><SPAN class=runner-btnleft></SPAN><SPAN class=runner-btnright></SPAN><A class=runner-button href="#" {$prevbutton_attrs}>&nbsp;&lt;&lt;&lt;&nbsp;</A> </SPAN>{END prev_button}{BEGIN back_button}<SPAN class=runner-btnframe><SPAN class=runner-btnleft></SPAN><SPAN class=runner-btnright></SPAN><A class=runner-button href="#" {$backbutton_attrs}>Back to 
+                  list</A> </SPAN>{END back_button}{BEGIN next_button}<SPAN class=runner-btnframe><SPAN class=runner-btnleft></SPAN><SPAN class=runner-btnright></SPAN><A class=runner-button href="#" {$nextbutton_attrs}>&nbsp;&gt;&gt;&gt;&nbsp;</A> 
+                </SPAN>{END next_button}</TD>
+                <TD class=runner-cr></TD></TR>
+              <TR class="{$cfooterclass_fields}"><TD class=runner-cl><IMG src="images/spacer.gif"></TD>
+                <TD class=runner-cc></TD>
+                <TD class=runner-cc></TD>
+                <TD class=runner-cr><IMG src="images/spacer.gif"></TD></TR></TABLE>{END container_fields}</TD>
+          <TD class=runner-cr></TD></TR>
+        <TR class="{$cfooterclass_edit}"><TD class=runner-cl><IMG src="images/spacer.gif"></TD>
+          <TD class=runner-cc></TD>
+          <TD class=runner-cr><IMG src="images/spacer.gif"></TD></TR></TABLE>{END container_edit}</TD></TR>
+  <TR class=runner-body><TD class="runner-left {$blockclass_left}"></TD>
+    <TD class="runner-center {$blockclass_center}"></TD>
+    <TD class="runner-right {$blockclass_right}"></TD></TR>
+  <TR class=runner-footer><TD class=runner-bottom 
+colSpan=3><!--%%bottom%%--></TD></TR></TABLE>{$footer}{END body} </BODY></HTML>

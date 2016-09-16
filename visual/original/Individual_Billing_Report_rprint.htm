@@ -1,0 +1,163 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+		<title>{$pagetitle}</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=7">
+		<meta http-equiv="Content-Type" content="text/html; charset=Windows-1252">
+		<link REL="stylesheet" href="styles/default.css" type="text/css">
+		{BEGIN styleCSSFiles}
+		<link REL="stylesheet" href="{$stylepath}" type="text/css">
+		{END styleCSSFiles}
+		{BEGIN pageCSSFiles}
+		<link REL="stylesheet" href="{$pagestylepath}" type="text/css">
+		{END pageCSSFiles}
+		<link REL="stylesheet" href="pagestyles/report_print.css" type="text/css">
+		<!--[if IE]>
+			<link REL="stylesheet" href="styles/defaultIE.css" type="text/css">
+			{BEGIN IEcssFiles}
+			<link REL="stylesheet" href="{$stylepathIE}" type="text/css">
+			{END IEcssFiles}
+		<![endif]-->
+	</head>
+	
+	<body class="{$stylename}" {$bodyattrs}>
+	{BEGIN body}
+			
+
+
+
+{BEGIN container_grid}
+
+
+
+{BEGIN pages}
+<h1>Individual Billing Report</h1>
+	<span {$pages_attrs}>
+		Page <b>{$pageno}</b> of <b>{$maxpages}</b>
+	</span>
+
+
+			<style>
+table.report {border-collapse: collapse} 
+table.report td {padding: 2px;border-width: 1px; border-style: solid; border-color: #cccccc;}
+div.page_block{clear:left;}
+td.noborder{padding-right:8px}
+td.data{padding-right:8px}
+td.group_1{background-color: #FFE4E1;}
+td.nbgroup_1{background-color: #FFE4E1;border-style:none;}
+td.header_1{background-color: #D8C1BF;}
+td.pagesummary{background-color:#ffffbb;}
+td.globalsummary{background-color:#ffe0b0;}
+</style>
+<div id="grid_block{$id}">
+<TABLE CELLPADDING=5 CELLSPACING=0 BORDER=0>
+	<tr class="runner-toprow style1">
+		<td class="runner-cl"><img src="images/spacer.gif"/></td>
+		<td class="runner-cc"></td>
+		<td class="runner-cr"><img src="images/spacer.gif"/></td>
+	</tr>
+	<tr class="runner-row style1">
+		<td class="runner-cl"></td>
+		<td class="runner-cc">
+			<table cellspacing=0 cellpadding=0 border=0 style="padding:2px">
+				{BEGIN grid_row}
+				<!-------------------------------------  group headers ----------------------------------------->
+					{BEGIN Branch_firstnewgroup}
+									<tr>
+					<td class=blackshade>Branch</td>
+					<td class=blackshade>Intake</td>
+					<td class=blackshade>Program</td>
+					<td class=blackshade>Name</td>
+					<td class=blackshade>ICNO</td>
+					<td class=blackshade>Item</td>
+					<td class=blackshade>Amount</td>
+					<td class=blackshade>Status</td>
+					<td class=blackshade>Date</td>
+					</tr>
+					<tr>
+												<td class=header_1 >
+						<font style="font-weight:900">{$Branch_grval}</font>
+												</td>
+				<!-------------------------------------  data ----------------------------------------->
+					<td class=data>
+										{$Intake_value}</td>
+					<td class=data>
+										{$Program_value}</td>
+					<td class=data>
+										{$Name_value}</td>
+					<td class=data>
+										{$ICNO_value}</td>
+					<td class=data>
+										{$item_value}</td>
+					<td class=data>
+										{$amount_value}</td>
+					<td class=data>
+										{$status_value}</td>
+					<td class=data>
+										{$date_value}</td>
+					</tr>
+					{END Branch_firstnewgroup}
+								{BEGIN nonewgroup}
+					<tr>
+						<td class=group_1 >
+												&nbsp;
+						</td>
+					<td class=data>
+					{$Intake_value}
+					</td>
+					<td class=data>
+					{$Program_value}
+					</td>
+					<td class=data>
+					{$Name_value}
+					</td>
+					<td class=data>
+					{$ICNO_value}
+					</td>
+					<td class=data>
+					{$item_value}
+					</td>
+					<td class=data>
+					{$amount_value}
+					</td>
+					<td class=data>
+					{$status_value}
+					</td>
+					<td class=data>
+					{$date_value}
+					</td>
+					</tr>
+				{END nonewgroup}
+				<!-------------------------------------  group summary ----------------------------------------->
+								{END grid_row}
+			</table>
+		</td>
+		<td class="runner-cr"></td>
+	</tr>
+	<tr class="runner-row style1">
+		<td class="runner-cl"></td>
+		<td class="runner-cc">
+			<table cellspacing=0 cellpadding=0 border=0>
+															</table>
+		</td>
+		<td class="runner-cr"></td>
+	</tr>
+	<tr class="runner-bottomrow style1">
+		<td class="runner-cl"><img src="images/spacer.gif"/></td>
+		<td class="runner-cc"></td>
+		<td class="runner-cr"><img src="images/spacer.gif"/></td>
+	</tr>
+</table>			
+</div>
+{END pages}
+
+
+
+
+
+{END container_grid}
+
+
+	{END body}
+	</body>
+</html>

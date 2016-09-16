@@ -1,0 +1,554 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+		<title>{$pagetitle}</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=7">
+		<meta http-equiv="Content-Type" content="text/html; charset=Windows-1252">
+		<link REL="stylesheet" href="styles/default.css" type="text/css">
+		{BEGIN rtlCSS}
+		<link REL="stylesheet" href="styles/defaultRTL.css" type="text/css">
+		{END rtlCSS}
+		{BEGIN styleCSSFiles}
+		<link REL="stylesheet" href="{$stylepath}" type="text/css">
+		{END styleCSSFiles}
+		{BEGIN pageCSSFiles}
+		<link REL="stylesheet" href="{$pagestylepath}" type="text/css">
+		{END pageCSSFiles}
+		<!--[if IE]>
+			<link REL="stylesheet" href="styles/defaultIE.css" type="text/css">
+			{BEGIN IEcssFiles}
+			<link REL="stylesheet" href="{$stylepathIE}" type="text/css">
+			{END IEcssFiles}
+		<![endif]-->
+	</head>
+	
+	<body class="{$stylename}" {$bodyattrs}>
+	{BEGIN body}
+		{$header}
+		<table   cellpadding="0" class="runner-toptable">
+			<tr class="runner-header">
+				<td class="runner-top" colspan=3>
+					
+
+{BEGIN container_toplinks}
+<table class="runner-c runner-c-toplinks" cellpadding="0" >
+<tr class="{$cheaderclass_toplinks}">
+<td class="runner-cl"><img src="images/spacer.gif"></td>
+<td class="runner-cc"></td><td class="runner-cr"><img src="images/spacer.gif"></td>
+</tr>
+<tr class="runner-row style1">
+<td class="runner-cl"></td>
+<td class="runner-cc">
+<table border="0" cellpadding="0" class="runner-hc">
+<tr>
+<td class="runner-cc filler"></td>
+
+{BEGIN prints_block}
+<td  class="runner-cc runner-bl runner-b-toplinks_print" {$brickclass_toplinks_print}><span>{BEGIN print_link}
+	<span class="runner-btnframe">
+	<span class="runner-btnleft"></span>
+	<span class="runner-btnright"></span>
+	<a href="#" class="runner-button" {$printlink_attrs}>Versi mesra-pencetak</a>
+	</span>
+{END print_link}
+
+{BEGIN printall_link}
+	<span class="runner-btnframe">
+	<span class="runner-btnleft"></span>
+	<span class="runner-btnright"></span>
+	<a href="#" class="runner-button" {$printalllink_attrs}>Cetak seluruh repot</a>
+	</span>
+{END printall_link}
+
+
+
+
+</span></td>
+{END prints_block}
+
+
+{BEGIN asearch_link}
+<td  class="runner-cc runner-bl runner-b-toplinks_advsearch" {$brickclass_toplinks_advsearch}><span>	<span class="runner-btnframe">
+	<span class="runner-btnleft"></span>
+	<span class="runner-btnright"></span>
+	<a href="#" class="runner-button" {$advsearchlink_attrs}>Carian maju</a>
+	</span>
+</span></td>
+{END asearch_link}
+
+
+
+
+{BEGIN export_link}
+<td  class="runner-cc runner-bl runner-b-toplinks_export_links" {$brickclass_toplinks_export_links}><span>	<span id="export_links{$id}">
+		<a href="#" {$excellink_attrs}><img alt="Export to Excel" src="images/excel.gif" border="0"></a>
+		<a href="#" {$wordlink_attrs}><img alt="Export to Word" src="images/word.gif" border="0" ></a>
+		</span>
+</span></td>
+{END export_link}
+
+<td class="runner-cc filler"></td>
+
+</tr>
+</table></td>
+<td class="runner-cr"></td>
+</tr>
+
+<tr class="{$cfooterclass_toplinks}">
+<td class="runner-cl"><img src="images/spacer.gif"></td>
+<td class="runner-cc"></td><td class="runner-cr"><img src="images/spacer.gif"></td>
+</tr>
+</table>
+{END container_toplinks}
+
+
+
+{BEGIN container_hmenu}
+<table class="runner-c runner-c-hmenu" cellpadding="0" >
+<tr class="{$cheaderclass_hmenu}">
+<td class="runner-cl"><img src="images/spacer.gif"></td>
+<td class="runner-cc"></td><td class="runner-cr"><img src="images/spacer.gif"></td>
+</tr>
+<tr class="runner-row style1">
+<td class="runner-cl"></td>
+<td class="runner-cc">
+<table border="0" cellpadding="0" class="runner-hc">
+<tr>
+
+{BEGIN menu_block}
+<td  class="runner-cc runner-bl runner-b-hmenu" {$brickclass_hmenu}><span>{$mainmenu horizontal}
+</span></td>
+{END menu_block}
+
+<td class="runner-cc filler"></td>
+</tr>
+</table></td>
+<td class="runner-cr"></td>
+</tr>
+
+<tr class="{$cfooterclass_hmenu}">
+<td class="runner-cl"><img src="images/spacer.gif"></td>
+<td class="runner-cc"></td><td class="runner-cr"><img src="images/spacer.gif"></td>
+</tr>
+</table>
+{END container_hmenu}
+
+
+
+{BEGIN container_search}
+<table class="runner-c runner-c-search" cellpadding="0" >
+<tr class="{$cheaderclass_search}">
+<td class="runner-cl"><img src="images/spacer.gif"></td>
+<td class="runner-cc"></td><td class="runner-cr"><img src="images/spacer.gif"></td>
+</tr>
+<tr class="runner-row style1">
+<td class="runner-cl"></td>
+<td class="runner-cc">
+<table border="0" cellpadding="0" class="runner-hc">
+<tr>
+
+{BEGIN searchform_block}
+<td  class="runner-cc runner-bl runner-b-search" {$brickclass_search}><span>	<span>
+		{BEGIN searchform_text}
+		<input type="text" {$searchfor_attrs} size="25">
+		{END searchform_text}
+		&nbsp;
+		{BEGIN searchform_search}
+		<span class="runner-btnframe">
+			<span class="runner-btnleft"></span>
+			<span class="runner-btnright"></span>
+			<a href="#" class="runner-button-img" {$searchbutton_attrs}><img src="images/search/search.gif"></a>
+		</span>
+		{END searchform_search}
+		&nbsp;
+		{BEGIN searchform_showall}
+		
+		<span class="runner-btnframe" {$showAllCont_attrs}>
+			<span class="runner-btnleft"></span>
+			<span class="runner-btnright"></span>
+			<a href="#" class="runner-button" {$showallbutton_attrs}>Tunjuk semua</a>
+		</span>
+		{END searchform_showall}
+	</span>
+</span></td>
+{END searchform_block}
+
+
+{BEGIN searchformbuttons_block}
+<td  class="runner-cc runner-bl runner-b-search_buttons" {$brickclass_search_buttons}><span>	{BEGIN searchPanelTopButtons}
+	<span>
+		&nbsp;
+		<span class="runner-btnframe">
+		<span class="runner-btnleft"></span>
+		<span class="runner-btnright"></span>
+		<a href="#" class="runner-button-img" id="showSrchWin{$id}" {$showHideSearchWin_attrs}><img src="images/search/showWindowPin.gif"></a>
+		</span>
+		&nbsp;		
+		<span class="runner-btnframe">
+		<span class="runner-btnleft"></span>
+		<span class="runner-btnright"></span>
+		<a href="#" class="runner-button-img" id="showOptPanel{$id}" {$showHideSearchPanel_attrs}><img src="images/search/showOptions.gif"></a>
+		</span>
+	</span>
+	{END searchPanelTopButtons}
+</span></td>
+{END searchformbuttons_block}
+
+<td class="runner-cc filler"></td>
+{BEGIN details_block}
+<td  class="runner-cc runner-br runner-b-details_found" {$brickclass_details_found}><span>	<span {$details_attrs}>
+		Perincian dijumpai: <b><span class="runner-details_found_count">{$records_found}</span></b>
+	</span>
+</span></td>
+{END details_block}
+
+
+{BEGIN pages_block}
+<td  class="runner-cc runner-br runner-b-page_of" {$brickclass_page_of}><span>	<span {$pages_attrs}>
+		Halaman <b>{$page}</b> dari <b>{$maxpages}</b>
+	</span>
+
+</span></td>
+{END pages_block}
+
+
+{BEGIN recordspp_block}
+<td  class="runner-cc runner-br runner-b-recsperpage" {$brickclass_recsperpage}><span>	<span id="recordspp_block{$id}" name="recordspp_block{$id}">
+			Kumpulan per muka:&nbsp;{$grpsPerPage}
+	</span>	
+</span></td>
+{END recordspp_block}
+
+
+</tr>
+</table></td>
+<td class="runner-cr"></td>
+</tr>
+
+<tr class="{$cfooterclass_search}">
+<td class="runner-cl"><img src="images/spacer.gif"></td>
+<td class="runner-cc"></td><td class="runner-cr"><img src="images/spacer.gif"></td>
+</tr>
+</table>
+{END container_search}
+
+
+				</td>
+			</tr>
+			<tr class="runner-body">
+				
+				<td class="runner-left {$blockclass_left}" >
+					
+
+{BEGIN container_left}
+<table class="runner-c runner-c-left" cellpadding="0" >
+<tr class="{$cheaderclass_left}">
+<td class="runner-cl"><img src="images/spacer.gif"></td>
+<td class="runner-cc"></td><td class="runner-cr"><img src="images/spacer.gif"></td>
+</tr>
+
+{BEGIN searchPanel}
+<tr  class="runner-row style1 runner-b-searchpanel {$brickclass_searchpanel}"><td class="runner-cl"></td><td class="runner-cc runner-brickcontents" ><div class="searchPanelContainer">
+{$adv_search_panel}
+</div></td><td class="runner-cr"></td></tr>{END searchPanel}
+
+
+<tr class="{$cfooterclass_left}">
+<td class="runner-cl"><img src="images/spacer.gif"></td>
+<td class="runner-cc"></td><td class="runner-cr"><img src="images/spacer.gif"></td>
+</tr>
+</table>
+{END container_left}
+
+
+				</td>	
+				
+				<td class="runner-center {$blockclass_center}">
+					
+
+{BEGIN container_message}
+<table class="runner-c runner-c-message" cellpadding="0" >
+<tr class="{$cheaderclass_message}">
+<td class="runner-cl"><img src="images/spacer.gif"></td>
+<td class="runner-cc"></td><td class="runner-cr"><img src="images/spacer.gif"></td>
+</tr>
+<tr class="runner-row style1">
+<td class="runner-cl"></td>
+<td class="runner-cc">
+<table border="0" cellpadding="0" class="runner-hc">
+<tr>
+
+{BEGIN message_block}
+<td  class="runner-cc runner-bl runner-b-message" {$brickclass_message}><span><div class="runner-message">{$message}</div></span></td>
+{END message_block}
+
+<td class="runner-cc filler"></td>
+</tr>
+</table></td>
+<td class="runner-cr"></td>
+</tr>
+
+<tr class="{$cfooterclass_message}">
+<td class="runner-cl"><img src="images/spacer.gif"></td>
+<td class="runner-cc"></td><td class="runner-cr"><img src="images/spacer.gif"></td>
+</tr>
+</table>
+{END container_message}
+
+
+
+{BEGIN container_grid}
+
+
+
+			<style>
+table.report {border-collapse: collapse} 
+table.report td {padding: 2px;border-width: 1px; border-style: solid; border-color: #cccccc;}
+div.page_block{clear:left;}
+td.noborder{padding-right:8px}
+td.data{padding-right:8px}
+td.group_1{background-color: #90EE90;padding-right:8px}
+td.nbgroup_1{background-color: #90EE90;border-style:none;padding-right:8px}
+td.header_1{background-color: #7ACA7A;padding-right:8px}
+td.pagesummary{background-color:#ffffbb;padding-right:8px}
+td.globalsummary{background-color:#ffe0b0;padding-right:8px}
+</style>
+<TABLE CELLPADDING=1 CELLSPACING=0 BORDER=0 class="runner-b-report">
+	<tr class="runner-toprow style1">
+		<td class="runner-cl"><img src="images/spacer.gif"/></td>
+		<td class="runner-cc"></td>
+		<td class="runner-cr"><img src="images/spacer.gif"/></td>
+	</tr>
+	<tr class="runner-row style1">
+		<td class="runner-cl"></td>
+		<td class="runner-cc">
+			<table cellspacing=0 cellpadding=0 border=0 style="padding:2px">
+			{BEGIN grid_row}
+			<!-------------------------------------  group headers ----------------------------------------->
+			{BEGIN adate_newgroup}
+								<tr>
+					<td style="padding-right:8px">Tarikh </td>
+					<td style="padding-right:8px">Id</td>
+					<td style="padding-right:8px">1A</td>
+					<td style="padding-right:8px">1B</td>
+					<td style="padding-right:8px">1J</td>
+					<td style="padding-right:8px">1H</td>
+					<td style="padding-right:8px">1D</td>
+					<td style="padding-right:8px">2A</td>
+					<td style="padding-right:8px">2B</td>
+					<td style="padding-right:8px">2J</td>
+					<td style="padding-right:8px">2H</td>
+					<td style="padding-right:8px">2D</td>
+					<td style="padding-right:8px">3A</td>
+					<td style="padding-right:8px">3B</td>
+					<td style="padding-right:8px">3J</td>
+					<td style="padding-right:8px">3H</td>
+					<td style="padding-right:8px">3D</td>
+					<td style="padding-right:8px">4A</td>
+					<td style="padding-right:8px">4B</td>
+					<td style="padding-right:8px">4J</td>
+					<td style="padding-right:8px">4H</td>
+					<td style="padding-right:8px">4D</td>
+					<td style="padding-right:8px">5A</td>
+					<td style="padding-right:8px">5B</td>
+					<td style="padding-right:8px">5J</td>
+					<td style="padding-right:8px">5H</td>
+					<td style="padding-right:8px">5D</td>
+					<td style="padding-right:8px">6A</td>
+					<td style="padding-right:8px">6B</td>
+					<td style="padding-right:8px">6J</td>
+					<td style="padding-right:8px">6H</td>
+					<td style="padding-right:8px">6D</td>
+				</tr>
+				<tr>
+											<td colspan=32 class=header_1><font style="font-weight:900">{$adate_grval}</font></td>
+				</tr>
+			{END adate_newgroup}
+						<!-------------------------------------  data ----------------------------------------->
+			{BEGIN row_data}
+				<tr>
+										<td class="noborder group_1" style="border-style:none; border-right:solid 1px">&nbsp;</td>
+					<td class=data>{$id_value}</td>
+					<td class=data>{$1A_value}</td>
+					<td class=data>{$1B_value}</td>
+					<td class=data>{$1J_value}</td>
+					<td class=data>{$1H_value}</td>
+					<td class=data>{$1D_value}</td>
+					<td class=data>{$2A_value}</td>
+					<td class=data>{$2B_value}</td>
+					<td class=data>{$2J_value}</td>
+					<td class=data>{$2H_value}</td>
+					<td class=data>{$2D_value}</td>
+					<td class=data>{$3A_value}</td>
+					<td class=data>{$3B_value}</td>
+					<td class=data>{$3J_value}</td>
+					<td class=data>{$3H_value}</td>
+					<td class=data>{$3D_value}</td>
+					<td class=data>{$4A_value}</td>
+					<td class=data>{$4B_value}</td>
+					<td class=data>{$4J_value}</td>
+					<td class=data>{$4H_value}</td>
+					<td class=data>{$4D_value}</td>
+					<td class=data>{$5A_value}</td>
+					<td class=data>{$5B_value}</td>
+					<td class=data>{$5J_value}</td>
+					<td class=data>{$5H_value}</td>
+					<td class=data>{$5D_value}</td>
+					<td class=data>{$6A_value}</td>
+					<td class=data>{$6B_value}</td>
+					<td class=data>{$6J_value}</td>
+					<td class=data>{$6H_value}</td>
+					<td class=data>{$6D_value}</td>
+				</tr>
+			{END row_data}
+			<!-------------------------------------  group summary ----------------------------------------->
+						{BEGIN adate_endgroup}
+				<tr>
+					<td style="border-top: none" class="noborder group_1" colspan=32 >
+				
+				Ringkasan untuk Tarikh  {$adate_grval}
+					- {$groupadate_total_cnt} Jumlah rekod-rekod</td>
+				</tr>
+						<!--  Sum -->
+				<tr>
+										<td class=group_1 style="border-left: solid #cccccc 1px;">Jumlah</td>
+										<td class=group_1>&nbsp;</td>
+										<td class=group_1>&nbsp;</td>
+										<td class=group_1>&nbsp;</td>
+										<td class=group_1>&nbsp;</td>
+										<td class=group_1>&nbsp;</td>
+										<td class=group_1>&nbsp;</td>
+										<td class=group_1>&nbsp;</td>
+										<td class=group_1>&nbsp;</td>
+										<td class=group_1>&nbsp;</td>
+										<td class=group_1>&nbsp;</td>
+										<td class=group_1>&nbsp;</td>
+										<td class=group_1>&nbsp;</td>
+										<td class=group_1>&nbsp;</td>
+										<td class=group_1>&nbsp;</td>
+										<td class=group_1>&nbsp;</td>
+										<td class=group_1>&nbsp;</td>
+										<td class=group_1>&nbsp;</td>
+										<td class=group_1>&nbsp;</td>
+										<td class=group_1>&nbsp;</td>
+										<td class=group_1>&nbsp;</td>
+										<td class=group_1>&nbsp;</td>
+										<td class=group_1>&nbsp;</td>
+										<td class=group_1>&nbsp;</td>
+										<td class=group_1>&nbsp;</td>
+										<td class=group_1>&nbsp;</td>
+										<td class=group_1>&nbsp;</td>
+										<td class=group_1>{$groupadate_total6A_sum}</td>
+										<td class=group_1>{$groupadate_total6B_sum}</td>
+										<td class=group_1>{$groupadate_total6J_sum}</td>
+										<td class=group_1>{$groupadate_total6H_sum}</td>
+										<td class=group_1>{$groupadate_total6D_sum}</td>
+				</tr>	
+												{END adate_endgroup}
+			{END grid_row}
+			</table>
+		</td>
+		<td class="runner-cr"></td>
+	</tr>
+	<tr class="runner-row style1">
+		<td class="runner-cl"></td>
+		<td class="runner-cc">
+			<table cellspacing=0 cellpadding=0 border=0>
+<!--				-->
+											</table>
+		</td>
+		<td class="runner-cr"></td>
+	</tr>
+	<tr class="runner-bottomrow style1">
+		<td class="runner-cl"><img src="images/spacer.gif"/></td>
+		<td class="runner-cc"></td>
+		<td class="runner-cr"><img src="images/spacer.gif"/></td>
+	</tr>
+</table>
+
+
+
+
+
+
+{END container_grid}
+
+
+
+{BEGIN container_pagination}
+<table class="runner-c runner-c-pagination" cellpadding="0" >
+<tr class="{$cheaderclass_pagination}">
+<td class="runner-cl"><img src="images/spacer.gif"></td>
+<td class="runner-cc"></td><td class="runner-cr"><img src="images/spacer.gif"></td>
+</tr>
+<tr class="runner-row style1">
+<td class="runner-cl"></td>
+<td class="runner-cc">
+<table border="0" cellpadding="0" class="runner-hc">
+<tr>
+
+{BEGIN pagination_block}
+<td  class="runner-cc runner-bc runner-b-pagination" {$brickclass_pagination}><span>{$pagination}</span></td>
+{END pagination_block}
+
+
+</tr>
+</table></td>
+<td class="runner-cr"></td>
+</tr>
+
+<tr class="{$cfooterclass_pagination}">
+<td class="runner-cl"><img src="images/spacer.gif"></td>
+<td class="runner-cc"></td><td class="runner-cr"><img src="images/spacer.gif"></td>
+</tr>
+</table>
+{END container_pagination}
+
+
+
+{BEGIN container_form}
+<table class="runner-c runner-c-form" cellpadding="0" >
+<tr class="{$cheaderclass_form}">
+<td class="runner-cl"><img src="images/spacer.gif"></td>
+<td class="runner-cc"></td><td class="runner-cr"><img src="images/spacer.gif"></td>
+</tr>
+<tr class="runner-row style1">
+<td class="runner-cl"></td>
+<td class="runner-cc">
+<table border="0" cellpadding="0" class="runner-hc">
+<tr>
+
+
+<td  class="runner-cc runner-bl runner-b-reportvariable" {$brickclass_reportvariable}><span>{$report_filename}</span></td>
+
+
+<td class="runner-cc filler"></td>
+</tr>
+</table></td>
+<td class="runner-cr"></td>
+</tr>
+
+<tr class="{$cfooterclass_form}">
+<td class="runner-cl"><img src="images/spacer.gif"></td>
+<td class="runner-cc"></td><td class="runner-cr"><img src="images/spacer.gif"></td>
+</tr>
+</table>
+{END container_form}
+
+
+				</td>	
+
+				<td class="runner-right {$blockclass_right}">
+					
+				</td>	
+			</tr>
+			<tr class="runner-footer">
+				<td class="runner-bottom" colspan=3>
+					<!--%%bottom%%-->
+				</td>
+			</tr>
+		</table>
+		{$footer}
+	{END body}
+	</body>
+</html>

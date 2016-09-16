@@ -1,0 +1,74 @@
+<div class="searchOptions bottomPanelBorder" {$srchOpt_attrs}>
+	<!-- Search panel content -->
+	<div class="srchCritTop" style="display: none;">
+		Criteria:&nbsp;
+		<input type="radio" name="srchType" class="runner-radio-button" {$all_checkbox}> {BEGIN all_checkbox_label}all{END all_checkbox_label}
+		&nbsp;&nbsp;&nbsp;
+		<input type="radio" name="srchType" class="runner-radio-button" {$any_checkbox}> {BEGIN any_checkbox_label}any{END any_checkbox_label}
+	</div>
+	
+	<div class="addOption">
+		<span class="runner-btnframe">
+		<span class="runner-btnleft"></span>
+		<span class="runner-btnright"></span>
+		<a href="#" id="showHideControlChooseMenu{$id}" class="runner-button" {$showHideCtrls_attrs}>Add field</a>
+		</span>
+		&nbsp;&nbsp;&nbsp;
+		<span class="runner-btnframe">
+		<span class="runner-btnleft"></span>
+		<span class="runner-btnright"></span>
+		<a href="#" id="showHideSearchType{$id}" class="runner-button" {$showHideCtrlsOpt_attrs}>{$showHideOpt_mess}</a>
+		</span>
+	</div>
+	
+	<!-- choose controls div -->
+	<div class="runner-panel controlChooseMenu" {$controlChooseMenuDiv_attrs}>
+		{BEGIN addSearch_Name}
+			<a href="#" id="addSearchControl_Name" class="addSearchControl" {$addSearchControl_Name_attrs}>Nama</a><br>
+		{END addSearch_Name}
+		{BEGIN addSearch_IC_Number}
+			<a href="#" id="addSearchControl_IC_Number" class="addSearchControl" {$addSearchControl_IC_Number_attrs}>K/P Baru</a><br>
+		{END addSearch_IC_Number}
+		{BEGIN addSearch_Gender}
+			<a href="#" id="addSearchControl_Gender" class="addSearchControl" {$addSearchControl_Gender_attrs}>Jantina</a><br>
+		{END addSearch_Gender}
+		{BEGIN addSearch_Address}
+			<a href="#" id="addSearchControl_Address" class="addSearchControl" {$addSearchControl_Address_attrs}>Alamat</a><br>
+		{END addSearch_Address}
+		{BEGIN addSearch_sstatus}
+			<a href="#" id="addSearchControl_sstatus" class="addSearchControl" {$addSearchControl_sstatus_attrs}>Status</a><br>
+		{END addSearch_sstatus}
+		{BEGIN addSearch_Job_Sesi}
+			<a href="#" id="addSearchControl_Job_Sesi" class="addSearchControl" {$addSearchControl_Job_Sesi_attrs}>Sesi</a><br>
+		{END addSearch_Job_Sesi}
+		{BEGIN addSearch_Job_Type}
+			<a href="#" id="addSearchControl_Job_Type" class="addSearchControl" {$addSearchControl_Job_Type_attrs}>Jenis Pekerjaan</a><br>
+		{END addSearch_Job_Type}
+		{BEGIN addSearch_Job_Title}
+			<a href="#" id="addSearchControl_Job_Title" class="addSearchControl" {$addSearchControl_Job_Title_attrs}>Nama Pekerjaan</a><br>
+		{END addSearch_Job_Title}
+		{BEGIN addSearch_Grade}
+			<a href="#" id="addSearchControl_Grade" class="addSearchControl" {$addSearchControl_Grade_attrs}>Gred Pekerjaan</a><br>
+		{END addSearch_Grade}
+		{BEGIN addSearch_Elaun}
+			<a href="#" id="addSearchControl_Elaun" class="addSearchControl" {$addSearchControl_Elaun_attrs}>Elaun ( Untuk Gred KAFA & RAKYAT)</a><br>
+		{END addSearch_Elaun}
+	</div>
+	
+	<div class="controlsBlock">
+		{BEGIN searchCtrlBlock}
+		<div class="srchPanelRow" {$filterRow_attrs}>
+			<div class="srchPanelCell">{$delCtrlButt}&nbsp;{$fLabel}:&nbsp;</div>
+			<div class="srchPanelCell srchPanelCell2">{$searchtype} {$searchcontrol} {$searchcontrol1}</div>
+		</div>
+		{END searchCtrlBlock}
+	</div>
+		
+	<div class="bottomSearchButt" align="left" {$bottomSearchButt_attrs}>
+		<span class="runner-btnframe">
+		<span class="runner-btnleft"></span>
+		<span class="runner-btnright"></span>
+		<a href="#" class="runner-button" {$searchbutton_attrs}>Cari</a>
+		</span>
+	</div>
+</div>

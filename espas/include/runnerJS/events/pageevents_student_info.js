@@ -1,0 +1,4 @@
+
+var pType=Runner.pages.constants.PAGE_LIST;Runner.pages.PageSettings.addPageEvent("student_info",pType,"afterPageReady",function(pageObj,proxy,pageid){pageObj.buttonNames[pageObj.buttonNames.length]='PROFIL';if(!pageObj.buttonEventBefore['PROFIL']){pageObj.buttonEventBefore['PROFIL']=function(params,ctrl,pageObj,proxy,pageid,rowData){}}
+if(!pageObj.buttonEventAfter['PROFIL']){pageObj.buttonEventAfter['PROFIL']=function(result,ctrl,pageObj,proxy,pageid,rowData){var StudentID=result["StudentID"];var ViewURL="x_student_info.php?StudentID="+StudentID;window.open(ViewURL,"_blank");;}}
+$('a[id=PROFIL]').each(function(){if(!$(this).closest('tr.gridRowAdd').length){var newId="PROFIL"+"_"+Runner.genId();this.id=newId;var button_PROFIL=new Runner.form.Button({id:newId,btnName:"PROFIL"});button_PROFIL.init({args:[pageObj,proxy,pageid]});}});});

@@ -1,0 +1,85 @@
+<div class="searchOptions bottomPanelBorder" {$srchOpt_attrs}>
+	
+	<!-- Search panel content -->
+	<div class="srchCritTop" style="display: none;">
+		Criteria:&nbsp;
+		<input type="radio" name="srchType" class="runner-radio-button" {$all_checkbox}> {BEGIN all_checkbox_label}all{END all_checkbox_label}
+		&nbsp;&nbsp;&nbsp;
+		<input type="radio" name="srchType" class="runner-radio-button" {$any_checkbox}> {BEGIN any_checkbox_label}any{END any_checkbox_label}
+	</div>
+	
+	<div class="addOption">
+		<span class="runner-btnframe">
+		<span class="runner-btnleft"></span>
+		<span class="runner-btnright"></span>
+		<a href="#" id="showHideControlChooseMenu{$id}" class="runner-button" {$showHideCtrls_attrs}>Add field</a>
+		</span>
+		&nbsp;&nbsp;&nbsp;
+		<span class="runner-btnframe">
+		<span class="runner-btnleft"></span>
+		<span class="runner-btnright"></span>
+		<a href="#" id="showHideSearchType{$id}" class="runner-button" {$showHideCtrlsOpt_attrs}>{$showHideOpt_mess}</a>
+		</span>
+	</div>
+	
+	<!-- choose controls div -->
+	<div class="runner-panel controlChooseMenu" {$controlChooseMenuDiv_attrs}>
+		{BEGIN addSearch_kafal}
+			<a href="#" id="addSearchControl_kafal" class="addSearchControl" {$addSearchControl_kafal_attrs}>Kafal</a><br>
+		{END addSearch_kafal}
+		{BEGIN addSearch_kafap}
+			<a href="#" id="addSearchControl_kafap" class="addSearchControl" {$addSearchControl_kafap_attrs}>Kafap</a><br>
+		{END addSearch_kafap}
+		{BEGIN addSearch_sum_kafa}
+			<a href="#" id="addSearchControl_sum_kafa" class="addSearchControl" {$addSearchControl_sum_kafa_attrs}>Sum Kafa</a><br>
+		{END addSearch_sum_kafa}
+		{BEGIN addSearch_rakyatl}
+			<a href="#" id="addSearchControl_rakyatl" class="addSearchControl" {$addSearchControl_rakyatl_attrs}>Rakyatl</a><br>
+		{END addSearch_rakyatl}
+		{BEGIN addSearch_rakyatp}
+			<a href="#" id="addSearchControl_rakyatp" class="addSearchControl" {$addSearchControl_rakyatp_attrs}>Rakyatp</a><br>
+		{END addSearch_rakyatp}
+		{BEGIN addSearch_sum_rakyat}
+			<a href="#" id="addSearchControl_sum_rakyat" class="addSearchControl" {$addSearchControl_sum_rakyat_attrs}>Sum Rakyat</a><br>
+		{END addSearch_sum_rakyat}
+		{BEGIN addSearch_gantil}
+			<a href="#" id="addSearchControl_gantil" class="addSearchControl" {$addSearchControl_gantil_attrs}>Gantil</a><br>
+		{END addSearch_gantil}
+		{BEGIN addSearch_gantip}
+			<a href="#" id="addSearchControl_gantip" class="addSearchControl" {$addSearchControl_gantip_attrs}>Gantip</a><br>
+		{END addSearch_gantip}
+		{BEGIN addSearch_sum_ganti}
+			<a href="#" id="addSearchControl_sum_ganti" class="addSearchControl" {$addSearchControl_sum_ganti_attrs}>Sum Ganti</a><br>
+		{END addSearch_sum_ganti}
+		{BEGIN addSearch_sum_pom}
+			<a href="#" id="addSearchControl_sum_pom" class="addSearchControl" {$addSearchControl_sum_pom_attrs}>Sum Pom</a><br>
+		{END addSearch_sum_pom}
+		{BEGIN addSearch_sum_laki}
+			<a href="#" id="addSearchControl_sum_laki" class="addSearchControl" {$addSearchControl_sum_laki_attrs}>Sum Laki</a><br>
+		{END addSearch_sum_laki}
+		{BEGIN addSearch_guru_all}
+			<a href="#" id="addSearchControl_guru_all" class="addSearchControl" {$addSearchControl_guru_all_attrs}>Guru All</a><br>
+		{END addSearch_guru_all}
+	</div>
+	
+	<table class="controlsBlock">
+	{BEGIN searchCtrlBlock}
+		<tr class="srchPanelRow" {$filterRow_attrs}>
+			<td class="srchPanelCell">{$delCtrlButt}</td>
+			<td class="srchPanelCell">{$fLabel}:&nbsp;</td>
+			<td class="srchPanelCell srchPanelCell2">
+				<div class="runner-searchtype">{$searchtype}</div>
+				<div class="runner-searchcontrol">{$searchcontrol}</div>
+				<div class="runner-searchcontrol">{$searchcontrol1}</div>
+		</tr>
+	{END searchCtrlBlock}
+	</table>
+	
+	<div class="bottomSearchButt" align="left" {$bottomSearchButt_attrs}>
+		<span class="runner-btnframe">
+		<span class="runner-btnleft"></span>
+		<span class="runner-btnright"></span>
+		<a href="#" class="runner-button" {$searchbutton_attrs}>Cari</a>
+		</span>
+	</div>
+</div>

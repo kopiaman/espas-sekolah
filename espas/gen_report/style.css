@@ -1,0 +1,55 @@
+
+body { font-family:Arial, Helvetica, sans-serif}
+table{border-collapse:collapse;}
+td, th{ }
+.row_ganjil{ border-bottom:none; border-right:none;}
+.td_none{ border-left:none; border-bottom:none; border-top:none; border-right:none;}
+.td_have{border:solid 1px #000;}
+.clr {clear:left;}
+
+.pagebreak{ page-break-after:always;}
+.small{ font-size:10px;}
+
+.whole{ padding:20px; display:block; height:270mm; width:210mm;}
+.whole_landscape{ padding:20px; display:block; width:280mm auto; height:210mm auto; font-size:9px;}
+.title{font-size:12px; text-align:center}
+.title2{font-size:12px}
+/* report PBSRA 1 */
+.header_center1{ text-align:center; font-size:14px; font-family:Georgia, "Times New Roman", Times, serif; }
+.header_center2{ text-align:center; font-size:10px; font-family:Georgia, "Times New Roman", Times, serif; }
+.header_report_right { float:right; border:outset 2px black; height:15px; width:100px; font-size:10px; text-align:center; margin-bottom:10px;}
+.header_report h1 { font-size:14px;}
+.header_report h2 { font-size:12px;}
+.pbsra1-topleft {  float:left; font-size:10px; display:block}
+.pbsra1-topright {float:right; display:block ; margin-bottom:10px;}
+.pbsra1-topright th {font-size:10px}
+.pbsra1-mid { display:block; }
+.pbsra1-botleft{   float:left; font-size:10px; display:block; padding:20px;}
+.pbsra1-botright{  float:left; font-size:10px; display:block; padding:20px}
+
+.tablemid th {  background-color:#CCC; font-size:10px; border:1px solid black;}
+.tablemid td {font-size:10px;border:1px solid black; font-weight:lighter;}
+
+.table_pbsra1 td{border:1px solid black;font-size:10px; }
+.table_pbsra1 th{border:none !important;font-size:10px; }
+
+/* report PBSRA 3 */
+.box_med1 { width:350px;  float:left;font-size:10px; }
+.box_med2 { width:350px;  float:right;  font-size:10px;}
+.tablemed1 th { font-weight:bold; background-color:#CCC; font-size:9px; border:1px solid black; padding:5px;}
+.tablemed1 td {font-size:10px;border:1px solid black; font-weight:lighter;padding:2px;}
+
+
+/* report PBSRA 5 1 */
+.tablesmall th { font-weight:bold; background-color:#CCC; font-size:10px; border:1px solid black;}
+.tablesmall td {font-size:10px;border:1px solid black; font-weight:lighter}
+
+
+/* pbsra 4 */
+.tablemid4 th {  background-color:#CCC; font-size:10px; border:1px solid black;}
+.tablemid4 td {font-size:10px;border:1px solid black; font-weight:lighter; padding:7px;}
+
+/* report swasta page 1*/
+.rs1_topleft{ float:left; width:30%; }
+.rs1_topright{ float:left; width:70%; }
+

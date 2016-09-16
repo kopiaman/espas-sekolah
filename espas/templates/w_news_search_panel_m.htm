@@ -1,0 +1,65 @@
+<div class="searchOptions bottomPanelBorder" {$srchOpt_attrs}>
+	<!-- Search panel content -->
+	<div class="srchCritTop" style="display: none;">
+		Criteria:&nbsp;
+		<input type="radio" name="srchType" class="runner-radio-button" {$all_checkbox}> {BEGIN all_checkbox_label}all{END all_checkbox_label}
+		&nbsp;&nbsp;&nbsp;
+		<input type="radio" name="srchType" class="runner-radio-button" {$any_checkbox}> {BEGIN any_checkbox_label}any{END any_checkbox_label}
+	</div>
+	
+	<div class="addOption">
+		<span class="runner-btnframe">
+		<span class="runner-btnleft"></span>
+		<span class="runner-btnright"></span>
+		<a href="#" id="showHideControlChooseMenu{$id}" class="runner-button" {$showHideCtrls_attrs}>Add field</a>
+		</span>
+		&nbsp;&nbsp;&nbsp;
+		<span class="runner-btnframe">
+		<span class="runner-btnleft"></span>
+		<span class="runner-btnright"></span>
+		<a href="#" id="showHideSearchType{$id}" class="runner-button" {$showHideCtrlsOpt_attrs}>{$showHideOpt_mess}</a>
+		</span>
+	</div>
+	
+	<!-- choose controls div -->
+	<div class="runner-panel controlChooseMenu" {$controlChooseMenuDiv_attrs}>
+		{BEGIN addSearch_nid}
+			<a href="#" id="addSearchControl_nid" class="addSearchControl" {$addSearchControl_nid_attrs}>Nid</a><br>
+		{END addSearch_nid}
+		{BEGIN addSearch_title}
+			<a href="#" id="addSearchControl_title" class="addSearchControl" {$addSearchControl_title_attrs}>Tajuk</a><br>
+		{END addSearch_title}
+		{BEGIN addSearch_ndate}
+			<a href="#" id="addSearchControl_ndate" class="addSearchControl" {$addSearchControl_ndate_attrs}>Tarikh</a><br>
+		{END addSearch_ndate}
+		{BEGIN addSearch_category}
+			<a href="#" id="addSearchControl_category" class="addSearchControl" {$addSearchControl_category_attrs}>Kategori</a><br>
+		{END addSearch_category}
+		{BEGIN addSearch_nstatus}
+			<a href="#" id="addSearchControl_nstatus" class="addSearchControl" {$addSearchControl_nstatus_attrs}>Status</a><br>
+		{END addSearch_nstatus}
+		{BEGIN addSearch_pic}
+			<a href="#" id="addSearchControl_pic" class="addSearchControl" {$addSearchControl_pic_attrs}>Gambar</a><br>
+		{END addSearch_pic}
+		{BEGIN addSearch_attach}
+			<a href="#" id="addSearchControl_attach" class="addSearchControl" {$addSearchControl_attach_attrs}>Attachment</a><br>
+		{END addSearch_attach}
+	</div>
+	
+	<div class="controlsBlock">
+		{BEGIN searchCtrlBlock}
+		<div class="srchPanelRow" {$filterRow_attrs}>
+			<div class="srchPanelCell">{$delCtrlButt}&nbsp;{$fLabel}:&nbsp;</div>
+			<div class="srchPanelCell srchPanelCell2">{$searchtype} {$searchcontrol} {$searchcontrol1}</div>
+		</div>
+		{END searchCtrlBlock}
+	</div>
+		
+	<div class="bottomSearchButt" align="left" {$bottomSearchButt_attrs}>
+		<span class="runner-btnframe">
+		<span class="runner-btnleft"></span>
+		<span class="runner-btnright"></span>
+		<a href="#" class="runner-button" {$searchbutton_attrs}>Cari</a>
+		</span>
+	</div>
+</div>

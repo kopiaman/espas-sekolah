@@ -1,0 +1,44 @@
+<div {$pageattrs}>
+
+{BEGIN container_1}
+
+
+
+<table class="runner-c" cellpadding="0">
+{BEGIN bank1_tabfieldblock}
+	<tr class="runner-row style1">
+		<td class="runner-cc runner-cc1">
+			<div class="fieldlabel_bank1 {$fielddispclass_bank1}">
+				{BEGIN bank1_label}Nama Bank 1 & No Akaun{END bank1_label}
+			</div>
+		</td>
+		<td class="runner-cc alt">
+			<div class="fieldcontrol_bank1 {$fielddispclass_bank1}">
+				{$bank1_editcontrol}
+			</div>
+		</td>
+	</tr>
+{END bank1_tabfieldblock}
+{BEGIN epf_tabfieldblock}
+	<tr class="runner-row style1">
+		<td class="runner-cc runner-cc1">
+			<div class="fieldlabel_epf {$fielddispclass_epf}">
+				{BEGIN epf_label}KWSP{END epf_label}
+			</div>
+		</td>
+		<td class="runner-cc alt">
+			<div class="fieldcontrol_epf {$fielddispclass_epf}">
+				{$epf_editcontrol}
+			</div>
+		</td>
+	</tr>
+{END epf_tabfieldblock}
+</table>
+
+
+
+
+
+{END container_1}
+
+</div>

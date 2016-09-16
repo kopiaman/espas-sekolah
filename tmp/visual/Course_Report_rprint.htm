@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<HTML {$html_attrs}><HEAD><TITLE>{$pagetitle}</TITLE>
+<META http-equiv="X-UA-Compatible" content="IE=Edge">
+<META content="text/html; charset=Windows-1252" http-equiv=Content-Type><LINK rel=stylesheet type=text/css href="styles/default.css">{BEGIN styleCSSFiles}<LINK rel=stylesheet type=text/css href="{$stylepath}">{END styleCSSFiles}{BEGIN pageCSSFiles}<LINK rel=stylesheet type=text/css href="{$pagestylepath}">{END pageCSSFiles}<LINK rel=stylesheet type=text/css 
+href="pagestyles/report_print.css"><!--[if IE]><LINK rel=stylesheet type=text/css href="styles/defaultIE.css">{BEGIN IEcssFiles}<LINK rel=stylesheet type=text/css href="{$stylepathIE}">{END IEcssFiles}<![endif]-->
+<META name=GENERATOR content="MSHTML 8.00.7600.16385"></HEAD>
+<BODY class="{$stylename}" {$bodyattrs}>
+{BEGIN body}{BEGIN container_grid}{BEGIN pages}
+<H1>Course Report</H1><SPAN {$pages_attrs}>Page <B>{$pageno}</B> of <B>{$maxpages}</B> </SPAN>
+<STYLE>
+table.report {border-collapse: collapse} 
+table.report td {padding: 2px;border-width: 1px; border-style: solid; border-color: #cccccc;}
+div.page_block{clear:left;}
+td.noborder{padding-right:8px}
+td.data{padding-right:8px}
+td.group_1{background-color: #FFE4E1;}
+td.nbgroup_1{background-color: #FFE4E1;border-style:none;}
+td.header_1{background-color: #D8C1BF;}
+td.pagesummary{background-color:#ffffbb;}
+td.globalsummary{background-color:#ffe0b0;}
+</STYLE>
+
+<DIV id=grid_block{$id}>
+<TABLE border=0 cellSpacing=0 cellPadding=5>
+  <TBODY>
+  <TR class="runner-toprow style1">
+    <TD class=runner-cl><IMG src="images/spacer.gif"></TD>
+    <TD class=runner-cc></TD>
+    <TD class=runner-cr><IMG src="images/spacer.gif"></TD></TR>
+  <TR class="runner-row style1">
+    <TD class=runner-cl></TD>
+    <TD class=runner-cc>
+      <TABLE style="PADDING-BOTTOM: 2px; PADDING-LEFT: 2px; PADDING-RIGHT: 2px; PADDING-TOP: 2px" border=0 cellSpacing=0 cellPadding=0>{BEGIN grid_row}<!-------------------------------------  group headers ----------------------------------------->
+        <TBODY>
+        {BEGIN Course_firstnewgroup}<TR>
+          <TD 
+          style="BACKGROUND-IMAGE: none; BACKGROUND-COLOR: #bea7ad; WIDTH: 141px; WHITE-SPACE: normal" 
+          class=blackshade>Course</TD>
+          <TD 
+          style="BACKGROUND-COLOR: #bea7ad; WIDTH: 137px; WHITE-SPACE: normal" 
+          class=blackshade>Branch</TD>
+          <TD 
+          style="BACKGROUND-COLOR: #bea7ad; WIDTH: 147px; WHITE-SPACE: normal" 
+          class=blackshade>Student</TD>
+          <TD 
+          style="BACKGROUND-COLOR: #bea7ad; WIDTH: 76px; WHITE-SPACE: normal" 
+          class=blackshade>ICNO</TD>
+          <TD 
+          style="BACKGROUND-COLOR: #bea7ad; WIDTH: 92px; WHITE-SPACE: normal" 
+          class=blackshade>Matric No</TD>
+          <TD 
+          style="BACKGROUND-COLOR: #bea7ad; WIDTH: 123px; WHITE-SPACE: normal" 
+          class=blackshade>Email</TD>
+          <TD 
+          style="BACKGROUND-COLOR: #bea7ad; WIDTH: 78px; WHITE-SPACE: normal" 
+          class=blackshade>Group</TD></TR>
+        <TR>
+          <TD 
+          style="BACKGROUND-COLOR: #ffe4e1; WIDTH: 141px; WHITE-SPACE: normal" 
+          class=header_1><FONT style="FONT-WEIGHT: 900">{$Course_grval}</FONT> </TD><!-------------------------------------  data ----------------------------------------->
+          <TD style="WIDTH: 129px" class=data>{$Branch_value}</TD>
+          <TD style="WIDTH: 139px" class=data>{$Student_value}</TD>
+          <TD style="WIDTH: 68px" 
+            class=data>{$ICNO_value}</TD>
+          <TD style="WIDTH: 84px" class=data>{$MatricNo_value}</TD>
+          <TD style="WIDTH: 115px" class=data>{$Email_value}</TD>
+          <TD style="WIDTH: 70px" class=data>{$group_value}</TD></TR>
+        {END Course_firstnewgroup}{BEGIN nonewgroup}<TR>
+          <TD 
+          style="BACKGROUND-IMAGE: none; BACKGROUND-COLOR: #ffe4e1; WIDTH: 141px; WHITE-SPACE: normal" 
+          class=group_1>&nbsp; </TD>
+          <TD style="WIDTH: 129px" class=data>{$Branch_value} </TD>
+          <TD style="WIDTH: 139px" class=data>{$Student_value} </TD>
+          <TD style="WIDTH: 68px" class=data>{$ICNO_value} </TD>
+          <TD style="WIDTH: 84px" class=data>{$MatricNo_value} </TD>
+          <TD style="WIDTH: 115px" class=data>{$Email_value} </TD>
+          <TD style="WIDTH: 70px" class=data>{$group_value} </TD></TR><!-------------------------------------  group summary ----------------------------------------->{END nonewgroup}</TBODY>{END grid_row}</TABLE></TD>
+    <TD class=runner-cr></TD></TR>
+  <TR class="runner-row style1">
+    <TD class=runner-cl></TD>
+    <TD class=runner-cc>
+      <TABLE border=0 cellSpacing=0 cellPadding=0>
+        <TBODY></TBODY></TABLE></TD>
+    <TD class=runner-cr></TD></TR>
+  <TR class="runner-bottomrow style1">
+    <TD class=runner-cl><IMG src="images/spacer.gif"></TD>
+    <TD class=runner-cc></TD>
+    <TD class=runner-cr><IMG src="images/spacer.gif"></TD></TR></TBODY></TABLE></DIV>{END pages}{END container_grid}{END body}</BODY></HTML>

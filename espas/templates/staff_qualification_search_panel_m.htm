@@ -1,0 +1,59 @@
+<div class="searchOptions bottomPanelBorder" {$srchOpt_attrs}>
+	<!-- Search panel content -->
+	<div class="srchCritTop" style="display: none;">
+		Criteria:&nbsp;
+		<input type="radio" name="srchType" class="runner-radio-button" {$all_checkbox}> {BEGIN all_checkbox_label}all{END all_checkbox_label}
+		&nbsp;&nbsp;&nbsp;
+		<input type="radio" name="srchType" class="runner-radio-button" {$any_checkbox}> {BEGIN any_checkbox_label}any{END any_checkbox_label}
+	</div>
+	
+	<div class="addOption">
+		<span class="runner-btnframe">
+		<span class="runner-btnleft"></span>
+		<span class="runner-btnright"></span>
+		<a href="#" id="showHideControlChooseMenu{$id}" class="runner-button" {$showHideCtrls_attrs}>Add field</a>
+		</span>
+		&nbsp;&nbsp;&nbsp;
+		<span class="runner-btnframe">
+		<span class="runner-btnleft"></span>
+		<span class="runner-btnright"></span>
+		<a href="#" id="showHideSearchType{$id}" class="runner-button" {$showHideCtrlsOpt_attrs}>{$showHideOpt_mess}</a>
+		</span>
+	</div>
+	
+	<!-- choose controls div -->
+	<div class="runner-panel controlChooseMenu" {$controlChooseMenuDiv_attrs}>
+		{BEGIN addSearch_Institution}
+			<a href="#" id="addSearchControl_Institution" class="addSearchControl" {$addSearchControl_Institution_attrs}>Institution</a><br>
+		{END addSearch_Institution}
+		{BEGIN addSearch_YearGrad}
+			<a href="#" id="addSearchControl_YearGrad" class="addSearchControl" {$addSearchControl_YearGrad_attrs}>Tahun Graduasi</a><br>
+		{END addSearch_YearGrad}
+		{BEGIN addSearch_EducationType}
+			<a href="#" id="addSearchControl_EducationType" class="addSearchControl" {$addSearchControl_EducationType_attrs}>Jenis </a><br>
+		{END addSearch_EducationType}
+		{BEGIN addSearch_Major}
+			<a href="#" id="addSearchControl_Major" class="addSearchControl" {$addSearchControl_Major_attrs}>Major</a><br>
+		{END addSearch_Major}
+		{BEGIN addSearch_Grade_CGPA}
+			<a href="#" id="addSearchControl_Grade_CGPA" class="addSearchControl" {$addSearchControl_Grade_CGPA_attrs}>Keputusan</a><br>
+		{END addSearch_Grade_CGPA}
+	</div>
+	
+	<div class="controlsBlock">
+		{BEGIN searchCtrlBlock}
+		<div class="srchPanelRow" {$filterRow_attrs}>
+			<div class="srchPanelCell">{$delCtrlButt}&nbsp;{$fLabel}:&nbsp;</div>
+			<div class="srchPanelCell srchPanelCell2">{$searchtype} {$searchcontrol} {$searchcontrol1}</div>
+		</div>
+		{END searchCtrlBlock}
+	</div>
+		
+	<div class="bottomSearchButt" align="left" {$bottomSearchButt_attrs}>
+		<span class="runner-btnframe">
+		<span class="runner-btnleft"></span>
+		<span class="runner-btnright"></span>
+		<a href="#" class="runner-button" {$searchbutton_attrs}>Cari</a>
+		</span>
+	</div>
+</div>

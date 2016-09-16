@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<HTML {$html_attrs}><HEAD><TITLE>{$pagetitle}</TITLE>
+<META http-equiv="X-UA-Compatible" content="IE=Edge">
+<META content="text/html; charset=Windows-1252" http-equiv=Content-Type><LINK rel=stylesheet type=text/css href="styles/default.css">{BEGIN rtlCSS}<LINK rel=stylesheet type=text/css href="styles/defaultRTL.css">{END rtlCSS}{BEGIN styleCSSFiles}<LINK rel=stylesheet type=text/css href="{$stylepath}">{END styleCSSFiles}{BEGIN pageCSSFiles}<LINK rel=stylesheet type=text/css href="{$pagestylepath}">{END pageCSSFiles}<!--[if IE]><LINK rel=stylesheet type=text/css href="styles/defaultIE.css">{BEGIN IEcssFiles}<LINK rel=stylesheet type=text/css href="{$stylepathIE}">{END IEcssFiles}<![endif]-->
+<META name=GENERATOR content="MSHTML 10.00.9200.16525"></HEAD>
+<BODY class="{$stylename}" {$bodyattrs}>{BEGIN body}{$header} 
+<TABLE class=runner-toptable cellPadding=0>
+  <TBODY>
+  <TR class=runner-header>
+    <TD class=runner-top colSpan=3>
+      {BEGIN container_search}
+      <TABLE class="runner-c runner-c-search" cellPadding=0 align=center>
+        <TBODY>
+        <TR class="runner-toprow style2 header">
+          <TD class=runner-cl><IMG src="images/spacer.gif"></TD>
+          <TD class=runner-cc>
+            
+            <DIV 
+            class="runner-b-srchheader {$brickclass_srchheader}">Manage-Student 
+            Billing (Program) - Advanced search {$CrossElem}</DIV></TD>
+          <TD class=runner-cr><IMG src="images/spacer.gif"></TD></TR>
+        {BEGIN conditions_block}<TR class="runner-row style1 runner-b-srchconditions {$brickclass_srchconditions}">
+          <TD class=runner-cl></TD>
+          <TD class="runner-cc runner-brickcontents">
+            
+            <CENTER><SPAN class=fieldname>Criteria:&nbsp;</SPAN> <INPUT 
+            class=runner-radio-button type=radio name=srchType 
+            {$all_checkbox}><LABEL for=all_checkbox> All conditions</LABEL> 
+            &nbsp;&nbsp;&nbsp; <INPUT class=runner-radio-button type=radio 
+            name=srchType {$any_checkbox}><LABEL for=any_checkbox> Any 
+            condition</LABEL> </CENTER></TD>
+          <TD class=runner-cr></TD></TR>
+        {END conditions_block}<TR class="runner-row style1 runner-b-wrapper {$wrapperclass_fields}">
+          <TD class=runner-cl></TD>
+          <TD class="runner-cc runner-brickcontents runner-wrapper">
+            
+            {BEGIN container_fields}
+            <TABLE class="runner-c runner-c-fields" cellPadding=0>
+              <TBODY>
+              <TR class="runner-toprow header style2 runner-b-srchfields">
+                <TD class=runner-cl><IMG src="images/spacer.gif"></TD>
+                <TD class=runner-cc>
+                  </TD>
+                <TD class=runner-cc>
+                  NOT</TD>
+                <TD class=runner-cc colSpan=3>
+                   </TD>
+                <TD class=runner-cr></TD></TR>
+              {BEGIN Name_fieldblock}<TR class="runner-row style1 runner-b-srchfields">
+                <TD class=runner-cl></TD>
+                <TD class="runner-cc runner-cc1">
+                  
+                  <DIV class="fieldlabel_Name {$fielddispclass_Name}">Student 
+                  Name </DIV></TD></TD>
+                <TD class="runner-cc alt">
+                  
+                  <DIV class="fieldoption_Name {$fielddispclass_Name}"><INPUT 
+                  type=checkbox {$Name_notbox}> </DIV></TD>
+                <TD class="runner-cc alt">
+                  
+                  <DIV class="fieldoption_Name {$fielddispclass_Name}">{$searchtype_Name} </DIV></TD>
+                <TD class="runner-cc alt">
+                  
+                  <DIV class="fieldcontrol_Name {$fielddispclass_Name}">{$Name_editcontrol}&nbsp; 
+                  </DIV></TD>
+                <TD class="runner-cc alt">
+                  
+                  <DIV class="fieldcontrol_Name {$fielddispclass_Name}">{$Name_editcontrol1}&nbsp; 
+                  </DIV></TD>
+                <TD class="runner-cr alt"></TD></TR>
+              {END Name_fieldblock}{BEGIN MatricNo_fieldblock}<TR class="runner-row style1 runner-b-srchfields">
+                <TD class=runner-cl></TD>
+                <TD class="runner-cc runner-cc1">
+                  
+                  <DIV 
+                  class="fieldlabel_MatricNo {$fielddispclass_MatricNo}">Matric 
+                  No </DIV></TD></TD>
+                <TD class="runner-cc alt">
+                  
+                  <DIV 
+                  class="fieldoption_MatricNo {$fielddispclass_MatricNo}"><INPUT 
+                  type=checkbox {$MatricNo_notbox}> </DIV></TD>
+                <TD class="runner-cc alt">
+                  
+                  <DIV 
+                  class="fieldoption_MatricNo {$fielddispclass_MatricNo}">{$searchtype_MatricNo} </DIV></TD>
+                <TD class="runner-cc alt">
+                  
+                  <DIV 
+                  class="fieldcontrol_MatricNo {$fielddispclass_MatricNo}">{$MatricNo_editcontrol}&nbsp; 
+                </DIV></TD>
+                <TD class="runner-cc alt">
+                  
+                  <DIV 
+                  class="fieldcontrol_MatricNo {$fielddispclass_MatricNo}">{$MatricNo_editcontrol1}&nbsp; 
+                </DIV></TD>
+                <TD class="runner-cr alt"></TD></TR>
+              {END MatricNo_fieldblock}{BEGIN Item_Name_fieldblock}<TR class="runner-row style1 runner-b-srchfields">
+                <TD class=runner-cl></TD>
+                <TD class="runner-cc runner-cc1">
+                  
+                  <DIV 
+                  class="fieldlabel_Item_Name {$fielddispclass_Item_Name}">Item 
+                  Name </DIV></TD></TD>
+                <TD class="runner-cc alt">
+                  
+                  <DIV 
+                  class="fieldoption_Item_Name {$fielddispclass_Item_Name}"><INPUT 
+                  type=checkbox {$Item_Name_notbox}> </DIV></TD>
+                <TD class="runner-cc alt">
+                  
+                  <DIV 
+                  class="fieldoption_Item_Name {$fielddispclass_Item_Name}">{$searchtype_Item_Name} </DIV></TD>
+                <TD class="runner-cc alt">
+                  
+                  <DIV 
+                  class="fieldcontrol_Item_Name {$fielddispclass_Item_Name}">{$Item_Name_editcontrol}&nbsp; 
+                  </DIV></TD>
+                <TD class="runner-cc alt">
+                  
+                  <DIV 
+                  class="fieldcontrol_Item_Name {$fielddispclass_Item_Name}">{$Item_Name_editcontrol1}&nbsp; 
+                  </DIV></TD>
+                <TD class="runner-cr alt"></TD></TR>
+              {END Item_Name_fieldblock}{BEGIN Invoice_No_fieldblock}<TR class="runner-row style1 runner-b-srchfields" style="HEIGHT: 20px">
+                <TD class=runner-cl></TD>
+                <TD class="runner-cc runner-cc1">
+                  
+                  <DIV 
+                  class="fieldlabel_Invoice_No {$fielddispclass_Invoice_No}">Invoice 
+                  No </DIV></TD></TD>
+                <TD class="runner-cc alt">
+                  
+                  <DIV 
+                  class="fieldoption_Invoice_No {$fielddispclass_Invoice_No}"><INPUT 
+                  type=checkbox {$Invoice_No_notbox}> </DIV></TD>
+                <TD class="runner-cc alt">
+                  
+                  <DIV 
+                  class="fieldoption_Invoice_No {$fielddispclass_Invoice_No}">{$searchtype_Invoice_No} </DIV></TD>
+                <TD class="runner-cc alt">
+                  
+                  <DIV 
+                  class="fieldcontrol_Invoice_No {$fielddispclass_Invoice_No}">{$Invoice_No_editcontrol}&nbsp; 
+                  </DIV></TD>
+                <TD class="runner-cc alt">
+                  
+                  <DIV 
+                  class="fieldcontrol_Invoice_No {$fielddispclass_Invoice_No}">{$Invoice_No_editcontrol1}&nbsp; 
+                  </DIV></TD>
+                <TD class="runner-cr alt"></TD></TR>
+              {END Invoice_No_fieldblock}{BEGIN Invoice_Date_fieldblock}<TR class="runner-row style1 runner-b-srchfields">
+                <TD class=runner-cl></TD>
+                <TD class="runner-cc runner-cc1">
+                  
+                  <DIV 
+                  class="fieldlabel_Invoice_Date {$fielddispclass_Invoice_Date}">Invoice 
+                  Date </DIV></TD></TD>
+                <TD class="runner-cc alt">
+                  
+                  <DIV 
+                  class="fieldoption_Invoice_Date {$fielddispclass_Invoice_Date}"><INPUT 
+                  type=checkbox {$Invoice_Date_notbox}> </DIV></TD>
+                <TD class="runner-cc alt">
+                  
+                  <DIV 
+                  class="fieldoption_Invoice_Date {$fielddispclass_Invoice_Date}">{$searchtype_Invoice_Date} </DIV></TD>
+                <TD class="runner-cc alt">
+                  
+                  <DIV 
+                  class="fieldcontrol_Invoice_Date {$fielddispclass_Invoice_Date}">{$Invoice_Date_editcontrol}&nbsp; 
+                  </DIV></TD>
+                <TD class="runner-cc alt">
+                  
+                  <DIV 
+                  class="fieldcontrol_Invoice_Date {$fielddispclass_Invoice_Date}">{$Invoice_Date_editcontrol1}&nbsp; 
+                  </DIV></TD>
+                <TD class="runner-cr alt"></TD></TR>
+              {END Invoice_Date_fieldblock}{BEGIN status_fieldblock}<TR class="runner-row style1 runner-b-srchfields">
+                <TD class=runner-cl></TD>
+                <TD class="runner-cc runner-cc1">
+                  
+                  <DIV class="fieldlabel_status {$fielddispclass_status}">Status 
+                  </DIV></TD></TD>
+                <TD class="runner-cc alt">
+                  
+                  <DIV 
+                  class="fieldoption_status {$fielddispclass_status}"><INPUT 
+                  type=checkbox {$status_notbox}> </DIV></TD>
+                <TD class="runner-cc alt">
+                  
+                  <DIV class="fieldoption_status {$fielddispclass_status}">{$searchtype_status} </DIV></TD>
+                <TD class="runner-cc alt">
+                  
+                  <DIV 
+                  class="fieldcontrol_status {$fielddispclass_status}">{$status_editcontrol}&nbsp; 
+                  </DIV></TD>
+                <TD class="runner-cc alt">
+                  
+                  <DIV 
+                  class="fieldcontrol_status {$fielddispclass_status}">{$status_editcontrol1}&nbsp; 
+                  </DIV></TD>
+                <TD class="runner-cr alt"></TD></TR>
+              {END status_fieldblock}<TR class="{$cfooterclass_fields}">
+                <TD class=runner-cl><IMG src="images/spacer.gif"></TD>
+                <TD class=runner-cc></TD>
+                <TD class="runner-cc alt"></TD>
+                <TD class="runner-cc alt"></TD>
+                <TD class="runner-cc alt"></TD>
+                <TD class="runner-cc alt"></TD>
+                <TD class="runner-cr alt"><IMG src="images/spacer.gif"></TD></TR></TBODY></TABLE>{END container_fields}</TD>
+          <TD class=runner-cr></TD></TR>
+        <TR 
+        class="runner-row style2 runner-b-srchbuttons {$brickclass_srchbuttons}">
+          <TD class=runner-cl></TD>
+          <TD class="runner-cc runner-brickcontents">
+            {BEGIN search_button}<SPAN class=runner-btnframe><SPAN class=runner-btnleft></SPAN><SPAN class=runner-btnright></SPAN><A class=runner-button href="#" {$searchbutton_attrs}>Search</A> 
+            </SPAN>{END search_button}{BEGIN reset_button}<SPAN class=runner-btnframe><SPAN class=runner-btnleft></SPAN><SPAN class=runner-btnright></SPAN><A class=runner-button href="#" {$resetbutton_attrs}>Reset</A> 
+            </SPAN>{END reset_button}{BEGIN back_button}<SPAN class=runner-btnframe><SPAN class=runner-btnleft></SPAN><SPAN class=runner-btnright></SPAN><A class=runner-button href="#" {$backbutton_attrs}>Back to list</A> 
+            </SPAN>{END back_button}</TD>
+          <TD class=runner-cr></TD></TR>
+        <TR class="{$cfooterclass_search}">
+          <TD class=runner-cl><IMG src="images/spacer.gif"></TD>
+          <TD class=runner-cc></TD>
+          <TD class=runner-cr><IMG src="images/spacer.gif"></TD></TR></TBODY></TABLE>{END container_search}</TD></TR>
+  <TR class=runner-body>
+    <TD class="runner-left {$blockclass_left}"></TD>
+    <TD class="runner-center {$blockclass_center}"></TD>
+    <TD class="runner-right {$blockclass_right}"></TD></TR>
+  <TR class=runner-footer>
+    <TD class=runner-bottom 
+colSpan=3><!--%%bottom%%--></TD></TR></TBODY></TABLE>{$footer}{END body} </BODY></HTML>

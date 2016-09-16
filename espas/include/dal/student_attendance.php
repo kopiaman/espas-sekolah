@@ -1,0 +1,41 @@
+<?php
+$dalTablestudent_attendance = array();
+$dalTablestudent_attendance["sid"] = array("type"=>3,"varname"=>"sid");
+$dalTablestudent_attendance["StudentID"] = array("type"=>3,"varname"=>"StudentID");
+$dalTablestudent_attendance["amonth"] = array("type"=>3,"varname"=>"amonth");
+$dalTablestudent_attendance["ayear"] = array("type"=>3,"varname"=>"ayear");
+$dalTablestudent_attendance["1"] = array("type"=>3,"varname"=>"fld1");
+$dalTablestudent_attendance["2"] = array("type"=>3,"varname"=>"fld2");
+$dalTablestudent_attendance["3"] = array("type"=>3,"varname"=>"fld3");
+$dalTablestudent_attendance["4"] = array("type"=>3,"varname"=>"fld4");
+$dalTablestudent_attendance["5"] = array("type"=>3,"varname"=>"fld5");
+$dalTablestudent_attendance["6"] = array("type"=>3,"varname"=>"fld6");
+$dalTablestudent_attendance["7"] = array("type"=>3,"varname"=>"fld7");
+$dalTablestudent_attendance["8"] = array("type"=>3,"varname"=>"fld8");
+$dalTablestudent_attendance["9"] = array("type"=>3,"varname"=>"fld9");
+$dalTablestudent_attendance["10"] = array("type"=>3,"varname"=>"fld10");
+$dalTablestudent_attendance["11"] = array("type"=>3,"varname"=>"fld11");
+$dalTablestudent_attendance["12"] = array("type"=>3,"varname"=>"fld12");
+$dalTablestudent_attendance["13"] = array("type"=>3,"varname"=>"fld13");
+$dalTablestudent_attendance["14"] = array("type"=>3,"varname"=>"fld14");
+$dalTablestudent_attendance["15"] = array("type"=>3,"varname"=>"fld15");
+$dalTablestudent_attendance["16"] = array("type"=>3,"varname"=>"fld16");
+$dalTablestudent_attendance["17"] = array("type"=>3,"varname"=>"fld17");
+$dalTablestudent_attendance["18"] = array("type"=>3,"varname"=>"fld18");
+$dalTablestudent_attendance["19"] = array("type"=>3,"varname"=>"fld19");
+$dalTablestudent_attendance["20"] = array("type"=>3,"varname"=>"fld20");
+$dalTablestudent_attendance["21"] = array("type"=>3,"varname"=>"fld21");
+$dalTablestudent_attendance["22"] = array("type"=>3,"varname"=>"fld22");
+$dalTablestudent_attendance["23"] = array("type"=>3,"varname"=>"fld23");
+$dalTablestudent_attendance["24"] = array("type"=>3,"varname"=>"fld24");
+$dalTablestudent_attendance["25"] = array("type"=>3,"varname"=>"fld25");
+$dalTablestudent_attendance["26"] = array("type"=>3,"varname"=>"fld26");
+$dalTablestudent_attendance["27"] = array("type"=>3,"varname"=>"fld27");
+$dalTablestudent_attendance["28"] = array("type"=>3,"varname"=>"fld28");
+$dalTablestudent_attendance["29"] = array("type"=>3,"varname"=>"fld29");
+$dalTablestudent_attendance["30"] = array("type"=>3,"varname"=>"fld30");
+$dalTablestudent_attendance["31"] = array("type"=>3,"varname"=>"fld31");
+	$dalTablestudent_attendance["sid"]["key"]=true;
+$dal_info["student_attendance"]=&$dalTablestudent_attendance;
+
+?>

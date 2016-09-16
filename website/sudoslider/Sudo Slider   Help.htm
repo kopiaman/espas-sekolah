@@ -1,0 +1,842 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<!-- saved from url=(0034)http://webbies.dk/SudoSlider/help/ -->
+<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!--<base href="http://webbies.dk/">--><base href=".">
+    <title>Sudo Slider | Help</title>
+    <meta name="author" content="Erik Krogh Kristensen (webbies.dk)">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    
+
+    <!-- [template css] begin -->
+    <link rel="stylesheet" href="./Sudo Slider   Help_files/screen.css" type="text/css" media="screen, projection">
+    <link rel="stylesheet" href="./Sudo Slider   Help_files/960.css" type="text/css" media="screen, projection">
+    <!--[if IE]>
+    <link rel="stylesheet" href="assets/templates/SudoSlider/css/ie.css" type="text/css" media="screen, projection" />
+    <![endif]-->
+    <!-- [template css] end -->
+    <script type="text/javascript" async="" src="./Sudo Slider   Help_files/ga.js"></script><script type="Text/Javascript" src="./Sudo Slider   Help_files/jquery.min.js"></script>
+    <script type="text/javascript" src="./Sudo Slider   Help_files/jquery.sudoSlider.min.js"></script>
+    <script type="text/javascript" src="./Sudo Slider   Help_files/jquery.ba-bbq.min.js"></script>
+    <script type="Text/Javascript">
+        $(function(){
+            $('a[href*=#]').click(function() {
+                if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'')
+                        && location.hostname == this.hostname) {
+                    var $target = $(this.hash);
+                    $target = $target.length && $target || $('[name=' + this.hash.slice(1) +']');
+                    if ($target.length) {
+                        var targetOffset = $target.offset().top;
+                        $('html,body').animate({scrollTop: targetOffset}, 800);
+                        return false;
+                    }
+                }
+            });
+        });
+
+    </script>
+    <script type="Text/Javascript">
+        $(document).ready(function(){
+            if ($("#navigation li.active").length == 0)
+            {
+                $("#navigation li.first").addClass("active");
+            }
+        });
+
+
+    </script>
+    <!-- Custom Header -->
+    <script type="text/javascript">
+    // This little script makes sure that the hash can link to both a slide, and a height.
+    clickHash = false;
+    if (window.location.hash)
+    {
+        var hash = window.location.hash;
+        hash = hash.split("-");
+        if (hash[0]) window.location.hash = hash[0];
+        if (hash[1]) clickHash = hash[1];
+    }
+</script>
+<script type="text/javascript" src="./Sudo Slider   Help_files/jquery.ba-bbq.min.js"></script>
+<script type="text/javascript">
+    var undefined;
+    sudoslider = undefined;
+    $(document).ready(function(){
+        var ulDidAlreadyCorrectLeft = 0;
+        var ulDidAlreadyCorrectTop = 0;
+        var init = true;
+        sudoSlider = $("#helpslider").sudoSlider({
+            prevNext: false,
+            history: true,
+            numericText:['Howto', 'Settings', 'Designers guide'],
+            afterAnimation: function () {
+                if (clickHash && init) {
+                    var target = $('[name=' + clickHash +']');
+                    var targetOffset = target.offset().top;
+                    $('html,body').animate({scrollTop: targetOffset}, 0);
+                }
+            },
+            beforeAnimation : function () {
+                // Fixing the animations if the user using the browser on the page.
+                var ul = $("#helpslider ul");
+                var ulLeft = ul.position().left;
+                var ulTop = ul.position().top;
+                ul.css({left: -ulLeft - ulDidAlreadyCorrectLeft, top: -ulTop - ulDidAlreadyCorrectTop});
+                ulDidAlreadyCorrectLeft += ulLeft;
+                ulDidAlreadyCorrectTop += ulTop;
+            }
+        });
+    });
+</script>
+<style>
+#helpslider li {background: white;}
+</style>
+    <!-- End Custom Header -->
+</head>
+<body>
+<a name="top"></a>
+<div class="container_12">
+
+    <!-- START LOGO -->
+    <div class="grid_4 header" style="margin-top:25px;">
+        <a href="http://webbies.dk/SudoSlider/"><img src="./Sudo Slider   Help_files/logo_new.png" alt="Sudo Slider"></a>
+    </div>
+    <!-- END LOGO -->
+
+    <!-- START NAVIGATION -->
+    <div class="grid_8 header">
+        <div id="navigation">
+            <ul><li class="first"><a href="http://webbies.dk/SudoSlider/index.html" title="Home">Home</a></li>
+<li><a href="http://webbies.dk/SudoSlider/download.html" title="Download">Download</a></li>
+<li class="active"><a href="./Sudo Slider   Help_files/Sudo Slider   Help.htm" title="Help">Help</a></li>
+<li class="last"><a href="http://webbies.dk/SudoSlider/demos.html" title="Demos" demos="">Demos</a></li>
+</ul>
+        </div>
+    </div>
+    <!-- END NAVIGATION -->
+
+    <div class="clear"></div>
+</div>
+<!-- START MEDIUM SECTION -->
+<div class="container_12 medium" style="margin-bottom:40px;">
+
+    <div id="featured">
+        <div class="grid_4">
+            <img src="./Sudo Slider   Help_files/help_board.png" width="256" height="256" alt="">
+        </div>
+        <div class="grid_8 help">
+            <h2 style="margin-bottom:5px;font-size:300%;">Get help and <span class="orange">support</span></h2>
+            <div style="width:620px;text-align:center;">
+                <a href="http://webbies.dk/SudoSlider/help/#helpcontent" onclick="javascript:sudoSlider.goToSlide(1);">
+                    <div style="width:140px;margin-right:20px;float:left;">
+                        <img src="./Sudo Slider   Help_files/tools.png" width="128" height="128">
+                        <h3><span class="orange">Howto</span> setup</h3>
+                    </div>
+                </a>
+                <a href="http://webbies.dk/SudoSlider/help/#helpcontent" onclick="javascript:sudoSlider.goToSlide(2);">
+                    <div style="width:140px;margin-right:20px;float:left;">
+                        <img src="./Sudo Slider   Help_files/settings.png" width="128" height="128">
+                        <h3>All <span class="orange">settings</span></h3>
+                    </div>
+                </a>
+                <a href="http://webbies.dk/SudoSlider/help/#helpcontent" onclick="javascript:sudoSlider.goToSlide(3);">
+                    <div style="width:140px;margin-right:20px;float:left;">
+                        <img src="./Sudo Slider   Help_files/toolbox_designer.png" width="128" height="128">
+                        <h3><span class="orange">Designers</span> guide</h3>
+                    </div>
+                </a>
+                <a href="http://webbies.dk/SudoSlider/help/ask-me/">
+                    <div style="width:140px;float:left;">
+                        <img src="./Sudo Slider   Help_files/ask_question.png" width="128" height="128">
+                        <h3><span class="orange">Ask me</span></h3>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+    <!-- End featured -->
+
+</div>
+<!-- END MEDIUM SECTION -->
+<a name="helpcontent"></a>
+<div class="container_12" style="margin-top:20px;">
+<div class="grid_2">
+    <p></p>
+</div>
+<div class="grid_8">
+<div id="helpslider" style="overflow: hidden; position: relative; height: 3017px; width: 800px;">
+<ul style="display: block; position: relative; width: 9000000px; margin-left: 0px; margin-top: 0px;">
+<li style="float: left; list-style: none; display: block; position: relative;">
+    <h1>Howto setup Sudo Slider</h1>
+    <p>1. Put the content you wan't to slide inside a container: </p>
+    <pre>&lt;div id="slider" &gt;
+   &lt;div&gt;&lt;img src="images/01.jpg"/&gt;&lt;/div&gt;
+   &lt;div&gt;Some content&lt;/div&gt;
+   &lt;div&gt;&lt;img src="../images/03.jpg" alt="image description"/&gt;&lt;/div&gt;
+&lt;/div&gt;</pre>
+    <p>(1.1) You can put it inside a list inside the container, if you wan't it to look "nicer" when JavaScript is turned off: </p>
+    <pre>&lt;div id="slider" &gt;
+   &lt;ul&gt;
+      &lt;li&gt;&lt;img src="images/01.jpg"/&gt;&lt;/li&gt;
+      &lt;li&gt;Some content&lt;/li&gt;
+      &lt;li&gt;&lt;img src="images/03.jpg" alt="image description"/&gt;&lt;/li&gt;
+   &lt;/ul&gt;
+&lt;/div&gt;</pre>
+    <p>2. Include the JavaScript</p>
+    <pre>&lt;script type="Text/Javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"&gt;&lt;/script&gt;
+&lt;script type="text/javascript" src="../js/jquery.sudoSlider.min.js"&gt;&lt;/script&gt;</pre>
+    <p>3. Run the slider</p>
+    <pre>var sudoSlider = $("#slider").sudoSlider({
+   numeric: true
+});</pre>
+    <p>If you can't get it to work, copy the <a href="http://webbies.dk/assets/files/SudoSlider/package/demos/basic.html">basic example</a>, and make sure that the links to the JavaScript works, because from this point i assume that you have SudoSlider up and running.</p>
+    <p>You specify the options like the following</p>
+	<pre>&lt;script&gt;
+$(document).ready(function(){	
+    var sudoSlider = $("#slider").sudoSlider({
+        option1: setting1,
+        option2: setting2,
+        option3: setting3,
+        option4: setting4
+    });
+&lt;/script&gt;</pre>
+    <p>Here an example with a couple of options set:</p>
+<pre>&lt;script&gt;
+$(document).ready(function(){	
+    var sudoSlider = $("#slider").sudoSlider({
+        continuous:        true,
+        history:           true,
+        numericText:       ['one','two','three'],
+        customLink:        'a.tablink',
+        updateBefore:      true,
+        nextHtml:          '&lt;span&gt; next &lt;/span&gt;'
+    });
+&lt;/script&gt;</pre>
+    <p><i>Remember to exclude the "," after the last setting.</i><br>
+    </p><p>All the options of SudoSlider are case insensitive, so you can use any mix of upper and lowercase when writing the options. </p>
+    You can off course replace the <i>"#slider"</i> with any CSS selector.<br>
+    <a href="http://webbies.dk/SudoSlider/help/#helpcontent" onclick="javascript:sudoSlider.goToSlide(2);">Here's a list of all options and an explanation of what they do.</a><p></p>
+    <!-- -->
+    <h2>Methods</h2>
+    <p>Methods is what you use, if you want the slider to do somethings after Init. </p>
+    <p>You do that by doing something like this:</p>
+	<pre>sudoSlider.goToSlide(1);</pre>
+    <p>This offcource requires that you saved the slider in the variable called "sudoSlider". <br>
+        The variable can have any name, you just need to make sure that you actually save the slider in a variable. </p>
+    <p><a href="http://webbies.dk/assets/files/SudoSlider/package/demos/keyboard.html">The keyboard demo</a> is a good basic example of how methods are used.</p>
+
+    <p>Any of these methods can be used. (see examples of them below.)</p>
+    <ul>
+        <li><i>.getOption(option);</i> Returns the value of that option.</li>
+        <li><i>.setOption(option, value);</i> Sets the value of an option. </li>
+        <li><i>.insertSlide(html, pos, [numtext]);</i> Inserts a slide with the specified content into the slider. With the pos value you can set wich slide the content should be inserted after (and if pos == 0, the content is inserted before the other slides). And with numtext (it's optional), you can set the associated numericText. </li>
+        <li><i>.removeSlide(pos);</i>Removes a slide.</li>
+        <li><i>.goToSlide(a, [speed]);</i> Animate to slide a (1 is the first, and 'next', 'prev', 'first' and 'last' also works). The optional speed argument specifies the speed.</li>
+        <li><i>.getSlide(number);</i> Gets the jQuery object for the specific slide (1 is the first). When using continuous this jQuery object will contain all the "continuous-clones". </li>
+        <li><i>.block();</i> Blocks any user input.</li>
+        <li><i>.unblock();</i> Removes the above mentioned block.</li>
+        <li><i>.startAuto();</i> Starts an automatic slideshow.</li>
+        <li><i>.stopAuto();</i> Stop the automatic slideshow.</li>
+        <li><i>.adjust();</i> Adjusts the slider, if anything has been changed (like the image size). The slider height, width and internal "position" is adjusted. </li>
+        <li><i>.destroy();</i> Destroys the slider, you can create it again by using .init(); </li>
+        <li><i>.init();</i> Use this to initiate the slider, after it has been destroyed.</li>
+        <li><i>.getValue(name);</i> This returns values, like the current slide. See accepted values and what they mean below.</li>
+        <li><i>.stopAnimation();</i> Stops the current animation.</li>
+    </ul>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <p>Below are example usage the different methods.  </p>
+    <pre>    // Returns the value of the option "fade".
+    var fade = sudoSlider.getOption('fade');
+
+    // Set the option "fade" to true.
+    sudoSlider.setOption('fade', true);
+
+    // The content is inserted after the second slide.
+    sudoSlider.insertSlide('&lt;p&gt;This is some content&lt;/p&gt;', 2, 'Content 3');
+
+    // The second slide is removed.
+    sudoSlider.removeSlide(2);
+
+    // The slider animates to slide number 3 in 500 miliseconds.
+    sudoSlider.goToSlide(3, 500);
+
+    // Returns the jQuery object for the 2nd slide
+    var slide = sudoSlider.getSlide(2);
+
+    // User input is blocked (the controls)
+    sudoSlider.block();
+
+    // User input is unblocked.
+    sudoSlider.unblock();
+
+    // Starts a slideshow.
+    sudoSlider.startAuto();
+
+    // Stops an automatic slideshow.
+    sudoSlider.stopAuto();
+
+    // Adjusts the slider, if anything has been changed (like the image size).
+    sudoSlider.adjust();
+
+    // The slider is destroyed.
+    sudoSlider.destroy();
+
+    // Build it again.
+    sudoSlider.init();
+
+    // Returns the current slide number (starts from 1).
+    var currentSlide = sudoSlider.getValue('currentSlide');
+
+    // Returns the total number of slides.
+    var totalSlides = sudoSlider.getValue('totalSlides');
+
+    // Returns if the slider is currently clickable (true/false).
+    var clickable = sudoSlider.getValue('clickable');
+
+    // Returns if the slider is currently destroyed (true/false).
+    var destroyed = sudoSlider.getValue('destroyed');
+
+    // Returns if the slider is currently running an automatic slideshow (true / false).
+    var destroyed = sudoSlider.getValue('autoAnimation');
+
+    // Stop the current animation
+    sudoSlider.stopAnimation();
+    </pre><br>
+    <p>If you have any question, bug report or spelling correction (English isn't my first language, so please correct me). Then plz <a href="http://webbies.dk/SudoSlider/help/ask-me/">leave a comment</a> or <a href="https://github.com/webbiesdk/SudoSlider/issues">file a bug</a>  </p>
+</li>
+<li style="float: left; list-style: none; display: block; position: relative;">
+<h1>All options and what they do</h1>
+<p><em>Note that all options are case insensitive, so you can use any mix of upper and lowercase when using the options. </em></p>
+<p></p><h3>[option name]:[option default value]</h3>
+[description of the option]<br>
+<span style="color: #C55805;text-decoration: none;">[Link(s) to example usage]</span><p></p>
+<br>
+<a href="http://webbies.dk/SudoSlider/help/#controls">Controls</a><br>
+<a href="http://webbies.dk/SudoSlider/help/#behavior">Slider behavior</a><br>
+<a href="http://webbies.dk/SudoSlider/help/#ajax">Ajax</a><br>
+<a href="http://webbies.dk/SudoSlider/help/#example">Full example</a><br><br>
+<h1></h1>
+<a name="controls" class="headline"><h1>Controls</h1></a>
+<h3>controlsShow:true</h3>
+If set to false, the controls (the numeric controls, and the prev, next, last and first buttons) will not be shown.<br>
+<br>
+<h3>controlsFade: true</h3>
+If set to false, the next/previous/first/last buttons won't fade away, when reaching the end of the slider, and continous == false.<br>
+<br>
+<h3>controlsFadeSpeed: '400'</h3>
+The speed of the fade animation of the previous and next buttons, when reaching the end of the slider and <br>
+continuous  == false and controlsFade == true.<br>
+You can also use the values 'fast', 'normal' or 'slow'. (Which means 200, 400 and 600 milliseconds.)<br>
+<br>
+<h3>controlsAttr:'id="controls"'</h3>
+The attributes  used in the "span" tag, that encloses all the generated controls. <br>
+See <a href="http://webbies.dk/SudoSlider/help/#Designers guide">designers guide</a> for an explanation of exactly where this is placed. <br>
+<br>
+<h3>prevNext:true</h3>
+If false, the previous and next buttons will not be shown.<br>
+It's still possible  to make a next and previous buttons with customLink.<br>
+<a href="http://webbies.dk/assets/files/SudoSlider/package/demos/numeric.html">demo of prevNext:false</a><br>
+<br>
+<h3>prevHtml:'&lt;a href="#" class="prevBtn"&gt; previous &lt;/a&gt;'</h3>
+The HTML used for the previous button. <br>
+It can be anything, as long as it's valid HTML with minimum 1 tag enclosing the whole thing. <br>
+See <a href="http://webbies.dk/SudoSlider/help/#Designers guide">designers guide</a> for an explanation of where this HTML is positioned relative to the slider. <br>
+<br>
+<h3>nextHtml:'&lt;a href="#" class="nextBtn"&gt; next &lt;/a&gt;'</h3>
+The HTML used for the next button. <br>
+It can be anything, as long as it's valid HTML with minimum 1 tag enclosing the whole thing. <br>
+See <a href="http://webbies.dk/SudoSlider/help/#Designers guide">designers guide</a> for an explanation of where this HTML is positioned relative to the slider. <br>
+<br>
+<a name="Numeric"></a>
+<h3>numeric:false</h3>
+If set to true, the numeric buttons will be shown. <br>
+The text in these buttons can be specified with numericText. <br>
+If set to 'pages', it will only make one button pr. [x] number of slides. (Where [x] is determined by the option "slideCount"). <br>
+<a href="http://webbies.dk/assets/files/SudoSlider/package/demos/numeric.html">numeric:true</a><br>
+<a href="http://webbies.dk/assets/files/SudoSlider/package/demos/mutiple%20slides%20pr.%20slide.html">numeric:'pages'</a><br>
+<br>
+<h3>numericAttr:'class="controls"'</h3>
+The attributes used in the "ol" tag, that encloses all the generated numeric buttons. <br>
+See <a href="http://webbies.dk/SudoSlider/help/#Designers guide">designers guide</a> for an explanation of exactly where this is placed. <br>
+<br>
+<h3>numericText:['1']</h3>
+The text used in the numeric buttons. This text is also used to specify the hash-url for each slide, which the history function use. <br>
+Example usage is <em>numericText:['First button text', 'Button number 2','This text comes in button number 3']</em><br>
+Any length of text's can be used, since the default values (1,2,3,4,5,6......) will be inserted if nothing is specified. <br>
+If using history, all values used must be unique like ['text1','text2','test3']. (If nothing is specified, it will still just use 1,2,3,4... as default values.)<br>
+<a href="http://webbies.dk/assets/files/SudoSlider/package/demos/fade.html">demo ussage of numericText</a><br>
+<br>
+<a name="CustomLink"></a>
+<h3>customLink:false </h3>
+If set to a value (jQuery selector), all the matched objects can make a animation. <br>
+Example usage of this variable is: customLink: 'div#customLinkbox a'.<br>
+To specify what animation the slider is supposed to do, set a value in the "rel" attribute of the custromlink element. This can be a number (1,2,3..) or "next", "prev", "last", "first". <br>
+You can place the customLinks wherever you want, even inside ajax-loaded or JavaScript generated content. If the selector is matched, it will work.<br>
+<a href="http://webbies.dk/assets/files/SudoSlider/package/demos/customLinks.html">Example usage in demo</a><br>
+<br>
+<h3>insertAfter: true</h3>
+If set to false, the auto generated controls will be inserted before the slider (before the &lt;div id="#someID"&gt;...&lt;/div&gt; ) instead of after.<br>
+<br>
+<a name="slideCount"></a>
+<h3>slideCount:1</h3>
+If you are showing more than 1 slide at the time, use this option to tell the slider how many slides you are showing. <br>
+That way, the slider will adjust when to fade out controls, and also make some adjustments to continuous to make that work.<br>
+AutoHeight and AutoWidth will also make sure that all the slides that are supposed to visible, are visible. <br>
+<a href="http://webbies.dk/assets/files/SudoSlider/package/demos/mutiple%20slides%20pr.%20slide.html">demo usage of slideCount</a><br>
+<a href="http://webbies.dk/assets/files/SudoSlider/package/demos/mutiple%20slides%20pr.%20slide%20continuous.html">demo usage of slideCount &amp; continuous</a><br>
+<br>
+<h3>moveCount:1</h3>
+This option adjust how many slides the slider moves when doing an animation to the "next" or the "previous" slide. <br>
+<a href="http://webbies.dk/assets/files/SudoSlider/package/demos/mutiple%20slides%20pr.%20slide.html">demo usage of moveCount</a><br>
+<br>
+<a name="behavior" class="headline"><h1>Slider behavior</h1></a>
+<h3>effect:"slide"</h3>
+Specifies the effect that will be used this can be a text string as shown <a href="http://webbies.dk/assets/files/SudoSlider/package/demos/fade.html">here</a>. <br>
+<a href="http://webbies.dk/assets/files/SudoSlider/package/demos/explorer%20effects.html">You can see all the possible effects in this demo</a> <br>
+If you know enough JavaScript, you can also make your own animation. Read the source code here to get an idea: <a href="http://webbies.dk/assets/files/SudoSlider/package/demos/make%20your%20own%20effect.html">Make your own effect</a> <br>
+<a href="http://webbies.dk/assets/files/SudoSlider/package/demos/different%20effects.html">You can also specify effects and their duration pr. slide.</a> <br>
+You can adjust how the many slices are used in the "fold" or "slice" effect with the <em>slices</em> option. <br>
+And you can set how many rows and columns are used with the <em>boxRows</em> and <em>boxRows</em> options.<br>
+Note that by specifying a prefix like "box", the slider will select randomly between all effects starting with "box". <br>
+<br>
+<h3>useCSS:true</h3>
+If set to true, SudoSlider will use CSS animations for everything in compatible browsers, and use JavaScript animations in non-compatible browsers. <br>
+<br>
+<h3>interruptible:false</h3>
+If set to true, the slider will do the following when requested to animate somewhere, when there is already an ongoing animation: <br>
+ - Stop the current animation, and move the slider to the slide it was going to. <br>
+ - Begin the next animation. <br>
+Otherwise, the next animation will just be queued. <br>
+<br>
+<h3>vertical:false</h3>
+If set to true, the slider will position the slides in a vertical line instead of in a horizontal line.<br>
+You can allways manually position the slides just the way you want. This setting only affects some css properties of the &lt;ul&gt; container.<br>
+<a href="http://webbies.dk/assets/files/SudoSlider/package/demos/vertical.html">demo of vertical:true</a><br>
+<br>
+<h3>responsive:false</h3>
+If set to true, the slider will automaticly adjust the slider to the size of the slider (in most cases the #slider). <br>
+This can be used for responsive layouts or a fullscreen slider. <br>
+The slider readjusts when the window is resized, so if any manual resizing is done, just call "$(window).resize();" and the slider will readjust. <br>
+<a href="http://webbies.dk/assets/files/SudoSlider/package/demos/responsive.html">demo of responsive:true</a><br>
+<br>
+<h3>speed: 1500</h3>
+This  number value specifies the speed of the sliding animation in milliseconds.<br>
+You can also use the values 'fast', 'normal' or 'slow'. (This means 400, 800 and 1200 milliseconds.)<br>
+A lot of the more complicated effects will take about twice the specified speed to complete. <br>
+<br>
+<h3>ease:'swing'</h3>
+Set  the easing the document should  make the animation with. This affects all build in animations.<br>
+There are 2 easings included in jQuery, and they are <em>'swing'</em> and <em>'linear'</em><br>
+Like any other jQuery plugin, you can also use non default easings, if you include a external JavaScript, like the jQuery Easing Plugin.<br>
+<br>
+<a name="auto"></a>
+<h3>auto:false</h3>
+If set to true, the slider will automatically  slide to the next slide after a specified period of time (see pause).  <br>
+This does not work with history, and it's not supposed to. <br>
+The automatic sliding stops when a user makes the slider do something. <br>
+<a href="http://webbies.dk/assets/files/SudoSlider/package/demos/auto.html">demo of auto:true</a><br>
+<br>
+<h3>pause: '2000' </h3>
+Sets the duration of the pause (from one animation stops, till the next begin) in milliseconds, when auto is true. <br>
+<br>
+<h3>resumePause:false</h3>
+Pr. default the slider stops completely when a user makes the slider do something.<br>
+But by using this option, you can make the slider continue after X miliseconds of inactivity.<br>
+<a href="http://webbies.dk/assets/files/SudoSlider/package/demos/auto%20with%20resumePause.html">demo of resumePause</a><br>
+<br>
+<a name="Continuous"></a>
+<h3>continuous:false </h3>
+If set to true, the slider will be continuous. Meaning that when sliding to the left of the first slide, you get the last (and if you slide the right of the last, you get the first). <br>
+You could also say that the slider goes in a loop, if you continuously slide in one direction.<br>
+If you use continuous, the slider creates clones of the outer content. This can cause some problems if you have flash content inside the slides. <br>
+Use the method .getSlide(number) to get the jQuery object for slides, if you are using continuous. This method will return all the clones of the specified slide. <br>
+<br>
+<a href="http://webbies.dk/assets/files/SudoSlider/package/demos/continuous.html">demo of continuous:true</a><br>
+<br>
+<h3>updateBefore: false</h3>
+If set to true, the numeric buttons (and the customLinks) will be given the class current when an animation is started, instead of when it finishes. <br>
+<br>
+<a name="History"></a>
+<h3>history:false</h3>
+If set to true, the slider will track which slide you are at, by the URL. Meaning that bookmarks and the browsers back/forward buttons are supported.<br>
+When using history, remember to include one of the required dependencies (see the demo), in order for it to work in old browsers.<br>
+Note: If you are testing a page locally, history might not work. That is simply because how browsers work, and not because the script doesn't work. <br>
+You can set the text (hashes) used by history by setting the numericText option. See the demo for how it works. <br>
+<a href="http://webbies.dk/assets/files/SudoSlider/package/demos/history.html">history:true in demo</a><br>
+<br>
+<a name="Autoheight"></a>
+<h3>autoheight:true</h3>
+If set to true, it will automatically adjust the height of the slider, according to the height of the content within the current slide. <br>
+<a href="http://webbies.dk/assets/files/SudoSlider/package/demos/autoheight.html">demo of autoheight:true</a><br>
+<br>
+<a name="Autowidth"></a>
+<h3>autowidth:true</h3>
+If set to true, it will automatically adjust the height of the width, according to the width of the current slide. <br>
+<a href="http://webbies.dk/assets/files/SudoSlider/package/demos/autowidth.html">demo of autoheight:true</a><br>
+<br>
+<a name="afterAnimation"></a>
+<a name="beforeAnimation"></a>
+<h3>beforeanimation:false</h3>
+This function runs before the animation (any animation) starts. <br>
+Example usage: <em>beforeanimation: function(t){ alert($(this).html()); }</em><br>
+The t variable is the number the slide have (the one the slider is animation towards). (As an example, the value of t is 2, when it's the second slide)<br>
+And the variable 'this' is the slide it is animating towards. <br>
+If you are ajax-loading some content, the function wont run until all the content on the target slide has loaded.  <br>
+A lot of the complex animations will create clones of some of the slides just after this callback has run. So be carefull with animations that take longer than 0ms if you are using a fancy animation. <br>
+You don't have to think about that in the afterAnimation callback.
+<br>
+<a href="http://webbies.dk/assets/files/SudoSlider/package/demos/callbacks%201.html">Example usage in demos</a><br>
+<br>
+<h3>afteranimation:false</h3>
+Same as beforeanimation. It's just runs after the animation (still any animation) has finished. <br>
+<a href="http://webbies.dk/assets/files/SudoSlider/package/demos/callbacks%201.html">Example usage in demos</a><br>
+<br>
+<h3>initCallback:false</h3>
+Runs when the slider has initialized. The this pointer is a reference to the sudoSlider object, so you can call methods like <em>this.getSlide(1);</em><br>
+Note that some methods like .setOption() re-initializes the slider, and the initCallback will run again if you use a method that re-initialize the slider.<br>
+<a href="http://webbies.dk/assets/files/SudoSlider/package/demos/fadeIn%20slider%20on%20load.html">Example usage in demos</a><br>
+<br>
+<h3>loadStart: false</h3>
+A function specified here will run when the script have to wait for a slide to load, when it tries to perform an animation. <br>
+The function takes one argument, which is the slide the slider tries to animation to. <br>
+The this variable is the same as the sudoSlider object. <br>
+Note that this function will not run, if there's nothing to wait for (which is most of the time, since SudoSlider pr. default tries to preload the slides, see preloadAjax). <br>
+<br>
+<h3>loadFinish: false</h3>
+Same as loadStart, only it is run after the load has finished. <br>
+<br>
+<a name="ajax" class="headline"><h1>Ajax</h1></a>
+<h3>ajax:false</h3>
+With this variable, you can set which ajax documents are loaded into the slides. <br>
+Example usage is: <em>ajax: ['images/01.jpg', 'somedocument.html', 'images/anotherpic.png', false, 'lastdocument.html']</em><br>
+In that example, slide 1,2,3 and 5 is are ajax-enabled, and the ajax content is loaded into the slides, but slide number 4 isn't touched. <br>
+If it's not an image, the document will be loaded into the slide using the jQuery .ajax function.<br>
+You can set how the slides are loaded with the option preloadAjax (just below). <br>
+<a href="http://webbies.dk/assets/files/SudoSlider/package/demos/ajax.html">Example usage in demo</a><br>
+Note that loading HTML documents tends not to work when testing on localhost. <br>
+<br>
+<h3>preloadAjax:100</h3>
+The default behaviour is that the script wait 100ms, after the last ajax-loading, then it preloads the next not-loaded slide.<br>
+You can also set it to true, then the script will try to preload every slide from the beginning. <br>
+If this option in set to false, the script will only load the visible slides.
+<br>
+<br>
+<h3>loadingText:''</h3>
+Sets the text that's shown before the ajax-content has been loaded.<br>
+Example usage is: <em>loadingText:'This document has yet to be loaded'</em><br>
+<br>
+<h3>startSlide:false</h3>
+Define the first slide to be shown. Example usage is startSlide:'2', which makes the slider show the second slide on load (the first slide is number '1', and not '0'). <br>
+<br>
+<h3>ajaxload:false</h3>
+Using this variable, you can set a function to be run after somethings has been loaded into a slide. Any JavaScript can be used.<br>
+The "this" variable is html of the slide, containing the image. <br>
+Note that the function only runs, when ALL the content within the slide has loaded.<br>
+Example usage:<br>
+ajaxload: function(t, img){ alert($(this).html()); }<br>
+The "t" variable is the number the slide have. (As an example, the value of t is 2, when it's the second slide)<br>
+the "img" variable is if the content was loaded as an image or as a document. (If true, content was considered an image). <br>
+And the variable 'this' is the slide. Therefore, if you want to get the src of an image, this won't work "$(this).attr('src');" but this will $(this).children('img').attr('src');<br>
+<br>
+
+<a name="example" class="headline"><h1>Full example</h1></a>
+<p>With all options set to their default values.</p>
+	<pre>$(document).ready(function(){    
+    $("#slider").sudoSlider({ 
+        effect:            FALSE,
+        speed:             800,
+        customlink:        FALSE,
+        controlsshow:      TRUE,
+        controlsfadespeed: 400,
+        controlsfade:      TRUE,
+        insertafter:       TRUE,
+        vertical:          FALSE,
+        slidecount:        1,
+        movecount:         1,
+        startslide:        1,
+        responsive:        FALSE,
+        ease:              'swing',
+        auto:              FALSE,
+        pause:             2000,
+        resumepause:       FALSE,
+        continuous:        FALSE,
+        prevnext:          TRUE,
+        numeric:           FALSE,
+        numerictext:       [],
+        slices:            15,
+        boxcols:           8,
+        boxrows:           4,
+        initcallback:      EMPTY_FUNCTION,
+        ajaxload:          EMPTY_FUNCTION,
+        beforeanimation:   EMPTY_FUNCTION,
+        afteranimation:    EMPTY_FUNCTION,
+        history:           FALSE,
+        autoheight:        TRUE,
+        autowidth:         TRUE,
+        updatebefore:      FALSE,
+        ajax:              FALSE,
+        preloadajax:       100,
+        loadingtext:       '',
+        prevhtml:          '<a href="http://webbies.dk/#" class="prevBtn"> previous </a>',
+        nexthtml:          '<a href="http://webbies.dk/#" class="nextBtn"> next </a>',
+        controlsattr:      'id="controls"',
+        numericattr:       'class="controls"'
+    });
+});</pre>
+</li>
+<li style="float: left; list-style: none; display: block; position: relative;">
+    <h1>Designers guide to Sudo Slider</h1>
+    <h2>Controls</h2>
+    <p>When using Sudo Slider, there's only one requirement to the HTML: That the slider is a div, with a unordered list inside.<br>
+        Like this: </p>
+	<pre>&lt;div id="slider"&gt;
+    &lt;ul&gt;
+        &lt;li&gt;Content&lt;/li&gt;
+        &lt;li&gt;Content&lt;/li&gt;
+        &lt;li&gt;Content&lt;/li&gt;
+        &lt;li&gt;Content&lt;/li&gt;
+        &lt;li&gt;Content&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/div&gt;</pre>
+
+    <p>When Sudo Slider loads, it makes some buttons, which easily can be targeted with CSS. <br>
+        This is the resulting HTML using the default configuration.</p>
+	<pre>&lt;div id="slider"&gt;
+    &lt;ul&gt;
+        &lt;li&gt;Content&lt;/li&gt;
+        &lt;li&gt;Content&lt;/li&gt;
+        &lt;li&gt;Content&lt;/li&gt;
+        &lt;li&gt;Content&lt;/li&gt;
+        &lt;li&gt;Content&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/div&gt;
+&lt;span id="controlsid"&gt;
+    &lt;a href="#" class="nextBtn"&gt; next &lt;/a&gt;
+    &lt;a href="#" class="prevBtn"&gt; previous &lt;/a&gt;
+&lt;/span&gt;
+</pre>
+    <p>The Controls are positioned outside of the HTML, so that they won't conflict with the slider itself. </p>
+    <p>And with every possible control enabled (still using the default configuration) the html ends up like this:</p>
+	<pre>&lt;div id="slider"&gt;
+    &lt;ul&gt;
+        &lt;li&gt;Content&lt;/li&gt;
+        &lt;li&gt;Content&lt;/li&gt;
+        &lt;li&gt;Content&lt;/li&gt;
+        &lt;li&gt;Content&lt;/li&gt;
+        &lt;li&gt;Content&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/div&gt;
+&lt;span id="controlsid"&gt;
+    &lt;a href="#" class="nextBtn"&gt; next &lt;/a&gt;
+    &lt;a href="#" class="prevBtn"&gt; previous &lt;/a&gt;
+    &lt;a href="#" class="lastBtn"&gt; last &lt;/a&gt;
+    &lt;a href="#" class="firstBtn"&gt; first &lt;/a&gt;
+    &lt;ol class="controls"&gt;
+        &lt;li rel="1" id="class="controls" class="current"&gt;&lt;a href="#"&gt;&lt;span&gt;1&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+        &lt;li rel="2" id="class="controls"&gt;&lt;a href="#"&gt;&lt;span&gt;2&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+        &lt;li rel="3" id="class="controls"&gt;&lt;a href="#"&gt;&lt;span&gt;3&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+        &lt;li rel="4" id="class="controls"&gt;&lt;a href="#"&gt;&lt;span&gt;4&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+        &lt;li rel="5" id="class="controls"&gt;&lt;a href="#"&gt;&lt;span&gt;5&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+    &lt;/ol&gt;
+&lt;/span&gt;</pre>
+    <p>If you then read the <a href="http://webbies.dk/SudoSlider/help/#Settings">document descriping the different settings</a>, you will see that much of this can be changed. <br>
+        Including inserting the controls before instead of after the slider using the option <em>insertAfter</em><br>
+        In the next example, the option names for the various pieces of changeable HTML is shown instead of their default value.<br>
+        They are show like this: [optionname]</p>
+	<pre>&lt;div id="slider"&gt;
+    &lt;ul&gt;
+        &lt;li&gt;Content&lt;/li&gt;
+        &lt;li&gt;Content&lt;/li&gt;
+        &lt;li&gt;Content&lt;/li&gt;
+        &lt;li&gt;Content&lt;/li&gt;
+        &lt;li&gt;Content&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/div&gt;
+&lt;span [controlsAttr]&gt;
+    [nextHtml]
+    [prevHtml]
+    [lastHtml]
+    [firstHtml]
+    &lt;ol [numericAttr]&gt;
+        &lt;li rel="1" class="current"&gt;&lt;a href="#"&gt;&lt;span&gt;1&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+        &lt;li rel="2"&gt;&lt;a href="#"&gt;&lt;span&gt;2&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+        &lt;li rel="3"&gt;&lt;a href="#"&gt;&lt;span&gt;3&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+        &lt;li rel="4"&gt;&lt;a href="#"&gt;&lt;span&gt;4&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+        &lt;li rel="5"&gt;&lt;a href="#"&gt;&lt;span&gt;5&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+    &lt;/ol&gt;
+&lt;/span&gt;</pre>
+    <p>I know that it's not possible to change the numeric controls a lot, but you can always use customLinks (see below), if you want more freedom.</p>
+    <h2>customLink</h2>
+    <p>The customLink option is really interesting, because by using it, you have 100% freedom over the HTML of the controls.</p>
+    <p>The value that goes into the customLink option, is a CSS selector, that targets the HTML you want to be a control.<br>
+        To be precise, it's jQuery selector, but just use it as an normal CSS selector. </p>
+    <p>I usually  use a value like <em>customLink: 'a.customlink'</em>, to select links with the class "customlink" to be my controls. <br>
+        Remember that anything can be used, it doesn't have to be a link. And remember  that one doesn't exclude the other, you can use ordinary  controls and <em>customLinks</em> at the same time.</p>
+    <p>But we also need to tell the slider what to do, that's done using the <em>rel</em> tag like this:
+	</p><pre>&lt;a class="customlink" rel="next"&gt;
+    This link makes the slider go to the next slide
+&lt;/a&gt;</pre>
+    <p>The possible values of the rel attribute are:</p>
+    <ul>
+        <li><i>stop</i> stops an automatic slideshow (if it is currently running). </li>
+        <li><i>start</i> starts an automatic slideshow.</li>
+        <li><i>block</i> blocks the slider from getting any user input.</li>
+        <li><i>unblock</i> unblocks the slider.</li>
+        <li><i>next</i> go to the next slide.</li>
+        <li><i>prev</i> go to the previous side.</li>
+        <li><i>first</i> go to the first slide.</li>
+        <li><i>last</i> go to the last slide.</li>
+        <li><i>[number]</i> go to the slide specified using a number. Instead of [number] you insert a number (like '1').</li>
+
+    </ul>
+    <p>A customlink can the anything, even the slider itself. (I here assume that the option <em>customLink</em> is set to <em>'li.customlink'</em>)</p>
+	<pre>&lt;div id="slider"&gt;
+    &lt;ul&gt;
+        &lt;li class="customlink" rel="3"&gt;Content&lt;/li&gt;
+        &lt;li&gt;Content&lt;/li&gt;
+        &lt;li&gt;Content&lt;/li&gt;
+        &lt;li&gt;Content&lt;/li&gt;
+        &lt;li&gt;Content&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/div&gt;</pre>
+    <p>That code will make the slider animate to the third slide, when you click anywhere on the first slide. </p>
+    <p>Now you should know how to make the HTML and CSS for Sudo Slider, next is the animations. </p>
+
+    <h2>Animate the controls</h2>
+    <p>As you might have noticed, the <a href="http://webbies.dk/assets/files/SudoSlider/package/demos/numeric.html">numeric buttons in the demo</a> change color when a buttons corresponding slide is selected. <br>
+        This happens because the numeric buttons gets a "current" class added (and removed later, when the button no longer matches the current slide).  </p>
+    <p>As always  with controls, remember  that there's no difference between  customLinks and "normal" controls, everything explained here works on both.</p>
+    <p>But there's also a function that fires when an numeric control gets the "current" class, and when it's removed.<br>
+        They are: <em>currentFunc</em> and <em>uncurrentFunc</em><br>
+        And with them, you can make any animation with the numeric controls.</p>
+    <p><a href="http://webbies.dk/assets/files/SudoSlider/package/demos/callbacks%202.html">I got a quick demo that uses them both.</a></p>
+    <p>This all happens after the animation is complete (at least with the default settings, it can be changed using the <em>updateBefore</em> option).</p>
+    <p>If you want to animate the next/previous/first/last buttons, then you can use the <em>beforeanimation</em> and <em>afteranimation</em><br>
+        It could look something like this:</p>
+	<pre> 
+$(document).ready(function(){	
+    var sudoSlider = $("#slider").sudoSlider({ 
+        prevNext: true,
+        numeric: false,
+        beforeanimation: function(t){ 
+            $('.nextBtn').stop().fadeTo(300, 0.3);
+            $('.prevBtn').stop().fadeTo(300, 0.3);
+        },
+        afteranimation: function(t){ 
+           if (t != 5) $('.nextBtn').stop().fadeTo(500, 1);
+           if (t != 1) $('.prevBtn').stop().fadeTo(500, 1);
+        }
+    });
+});
+	</pre>
+</li>
+<li style="float: left; list-style: none; display: block; position: relative;">
+
+</li>
+</ul>
+</div><span id="controls"></span>
+</div>
+<div class="grid_2">
+    <p></p>
+</div>
+<div class="clear"></div>
+</div>
+   
+<!-- END TOP SECTION -->
+<!-- START BOTTOM SECTION -->
+<div class="clearer"></div>
+<div class="separator"></div>
+<div class="container_12 bottom">
+
+    <div class="grid_4">
+
+        <a href="./Sudo Slider   Help_files/Sudo Slider   Help.htm"><h2>Help and <span class="orange">support</span></h2></a>
+        <div style="float:left;margin-right:10px;">
+            <img src="./Sudo Slider   Help_files/help.png" height="60" width="60" alt="">
+        </div>
+        <p>
+            If you need help, the first thing you should do is read the documentation. <br>
+            Start with reading <a href="http://webbies.dk/SudoSlider/help/#helpcontent">howto setup the slider</a> if you are completely lost.<br>
+            If that doesn't help, try reading <a href="./Sudo Slider   Help_files/Sudo Slider   Help.htm">the rest of the documentation</a>.
+        </p>
+    </div>
+
+    <!-- START TESTIMONIAL SECTION -->
+    <div class="grid_4">
+
+        <a href="http://webbies.dk/SudoSlider/donate/" class="donateLink"><h2><span class="orange">Donate</span> to the project</h2></a>
+        <div style="float:left;margin-right:10px;">
+            <img src="./Sudo Slider   Help_files/coffee.png" height="60" width="60" alt="">
+        </div>
+        <p>
+            I like my work, like to see a piece of code grow.<br>
+            But humans doensn't live of air alone.<br>
+            So if you like my creation, you should consider <a href="http://webbies.dk/SudoSlider/donate/" class="donateLink">giving me a cup of coffee</a>.
+        </p>
+
+    </div>
+    <!-- END TESTIMONIAL SECTION -->
+
+    <!-- START CONTACT SECTION -->
+    <div class="grid_4">
+        <a href="http://webbies.dk/SudoSlider/demos.html"><h2>See the <span class="orange">demos</span></h2></a>
+        <div style="float:left;margin-right:10px;">
+            <img src="./Sudo Slider   Help_files/toolbox.png" height="60" width="60" alt="">
+        </div>
+        <p>
+            The demos showcase just how much Sudo Slider can do. <br>
+            They showcase features such as <a href="http://webbies.dk/assets/files/SudoSlider/package/demos/ajax.html">AJAX</a>, <a href="http://webbies.dk/assets/files/SudoSlider/package/demos/fade.html">fading</a>, <a href="http://webbies.dk/assets/files/SudoSlider/package/demos/callbacks%201.html">callbacks</a>, <a href="http://webbies.dk/assets/files/SudoSlider/package/demos/captions.html">captions</a> <a href="http://webbies.dk/assets/files/SudoSlider/package/demos/auto.html">automatic slidehow</a> and a <a href="http://webbies.dk/assets/files/SudoSlider/package/demos/tabs.html">tabs</a>.
+        </p>
+    </div>
+    <!-- END CONTACT SECTION -->
+
+    <div class="clear"></div>
+</div>
+<!-- END BOTTOM SECTION -->
+<!-- I have to live from something, very few donates, so some ads to earn me money -->
+<!--<div class="container_12">
+    <div style="width:728px;height:90px;margin:0 auto;text-align:center;margin-top:15px;">
+        <script type="text/javascript">
+        google_ad_client = "ca-pub-8170632875475442";
+        google_ad_slot = "0149025622";
+        google_ad_width = 728;
+        google_ad_height = 90;
+        </script>
+        <script type="text/javascript"
+                src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+        </script>
+    </div>
+    <div class="clearer"></div>
+</div>-->
+<!-- START FOOTER -->
+<div class="container_12">
+    <p class="footer">
+        Copyright 2013 by Erik Krogh Kristensen (webbies.dk)<br>
+        <!-- And if you really wanna know, this site is based on the YIWMinimal template -->
+        This site is under a <a href="http://creativecommons.org/licenses/by/3.0/">Creative Commons License</a>.
+    </p>
+</div>
+<!-- END FOOTER -->
+<script type="text/javascript">
+
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-20484420-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+
+</script>
+
+
+<embed id="embed_npwlo" type="application/npwlo" height="0"></body></html>

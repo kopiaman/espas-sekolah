@@ -1,0 +1,82 @@
+<div class="searchOptions bottomPanelBorder" {$srchOpt_attrs}>
+	
+	<!-- Search panel content -->
+	<div class="srchCritTop" style="display: none;">
+		Criteria:&nbsp;
+		<input type="radio" name="srchType" class="runner-radio-button" {$all_checkbox}> {BEGIN all_checkbox_label}all{END all_checkbox_label}
+		&nbsp;&nbsp;&nbsp;
+		<input type="radio" name="srchType" class="runner-radio-button" {$any_checkbox}> {BEGIN any_checkbox_label}any{END any_checkbox_label}
+	</div>
+	
+	<div class="addOption">
+		<span class="runner-btnframe">
+		<span class="runner-btnleft"></span>
+		<span class="runner-btnright"></span>
+		<a href="#" id="showHideControlChooseMenu{$id}" class="runner-button" {$showHideCtrls_attrs}>Add field</a>
+		</span>
+		&nbsp;&nbsp;&nbsp;
+		<span class="runner-btnframe">
+		<span class="runner-btnleft"></span>
+		<span class="runner-btnright"></span>
+		<a href="#" id="showHideSearchType{$id}" class="runner-button" {$showHideCtrlsOpt_attrs}>{$showHideOpt_mess}</a>
+		</span>
+	</div>
+	
+	<!-- choose controls div -->
+	<div class="runner-panel controlChooseMenu" {$controlChooseMenuDiv_attrs}>
+		{BEGIN addSearch_StudentID}
+			<a href="#" id="addSearchControl_StudentID" class="addSearchControl" {$addSearchControl_StudentID_attrs}>Nama Pelajar</a><br>
+		{END addSearch_StudentID}
+		{BEGIN addSearch_MatricNo}
+			<a href="#" id="addSearchControl_MatricNo" class="addSearchControl" {$addSearchControl_MatricNo_attrs}>No Dikenali</a><br>
+		{END addSearch_MatricNo}
+		{BEGIN addSearch_Status}
+			<a href="#" id="addSearchControl_Status" class="addSearchControl" {$addSearchControl_Status_attrs}>Status</a><br>
+		{END addSearch_Status}
+		{BEGIN addSearch_Class}
+			<a href="#" id="addSearchControl_Class" class="addSearchControl" {$addSearchControl_Class_attrs}>Kelas</a><br>
+		{END addSearch_Class}
+		{BEGIN addSearch_sesi}
+			<a href="#" id="addSearchControl_sesi" class="addSearchControl" {$addSearchControl_sesi_attrs}>Sesi</a><br>
+		{END addSearch_sesi}
+		{BEGIN addSearch_darjah}
+			<a href="#" id="addSearchControl_darjah" class="addSearchControl" {$addSearchControl_darjah_attrs}>Darjah</a><br>
+		{END addSearch_darjah}
+		{BEGIN addSearch_Activity}
+			<a href="#" id="addSearchControl_Activity" class="addSearchControl" {$addSearchControl_Activity_attrs}>Aktiviti</a><br>
+		{END addSearch_Activity}
+		{BEGIN addSearch_Level}
+			<a href="#" id="addSearchControl_Level" class="addSearchControl" {$addSearchControl_Level_attrs}>Peringkat</a><br>
+		{END addSearch_Level}
+		{BEGIN addSearch_Date_Committed}
+			<a href="#" id="addSearchControl_Date_Committed" class="addSearchControl" {$addSearchControl_Date_Committed_attrs}>Tarikh Perlakuan</a><br>
+		{END addSearch_Date_Committed}
+		{BEGIN addSearch_Action_Taken}
+			<a href="#" id="addSearchControl_Action_Taken" class="addSearchControl" {$addSearchControl_Action_Taken_attrs}>Tindakan</a><br>
+		{END addSearch_Action_Taken}
+		{BEGIN addSearch_Comment}
+			<a href="#" id="addSearchControl_Comment" class="addSearchControl" {$addSearchControl_Comment_attrs}>Catatan</a><br>
+		{END addSearch_Comment}
+	</div>
+	
+	<table class="controlsBlock">
+	{BEGIN searchCtrlBlock}
+		<tr class="srchPanelRow" {$filterRow_attrs}>
+			<td class="srchPanelCell">{$delCtrlButt}</td>
+			<td class="srchPanelCell">{$fLabel}:&nbsp;</td>
+			<td class="srchPanelCell srchPanelCell2">
+				<div class="runner-searchtype">{$searchtype}</div>
+				<div class="runner-searchcontrol">{$searchcontrol}</div>
+				<div class="runner-searchcontrol">{$searchcontrol1}</div>
+		</tr>
+	{END searchCtrlBlock}
+	</table>
+	
+	<div class="bottomSearchButt" align="left" {$bottomSearchButt_attrs}>
+		<span class="runner-btnframe">
+		<span class="runner-btnleft"></span>
+		<span class="runner-btnright"></span>
+		<a href="#" class="runner-button" {$searchbutton_attrs}>Cari</a>
+		</span>
+	</div>
+</div>

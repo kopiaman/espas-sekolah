@@ -1,0 +1,118 @@
+<div class="searchOptions bottomPanelBorder" {$srchOpt_attrs}>
+	
+	<!-- Search panel content -->
+	<div class="srchCritTop" style="display: none;">
+		Criteria:&nbsp;
+		<input type="radio" name="srchType" class="runner-radio-button" {$all_checkbox}> {BEGIN all_checkbox_label}all{END all_checkbox_label}
+		&nbsp;&nbsp;&nbsp;
+		<input type="radio" name="srchType" class="runner-radio-button" {$any_checkbox}> {BEGIN any_checkbox_label}any{END any_checkbox_label}
+	</div>
+	
+	<div class="addOption">
+		<span class="runner-btnframe">
+		<span class="runner-btnleft"></span>
+		<span class="runner-btnright"></span>
+		<a href="#" id="showHideControlChooseMenu{$id}" class="runner-button" {$showHideCtrls_attrs}>Add field</a>
+		</span>
+		&nbsp;&nbsp;&nbsp;
+		<span class="runner-btnframe">
+		<span class="runner-btnleft"></span>
+		<span class="runner-btnright"></span>
+		<a href="#" id="showHideSearchType{$id}" class="runner-button" {$showHideCtrlsOpt_attrs}>{$showHideOpt_mess}</a>
+		</span>
+	</div>
+	
+	<!-- choose controls div -->
+	<div class="runner-panel controlChooseMenu" {$controlChooseMenuDiv_attrs}>
+		{BEGIN addSearch_murid}
+			<a href="#" id="addSearchControl_murid" class="addSearchControl" {$addSearchControl_murid_attrs}>Murid</a><br>
+		{END addSearch_murid}
+		{BEGIN addSearch_tahun}
+			<a href="#" id="addSearchControl_tahun" class="addSearchControl" {$addSearchControl_tahun_attrs}>Darjah</a><br>
+		{END addSearch_tahun}
+		{BEGIN addSearch_Class}
+			<a href="#" id="addSearchControl_Class" class="addSearchControl" {$addSearchControl_Class_attrs}>Kelas</a><br>
+		{END addSearch_Class}
+		{BEGIN addSearch_etype}
+			<a href="#" id="addSearchControl_etype" class="addSearchControl" {$addSearchControl_etype_attrs}>Peperiksaan</a><br>
+		{END addSearch_etype}
+		{BEGIN addSearch_s1}
+			<a href="#" id="addSearchControl_s1" class="addSearchControl" {$addSearchControl_s1_attrs}>AL QURAN</a><br>
+		{END addSearch_s1}
+		{BEGIN addSearch_grade1}
+			<a href="#" id="addSearchControl_grade1" class="addSearchControl" {$addSearchControl_grade1_attrs}>Gred</a><br>
+		{END addSearch_grade1}
+		{BEGIN addSearch_s2}
+			<a href="#" id="addSearchControl_s2" class="addSearchControl" {$addSearchControl_s2_attrs}>AKHLAK</a><br>
+		{END addSearch_s2}
+		{BEGIN addSearch_grade2}
+			<a href="#" id="addSearchControl_grade2" class="addSearchControl" {$addSearchControl_grade2_attrs}>Gred</a><br>
+		{END addSearch_grade2}
+		{BEGIN addSearch_s3}
+			<a href="#" id="addSearchControl_s3" class="addSearchControl" {$addSearchControl_s3_attrs}>FEKAH</a><br>
+		{END addSearch_s3}
+		{BEGIN addSearch_grade3}
+			<a href="#" id="addSearchControl_grade3" class="addSearchControl" {$addSearchControl_grade3_attrs}>Gred</a><br>
+		{END addSearch_grade3}
+		{BEGIN addSearch_s4}
+			<a href="#" id="addSearchControl_s4" class="addSearchControl" {$addSearchControl_s4_attrs}>TAUHID</a><br>
+		{END addSearch_s4}
+		{BEGIN addSearch_grade4}
+			<a href="#" id="addSearchControl_grade4" class="addSearchControl" {$addSearchControl_grade4_attrs}>Gred</a><br>
+		{END addSearch_grade4}
+		{BEGIN addSearch_s5}
+			<a href="#" id="addSearchControl_s5" class="addSearchControl" {$addSearchControl_s5_attrs}>SIRAH</a><br>
+		{END addSearch_s5}
+		{BEGIN addSearch_grade5}
+			<a href="#" id="addSearchControl_grade5" class="addSearchControl" {$addSearchControl_grade5_attrs}>Gred</a><br>
+		{END addSearch_grade5}
+		{BEGIN addSearch_s8}
+			<a href="#" id="addSearchControl_s8" class="addSearchControl" {$addSearchControl_s8_attrs}>JAWI</a><br>
+		{END addSearch_s8}
+		{BEGIN addSearch_grade8}
+			<a href="#" id="addSearchControl_grade8" class="addSearchControl" {$addSearchControl_grade8_attrs}>Gred</a><br>
+		{END addSearch_grade8}
+		{BEGIN addSearch_s9}
+			<a href="#" id="addSearchControl_s9" class="addSearchControl" {$addSearchControl_s9_attrs}>KHAT</a><br>
+		{END addSearch_s9}
+		{BEGIN addSearch_grade9}
+			<a href="#" id="addSearchControl_grade9" class="addSearchControl" {$addSearchControl_grade9_attrs}>Gred</a><br>
+		{END addSearch_grade9}
+		{BEGIN addSearch_s6}
+			<a href="#" id="addSearchControl_s6" class="addSearchControl" {$addSearchControl_s6_attrs}>BH ARAB</a><br>
+		{END addSearch_s6}
+		{BEGIN addSearch_grade6}
+			<a href="#" id="addSearchControl_grade6" class="addSearchControl" {$addSearchControl_grade6_attrs}>Gred</a><br>
+		{END addSearch_grade6}
+		{BEGIN addSearch_s7}
+			<a href="#" id="addSearchControl_s7" class="addSearchControl" {$addSearchControl_s7_attrs}>TAJWID</a><br>
+		{END addSearch_s7}
+		{BEGIN addSearch_grade7}
+			<a href="#" id="addSearchControl_grade7" class="addSearchControl" {$addSearchControl_grade7_attrs}>Gred</a><br>
+		{END addSearch_grade7}
+		{BEGIN addSearch_sum}
+			<a href="#" id="addSearchControl_sum" class="addSearchControl" {$addSearchControl_sum_attrs}>Sum</a><br>
+		{END addSearch_sum}
+	</div>
+	
+	<table class="controlsBlock">
+	{BEGIN searchCtrlBlock}
+		<tr class="srchPanelRow" {$filterRow_attrs}>
+			<td class="srchPanelCell">{$delCtrlButt}</td>
+			<td class="srchPanelCell">{$fLabel}:&nbsp;</td>
+			<td class="srchPanelCell srchPanelCell2">
+				<div class="runner-searchtype">{$searchtype}</div>
+				<div class="runner-searchcontrol">{$searchcontrol}</div>
+				<div class="runner-searchcontrol">{$searchcontrol1}</div>
+		</tr>
+	{END searchCtrlBlock}
+	</table>
+	
+	<div class="bottomSearchButt" align="left" {$bottomSearchButt_attrs}>
+		<span class="runner-btnframe">
+		<span class="runner-btnleft"></span>
+		<span class="runner-btnright"></span>
+		<a href="#" class="runner-button" {$searchbutton_attrs}>Cari</a>
+		</span>
+	</div>
+</div>

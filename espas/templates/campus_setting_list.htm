@@ -1,0 +1,489 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+		<title>{$pagetitle}</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=7">
+		<meta http-equiv="Content-Type" content="text/html; charset=Windows-1252">
+		<link REL="stylesheet" href="styles/default.css" type="text/css">
+		{BEGIN rtlCSS}
+		<link REL="stylesheet" href="styles/defaultRTL.css" type="text/css">
+		{END rtlCSS}
+		{BEGIN styleCSSFiles}
+		<link REL="stylesheet" href="{$stylepath}" type="text/css">
+		{END styleCSSFiles}
+		{BEGIN pageCSSFiles}
+		<link REL="stylesheet" href="{$pagestylepath}" type="text/css">
+		{END pageCSSFiles}
+		<!--[if IE]>
+			<link REL="stylesheet" href="styles/defaultIE.css" type="text/css">
+			{BEGIN IEcssFiles}
+			<link REL="stylesheet" href="{$stylepathIE}" type="text/css">
+			{END IEcssFiles}
+		<![endif]-->
+	</head>
+	
+	<body class="{$stylename}" {$bodyattrs}>
+	{BEGIN body}
+		{$header}
+		<table   cellpadding="0" class="runner-toptable">
+			<tr class="runner-header">
+				<td class="runner-top" colspan=3>
+					
+
+
+
+{BEGIN container_toplinks}
+<table class="runner-c runner-c-toplinks" cellpadding="0" >
+<tr class="{$cheaderclass_toplinks}">
+<td class="runner-cl"><img src="images/spacer.gif"></td>
+<td class="runner-cc"></td><td class="runner-cr"><img src="images/spacer.gif"></td>
+</tr>
+<tr class="runner-row style1">
+<td class="runner-cl"></td>
+<td class="runner-cc">
+<table border="0" cellpadding="0" class="runner-hc">
+<tr>
+
+{BEGIN security_block}
+<td  class="runner-cc runner-bl runner-b-loggedas" {$brickclass_loggedas}><span>{BEGIN loggedas_message} 
+<span>Log-masuk sebagai&nbsp;<b>{$username}</b>&nbsp;</span> 
+{END loggedas_message}
+{BEGIN guestloginbutton}
+<span class="runner-btnframe">
+<span class="runner-btnleft"></span>
+<span class="runner-btnright"></span>
+<a href="#" class="runner-button" {$guestloginlink_attrs}>Log-masuk</a>
+</span>
+{END guestloginbutton}
+{BEGIN logoutbutton}
+<span class="runner-btnframe">
+<span class="runner-btnleft"></span>
+<span class="runner-btnright"></span>
+<a href="#" class="runner-button" {$logoutlink_attrs}>Log-keluar</a>
+</span>
+{END logoutbutton}
+{BEGIN adminarea_link}
+	<span class="runner-btnframe">
+	<span class="runner-btnleft"></span>
+	<span class="runner-btnright"></span>
+	<a href="admin_rights_list.php" class="runner-button" {$adminarealink_attrs}>Admin Area</a>
+	</span>
+{END adminarea_link}
+
+{BEGIN changepwd_link}
+	<span class="runner-btnframe">
+	<span class="runner-btnleft"></span>
+	<span class="runner-btnright"></span>
+	<a href="#" class="runner-button" {$changepwdlink_attrs}>Tukar katalaluan</a>
+	</span>
+{END changepwd_link}
+</span></td>
+{END security_block}
+
+
+
+
+
+
+
+<td class="runner-cc filler"></td>
+</tr>
+</table></td>
+<td class="runner-cr"></td>
+</tr>
+
+<tr class="{$cfooterclass_toplinks}">
+<td class="runner-cl"><img src="images/spacer.gif"></td>
+<td class="runner-cc"></td><td class="runner-cr"><img src="images/spacer.gif"></td>
+</tr>
+</table>
+{END container_toplinks}
+
+
+
+{BEGIN container_hmenu}
+<table class="runner-c runner-c-hmenu" cellpadding="0" >
+<tr class="{$cheaderclass_hmenu}">
+<td class="runner-cl"><img src="images/spacer.gif"></td>
+<td class="runner-cc"></td><td class="runner-cr"><img src="images/spacer.gif"></td>
+</tr>
+<tr class="runner-row style1">
+<td class="runner-cl"></td>
+<td class="runner-cc">
+<table border="0" cellpadding="0" class="runner-hc">
+<tr>
+
+{BEGIN menu_block}
+<td  class="runner-cc runner-bl runner-b-hmenu" {$brickclass_hmenu}><span>{$mainmenu horizontal}
+</span></td>
+{END menu_block}
+
+<td class="runner-cc filler"></td>
+</tr>
+</table></td>
+<td class="runner-cr"></td>
+</tr>
+
+<tr class="{$cfooterclass_hmenu}">
+<td class="runner-cl"><img src="images/spacer.gif"></td>
+<td class="runner-cc"></td><td class="runner-cr"><img src="images/spacer.gif"></td>
+</tr>
+</table>
+{END container_hmenu}
+
+
+
+{BEGIN container_search}
+<table class="runner-c runner-c-search" cellpadding="0" >
+<tr class="{$cheaderclass_search}">
+<td class="runner-cl"><img src="images/spacer.gif"></td>
+<td class="runner-cc"></td><td class="runner-cr"><img src="images/spacer.gif"></td>
+</tr>
+<tr class="runner-row style1">
+<td class="runner-cl"></td>
+<td class="runner-cc">
+<table border="0" cellpadding="0" class="runner-hc">
+<tr>
+
+
+<td class="runner-cc filler"></td>
+{BEGIN details_block}
+<td  class="runner-cc runner-br runner-b-details_found" {$brickclass_details_found}><span>	<span {$details_attrs}>
+		Perincian dijumpai: <b><span class="runner-details_found_count">{$records_found}</span></b>
+	</span>
+</span></td>
+{END details_block}
+
+
+{BEGIN pages_block}
+<td  class="runner-cc runner-br runner-b-page_of" {$brickclass_page_of}><span>	<span {$pages_attrs}>
+		Halaman <b>{$page}</b> dari <b>{$maxpages}</b>
+	</span>
+
+</span></td>
+{END pages_block}
+
+
+{BEGIN recordspp_block}
+<td  class="runner-cc runner-br runner-b-recsperpage" {$brickclass_recsperpage}><span>	<span id="recordspp_block{$id}" name="recordspp_block{$id}">
+			Rekod per halaman:&nbsp;{$recsPerPage}
+	</span>	
+</span></td>
+{END recordspp_block}
+
+
+</tr>
+</table></td>
+<td class="runner-cr"></td>
+</tr>
+
+<tr class="{$cfooterclass_search}">
+<td class="runner-cl"><img src="images/spacer.gif"></td>
+<td class="runner-cc"></td><td class="runner-cr"><img src="images/spacer.gif"></td>
+</tr>
+</table>
+{END container_search}
+
+
+
+
+				</td>
+			</tr>
+			<tr class="runner-body">
+				
+				<td class="runner-left {$blockclass_left}" >
+					
+
+
+				</td>	
+				
+				<td class="runner-center {$blockclass_center}">
+					
+
+{BEGIN container_message}
+<table class="runner-c runner-c-message" cellpadding="0" >
+<tr class="{$cheaderclass_message}">
+<td class="runner-cl"><img src="images/spacer.gif"></td>
+<td class="runner-cc"></td><td class="runner-cr"><img src="images/spacer.gif"></td>
+</tr>
+<tr class="runner-row style1">
+<td class="runner-cl"></td>
+<td class="runner-cc">
+<table border="0" cellpadding="0" class="runner-hc">
+<tr>
+
+{BEGIN message_block}
+<td  class="runner-cc runner-bc runner-b-message" {$brickclass_message}><span><div class="runner-message">{$message}</div></span></td>
+{END message_block}
+
+
+</tr>
+</table></td>
+<td class="runner-cr"></td>
+</tr>
+
+<tr class="{$cfooterclass_message}">
+<td class="runner-cl"><img src="images/spacer.gif"></td>
+<td class="runner-cc"></td><td class="runner-cr"><img src="images/spacer.gif"></td>
+</tr>
+</table>
+{END container_message}
+
+
+
+{BEGIN container_grid}
+
+
+{BEGIN grid_block}
+							<table cellpadding="0" class="runner-c-grid runner-b-grid">
+							{BEGIN grid_row}
+							<tr {$rowclass} {$rowattrs} {$rowstyle}>
+								{BEGIN grid_record}
+								<td class="runner-cg">
+									{BEGIN grid_vrecord}
+									<table class="runner-c" cellpadding="0">
+										{BEGIN grid_recordheader}
+										<tr class="runner-toprow style1">
+											<th class="runner-cl"><img src="images/spacer.gif"/></th>
+											<th class="runner-cc" colspan="2" iEditCont="all">
+																								{BEGIN edit_column}
+												{BEGIN edit_link}
+																								<a {$editlink_attrs} title="Sunting" class="runner-verticalicons"><img src="images/icon_edit_new.gif" alt="Sunting" border="0"></a>
+												{END edit_link}
+												{END edit_column}
+
+												
+												
+												
+												
+											</th>
+											<th class="runner-cr"><img src="images/spacer.gif"/></th>
+										</tr>
+										{END grid_recordheader}
+										
+											{BEGIN logo_fieldcolumn}
+<tr class="runner-row style1">
+	<td class="runner-cl"></td>
+	<td class="runner-cc runner-cc1">Logo</td>
+	<td class="runner-cc alt runner-cc2 {$logo_class}" {$logo_style}>{$logo_value}&nbsp;</td>
+	<td class="runner-cr alt"></td>
+</tr>
+{END logo_fieldcolumn}
+	{BEGIN acronyim_fieldcolumn}
+<tr class="runner-row style1">
+	<td class="runner-cl"></td>
+	<td class="runner-cc runner-cc1">Akronim</td>
+	<td class="runner-cc alt runner-cc2 {$acronyim_class}" {$acronyim_style}>{$acronyim_value}&nbsp;</td>
+	<td class="runner-cr alt"></td>
+</tr>
+{END acronyim_fieldcolumn}
+	{BEGIN campus_name_fieldcolumn}
+<tr class="runner-row style1">
+	<td class="runner-cl"></td>
+	<td class="runner-cc runner-cc1">Nama Sekolah</td>
+	<td class="runner-cc alt runner-cc2 {$campus_name_class}" {$campus_name_style}>{$campus_name_value}&nbsp;</td>
+	<td class="runner-cr alt"></td>
+</tr>
+{END campus_name_fieldcolumn}
+	{BEGIN sek_kod_fieldcolumn}
+<tr class="runner-row style1">
+	<td class="runner-cl"></td>
+	<td class="runner-cc runner-cc1">Kod Sekolah</td>
+	<td class="runner-cc alt runner-cc2 {$sek_kod_class}" {$sek_kod_style}>{$sek_kod_value}&nbsp;</td>
+	<td class="runner-cr alt"></td>
+</tr>
+{END sek_kod_fieldcolumn}
+	{BEGIN address_fieldcolumn}
+<tr class="runner-row style1">
+	<td class="runner-cl"></td>
+	<td class="runner-cc runner-cc1">Alamat</td>
+	<td class="runner-cc alt runner-cc2 {$address_class}" {$address_style}>{$address_value}&nbsp;</td>
+	<td class="runner-cr alt"></td>
+</tr>
+{END address_fieldcolumn}
+	{BEGIN postcode_fieldcolumn}
+<tr class="runner-row style1">
+	<td class="runner-cl"></td>
+	<td class="runner-cc runner-cc1">Poskod</td>
+	<td class="runner-cc alt runner-cc2 {$postcode_class}" {$postcode_style}>{$postcode_value}&nbsp;</td>
+	<td class="runner-cr alt"></td>
+</tr>
+{END postcode_fieldcolumn}
+	{BEGIN city_fieldcolumn}
+<tr class="runner-row style1">
+	<td class="runner-cl"></td>
+	<td class="runner-cc runner-cc1">Bandar</td>
+	<td class="runner-cc alt runner-cc2 {$city_class}" {$city_style}>{$city_value}&nbsp;</td>
+	<td class="runner-cr alt"></td>
+</tr>
+{END city_fieldcolumn}
+	{BEGIN state_fieldcolumn}
+<tr class="runner-row style1">
+	<td class="runner-cl"></td>
+	<td class="runner-cc runner-cc1">Negeri</td>
+	<td class="runner-cc alt runner-cc2 {$state_class}" {$state_style}>{$state_value}&nbsp;</td>
+	<td class="runner-cr alt"></td>
+</tr>
+{END state_fieldcolumn}
+	{BEGIN email_fieldcolumn}
+<tr class="runner-row style1">
+	<td class="runner-cl"></td>
+	<td class="runner-cc runner-cc1">Email</td>
+	<td class="runner-cc alt runner-cc2 {$email_class}" {$email_style}>{$email_value}&nbsp;</td>
+	<td class="runner-cr alt"></td>
+</tr>
+{END email_fieldcolumn}
+	{BEGIN faxNo_fieldcolumn}
+<tr class="runner-row style1">
+	<td class="runner-cl"></td>
+	<td class="runner-cc runner-cc1">No Fax</td>
+	<td class="runner-cc alt runner-cc2 {$faxNo_class}" {$faxNo_style}>{$faxNo_value}&nbsp;</td>
+	<td class="runner-cr alt"></td>
+</tr>
+{END faxNo_fieldcolumn}
+	{BEGIN telephone_fieldcolumn}
+<tr class="runner-row style1">
+	<td class="runner-cl"></td>
+	<td class="runner-cc runner-cc1">No Tel</td>
+	<td class="runner-cc alt runner-cc2 {$telephone_class}" {$telephone_style}>{$telephone_value}&nbsp;</td>
+	<td class="runner-cr alt"></td>
+</tr>
+{END telephone_fieldcolumn}
+	{BEGIN daerah_fieldcolumn}
+<tr class="runner-row style1">
+	<td class="runner-cl"></td>
+	<td class="runner-cc runner-cc1">Daerah</td>
+	<td class="runner-cc alt runner-cc2 {$daerah_class}" {$daerah_style}>{$daerah_value}&nbsp;</td>
+	<td class="runner-cr alt"></td>
+</tr>
+{END daerah_fieldcolumn}
+	{BEGIN gb_tel_fieldcolumn}
+<tr class="runner-row style1">
+	<td class="runner-cl"></td>
+	<td class="runner-cc runner-cc1">No Tel Guru Besar</td>
+	<td class="runner-cc alt runner-cc2 {$gb_tel_class}" {$gb_tel_style}>{$gb_tel_value}&nbsp;</td>
+	<td class="runner-cr alt"></td>
+</tr>
+{END gb_tel_fieldcolumn}
+	{BEGIN gb_name_fieldcolumn}
+<tr class="runner-row style1">
+	<td class="runner-cl"></td>
+	<td class="runner-cc runner-cc1">Nama Guru Besar</td>
+	<td class="runner-cc alt runner-cc2 {$gb_name_class}" {$gb_name_style}>{$gb_name_value}&nbsp;</td>
+	<td class="runner-cr alt"></td>
+</tr>
+{END gb_name_fieldcolumn}
+	{BEGIN sek_mix_fieldcolumn}
+<tr class="runner-row style1">
+	<td class="runner-cl"></td>
+	<td class="runner-cc runner-cc1">Sek. Lelaki/ Perempuan/ Bercampur</td>
+	<td class="runner-cc alt runner-cc2 {$sek_mix_class}" {$sek_mix_style}>{$sek_mix_value}&nbsp;</td>
+	<td class="runner-cr alt"></td>
+</tr>
+{END sek_mix_fieldcolumn}
+	{BEGIN sek_jenis_fieldcolumn}
+<tr class="runner-row style1">
+	<td class="runner-cl"></td>
+	<td class="runner-cc runner-cc1">Jenis Sekolah</td>
+	<td class="runner-cc alt runner-cc2 {$sek_jenis_class}" {$sek_jenis_style}>{$sek_jenis_value}&nbsp;</td>
+	<td class="runner-cr alt"></td>
+</tr>
+{END sek_jenis_fieldcolumn}
+	{BEGIN sek_building_fieldcolumn}
+<tr class="runner-row style1">
+	<td class="runner-cl"></td>
+	<td class="runner-cc runner-cc1">Jenis Bangunan</td>
+	<td class="runner-cc alt runner-cc2 {$sek_building_class}" {$sek_building_style}>{$sek_building_value}&nbsp;</td>
+	<td class="runner-cr alt"></td>
+</tr>
+{END sek_building_fieldcolumn}
+	{BEGIN sek_owner_fieldcolumn}
+<tr class="runner-row style1">
+	<td class="runner-cl"></td>
+	<td class="runner-cc runner-cc1">Pemilik Bangunan</td>
+	<td class="runner-cc alt runner-cc2 {$sek_owner_class}" {$sek_owner_style}>{$sek_owner_value}&nbsp;</td>
+	<td class="runner-cr alt"></td>
+</tr>
+{END sek_owner_fieldcolumn}
+
+										
+										<tr class="runner-bottomrow style1">
+											<td class="runner-cl"><img src="images/spacer.gif"/></td>
+											<td class="runner-cc"></td>
+											<td class="runner-cc alt"></td>
+											<td class="runner-cr alt"><img src="images/spacer.gif"/></td>
+										</tr>
+									</table>
+									{END grid_vrecord}
+								</td>
+								{BEGIN endrecord_block}
+								<td class="runner-cs" {$endrecordblock_attrs}>&nbsp;</td>
+								{END endrecord_block}
+								{END grid_record}
+							</tr>
+							{BEGIN grid_rowspace}
+							<tr class="runner-rs {$rsclass}">
+								{BEGIN grid_recordspace}
+								<td>&nbsp;</td>
+								{END grid_recordspace}
+							</tr>
+							{END grid_rowspace}
+							{END grid_row}
+						</table>
+						
+				
+
+{END grid_block}
+
+
+
+{END container_grid}
+
+
+
+{BEGIN container_pagination}
+<table class="runner-c runner-c-pagination" cellpadding="0" >
+<tr class="{$cheaderclass_pagination}">
+<td class="runner-cl"><img src="images/spacer.gif"></td>
+<td class="runner-cc"></td><td class="runner-cr"><img src="images/spacer.gif"></td>
+</tr>
+<tr class="runner-row style1">
+<td class="runner-cl"></td>
+<td class="runner-cc">
+<table border="0" cellpadding="0" class="runner-hc">
+<tr>
+
+{BEGIN pagination_block}
+<td  class="runner-cc runner-bc runner-b-pagination" {$brickclass_pagination}><span>{$pagination}</span></td>
+{END pagination_block}
+
+
+</tr>
+</table></td>
+<td class="runner-cr"></td>
+</tr>
+
+<tr class="{$cfooterclass_pagination}">
+<td class="runner-cl"><img src="images/spacer.gif"></td>
+<td class="runner-cc"></td><td class="runner-cr"><img src="images/spacer.gif"></td>
+</tr>
+</table>
+{END container_pagination}
+
+
+				</td>	
+
+				<td class="runner-right {$blockclass_right}">
+					
+				</td>	
+			</tr>
+			<tr class="runner-footer">
+				<td class="runner-bottom" colspan=3>
+					<!--%%bottom%%-->
+				</td>
+			</tr>
+		</table>
+		{$footer}
+	{END body}
+	</body>
+</html>

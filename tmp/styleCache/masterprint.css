@@ -1,0 +1,64 @@
+.page-preview,
+  .runner-pagewrapper .page-preview,
+  .runner-pagewrapper .runner-pagewrapper .page-preview
+{
+padding-top:10px; padding-left:10px;
+}
+.page-preview .runner-c-0,
+  .runner-pagewrapper .page-preview .runner-c-0,
+  .runner-pagewrapper .runner-pagewrapper .page-preview .runner-c-0
+{
+margin-bottom:5px;
+}
+.page-preview .runner-b-masterprintheader, .page-preview .runner-b-masterprintheader,
+.page-preview .runner-b-masterprintheader, .page-preview .runner-b-masterprintheader > *,
+  .runner-pagewrapper .page-preview .runner-b-masterprintheader, .page-preview .runner-b-masterprintheader,
+  .runner-pagewrapper .page-preview .runner-b-masterprintheader, .page-preview .runner-b-masterprintheader > *,
+  .runner-pagewrapper .runner-pagewrapper .page-preview .runner-b-masterprintheader, .page-preview .runner-b-masterprintheader,
+  .runner-pagewrapper .runner-pagewrapper .page-preview .runner-b-masterprintheader, .page-preview .runner-b-masterprintheader > *
+{
+white-space: nowrap;
+}
+.page-preview .runner-b-masterprintheader, .page-preview .runner-b-masterprintheader,
+.page-preview .runner-b-masterprintheader, .page-preview .runner-b-masterprintheader > *,
+  .runner-pagewrapper .page-preview .runner-b-masterprintheader, .page-preview .runner-b-masterprintheader,
+  .runner-pagewrapper .page-preview .runner-b-masterprintheader, .page-preview .runner-b-masterprintheader > *,
+  .runner-pagewrapper .runner-pagewrapper .page-preview .runner-b-masterprintheader, .page-preview .runner-b-masterprintheader,
+  .runner-pagewrapper .runner-pagewrapper .page-preview .runner-b-masterprintheader, .page-preview .runner-b-masterprintheader > *
+{
+text-align: left;
+}
+.page-preview .runner-c-mastergrid,
+  .runner-pagewrapper .page-preview .runner-c-mastergrid,
+  .runner-pagewrapper .runner-pagewrapper .page-preview .runner-c-mastergrid
+{
+margin-bottom:5px;
+}
+.page-preview .runner-c-mastergrid,
+  .runner-pagewrapper .page-preview .runner-c-mastergrid,
+  .runner-pagewrapper .runner-pagewrapper .page-preview .runner-c-mastergrid
+{
+width:100%;
+}
+.page-preview .runner-b-masterprintfields, .page-preview .runner-b-masterprintfields,
+.page-preview .runner-b-masterprintfields, .page-preview .runner-b-masterprintfields > *,
+  .runner-pagewrapper .page-preview .runner-b-masterprintfields, .page-preview .runner-b-masterprintfields,
+  .runner-pagewrapper .page-preview .runner-b-masterprintfields, .page-preview .runner-b-masterprintfields > *,
+  .runner-pagewrapper .runner-pagewrapper .page-preview .runner-b-masterprintfields, .page-preview .runner-b-masterprintfields,
+  .runner-pagewrapper .runner-pagewrapper .page-preview .runner-b-masterprintfields, .page-preview .runner-b-masterprintfields > *
+{
+white-space: normal;
+}
+.page-preview .runner-b-masterprintfields, .page-preview .runner-b-masterprintfields,
+.page-preview .runner-b-masterprintfields, .page-preview .runner-b-masterprintfields > *,
+  .runner-pagewrapper .page-preview .runner-b-masterprintfields, .page-preview .runner-b-masterprintfields,
+  .runner-pagewrapper .page-preview .runner-b-masterprintfields, .page-preview .runner-b-masterprintfields > *,
+  .runner-pagewrapper .runner-pagewrapper .page-preview .runner-b-masterprintfields, .page-preview .runner-b-masterprintfields,
+  .runner-pagewrapper .runner-pagewrapper .page-preview .runner-b-masterprintfields, .page-preview .runner-b-masterprintfields > *
+{
+text-align: left;
+}
+body.page-preview .runner-bare
+{
+padding-right: 5px;
+}
